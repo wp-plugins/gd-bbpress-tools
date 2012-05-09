@@ -1,0 +1,306 @@
+#: code/tools/class.php:103
+#: code/tools/class.php:115
+#: code/tools/class.php:193
+msgid "Forums"
+msgstr ""
+
+#: code/tools/class.php:142
+msgid "Views"
+msgstr ""
+
+#: code/tools/class.php:163
+msgid "New"
+msgstr ""
+
+#: code/tools/class.php:169
+msgid "Forum"
+msgstr ""
+
+#: code/tools/class.php:175
+msgid "Topic"
+msgstr ""
+
+#: code/tools/class.php:181
+msgid "Reply"
+msgstr ""
+
+#: code/tools/class.php:187
+msgid "Edit"
+msgstr ""
+
+#: code/tools/class.php:199
+msgid "Topics"
+msgstr ""
+
+#: code/tools/class.php:205
+msgid "Replies"
+msgstr ""
+
+#: code/tools/class.php:212
+#: forms/panels.php:5
+msgid "Settings"
+msgstr ""
+
+#: code/tools/class.php:218
+msgid "bbPress Settings"
+msgstr ""
+
+#: code/tools/class.php:228
+msgid "GD bbPress Tools"
+msgstr ""
+
+#: code/tools/class.php:235
+msgid "GD bbPress Attchments"
+msgstr ""
+
+#: code/tools/class.php:243
+#: code/admin.php:30
+msgid "Tools"
+msgstr ""
+
+#: code/tools/class.php:249
+msgid "Recount"
+msgstr ""
+
+#: code/tools/class.php:262
+msgid "Information"
+msgstr ""
+
+#: code/tools/class.php:277
+msgid "bbPress Homepage"
+msgstr ""
+
+#: code/tools/class.php:285
+msgid "Dev4Press Homepage"
+msgstr ""
+
+#: code/admin.php:48
+msgid "Website"
+msgstr ""
+
+#: code/admin.php:49
+msgid "On Twitter"
+msgstr ""
+
+#: code/admin.php:50
+msgid "On Facebook"
+msgstr ""
+
+#: code/admin.php:54
+msgid "Get Help"
+msgstr ""
+
+#: code/admin.php:55
+msgid "General Plugin Information"
+msgstr ""
+
+#: code/admin.php:56
+msgid "Home Page on Dev4Press.com"
+msgstr ""
+
+#: code/admin.php:57
+msgid "Home Page on WordPress.org"
+msgstr ""
+
+#: code/admin.php:58
+msgid "Getting Plugin Support"
+msgstr ""
+
+#: code/admin.php:59
+msgid "Support Forum on Dev4Press.com"
+msgstr ""
+
+#: code/admin.php:60
+msgid "Support Forum on WordPress.org"
+msgstr ""
+
+#: code/admin.php:61
+msgid "Plugin Support Sources"
+msgstr ""
+
+#: code/admin.php:66
+msgid "On Dev4Press website you can find many useful plugins, themes and tutorials, all for WordPress. Please, take a few minutes to browse some of these resources, you might find some of them very useful."
+msgstr ""
+
+#: code/admin.php:67
+msgid "Plugins"
+msgstr ""
+
+#: code/admin.php:67
+msgid "We have more than 10 plugins available, some of them are commercial and some are available for free."
+msgstr ""
+
+#: code/admin.php:68
+msgid "Themes"
+msgstr ""
+
+#: code/admin.php:68
+msgid "All our themes are based on our own xScape Theme Framework, and only available as premium."
+msgstr ""
+
+#: code/admin.php:69
+msgid "Tutorials"
+msgstr ""
+
+#: code/admin.php:69
+msgid "Premium and free tutorials for our plugins themes, and many general and practical WordPress tutorials."
+msgstr ""
+
+#: code/admin.php:70
+msgid "Central Documentation"
+msgstr ""
+
+#: code/admin.php:70
+msgid "Growing collection of functions, classes, hooks, constants with examples for our plugins and themes."
+msgstr ""
+
+#: code/admin.php:71
+msgid "Support Forums"
+msgstr ""
+
+#: code/admin.php:71
+msgid "Premium support forum for all with valid licenses to get help. Also, report bugs and leave suggestions."
+msgstr ""
+
+#: forms/tabs/about.php:10
+msgid "Release Date: "
+msgstr ""
+
+#: forms/tabs/about.php:12
+msgid "Status: "
+msgstr ""
+
+#: forms/tabs/about.php:14
+msgid "Build: "
+msgstr ""
+
+#: forms/tabs/about.php:19
+msgid "System Requirements"
+msgstr ""
+
+#: forms/tabs/about.php:22
+msgid "WordPress: "
+msgstr ""
+
+#: forms/tabs/about.php:24
+msgid "bbPress: "
+msgstr ""
+
+#: forms/tabs/about.php:30
+msgid "Important Plugin Links"
+msgstr ""
+
+#: forms/tabs/about.php:31
+msgid "Home Page"
+msgstr ""
+
+#: forms/tabs/about.php:32
+#: forms/tabs/about.php:36
+msgid "on"
+msgstr ""
+
+#: forms/tabs/about.php:33
+msgid "Plugin Support"
+msgstr ""
+
+#: forms/tabs/about.php:34
+msgid "Plugin Support Forum on Dev4Press"
+msgstr ""
+
+#: forms/tabs/about.php:35
+msgid "Dev4Press Important Links"
+msgstr ""
+
+#: forms/tabs/about.php:37
+#: forms/tabs/about.php:38
+msgid "Page"
+msgstr ""
+
+#: forms/tabs/d4p.php:3
+#: forms/tabs/d4p.php:8
+msgid "Plugin Home Website"
+msgstr ""
+
+#: forms/tabs/d4p.php:4
+#: forms/tabs/d4p.php:9
+#: forms/tabs/d4p.php:13
+msgid "Home on Dev4Press"
+msgstr ""
+
+#: forms/tabs/d4p.php:17
+msgid "Other Premium Plugins"
+msgstr ""
+
+#: forms/tabs/d4p.php:20
+msgid "Premium Themes"
+msgstr ""
+
+#: forms/tabs/d4p.php:23
+msgid "Free Plugins"
+msgstr ""
+
+#: forms/tabs/tools.php:2
+msgid "Settings saved."
+msgstr ""
+
+#: forms/tabs/tools.php:9
+msgid "Toolbar Menu"
+msgstr ""
+
+#: forms/tabs/tools.php:10
+msgid "Add menu to the WordPress toolbar with quick access to both admin and front end side forum related pages."
+msgstr ""
+
+#: forms/tabs/tools.php:14
+#: forms/tabs/tools.php:48
+msgid "Active"
+msgstr ""
+
+#: forms/tabs/tools.php:20
+msgid "Show to Super Admin"
+msgstr ""
+
+#: forms/tabs/tools.php:26
+msgid "Show menu to"
+msgstr ""
+
+#: forms/tabs/tools.php:29
+msgid "Allow upload to"
+msgstr ""
+
+#: forms/tabs/tools.php:43
+msgid "Limit bbPress access on admin side"
+msgstr ""
+
+#: forms/tabs/tools.php:44
+msgid "Select who can see and access admin side bbPress forums, topics and reply controls. Be careful with this feature."
+msgstr ""
+
+#: forms/tabs/tools.php:54
+msgid "Super Admin access"
+msgstr ""
+
+#: forms/tabs/tools.php:60
+msgid "Roles with access"
+msgstr ""
+
+#: forms/tabs/tools.php:63
+msgid "User Roles"
+msgstr ""
+
+#: forms/tabs/tools.php:77
+msgid "Save Changes"
+msgstr ""
+
+#: forms/panels.php:6
+msgid "FAQ"
+msgstr ""
+
+#: forms/panels.php:7
+msgid "Dev4Press"
+msgstr ""
+
+#: forms/panels.php:8
+msgid "About"
+msgstr ""
+
