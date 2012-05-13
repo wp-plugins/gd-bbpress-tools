@@ -1,23 +1,27 @@
 === GD bbPress Tools ===
 Contributors: GDragoN
 Donate link: http://www.dev4press.com/
-Version: 1.0.0
-Tags: bbpress, tools, gdragon, dev4press, forum, topic, reply, toolbar, admin
+Version: 1.1.0
+Tags: bbpress, tools, gdragon, dev4press, forums, forum, topic, reply, signature, quote, toolbar, admin, bbcode, bbcodes, shortcode, shortcodes
 Requires at least: 3.2
 Tested up to: 3.4
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Adds various tools to expand the bbPress plugin implemented forums.
+Adds different expansions and tools to the bbPress 2.0 plugin powered forums: BBCode support, toolbar menu, quote, access control...
 
 == Description ==
-Adds various tools to expand the bbPress plugin implemented forums. Currently included tools:
+Adds various espansions and tools to the bbPress 2.0 plugin implemented forums. Currently included tools:
 
+* BBCode shortcodes support
+* Quote Reply or Topic
 * Toolbar menu integration
 * Limit bbPress admin side access
 
-Supported languages: English, Serbian.
+Plugin supports BBCodes based on the phpBB implementation. Right now, plugin has 26 BBCodes.
+
+Supported languages: English.
 
 = Important URL's =
 [Plugin Home](http://www.dev4press.com/plugins/gd-bbpress-tools/) |
@@ -25,6 +29,10 @@ Supported languages: English, Serbian.
 [Feedburner](http://feeds2.feedburner.com/dev4press) |
 [Twitter](http://twitter.com/milangd) |
 [Facebook Page](http://www.facebook.com/dev4press)
+
+= More from dev4Press.com for bbPress =
+* [GD bbPress Attachments](http://wordpress.org/extend/plugins/gd-bbpress-attachments/) - attachments for topics and replies
+* [GD CPT Tools Pro](http://www.gdcpttools.com/features/bbpress-integration/) - meta box for the topic and reply form
 
 == Installation ==
 = General Requirements =
@@ -54,16 +62,22 @@ No. Plugin requires bbPress 2.0 or higher plugin.
 
 == Translations ==
 * English
-* Serbian
 
 == Changelog ==
+= 1.1.0 =
+* Added BBCodes shortcodes support
+* Added quote reply or topic support
+* Added file with shared functions
+* Plugin features organized into mods
+
 = 1.0.0 =
 * First official release
 
 == Upgrade Notice ==
-= 1.0.0 =
-First official release.
+= 1.1.0 =
+Added BBCodes shortcodes support. Added quote reply or topic support. Added file with shared functions. Plugin features organized into mods.
 
 == Screenshots ==
 1. Main plugins settings panel
-2. Toolbar bbPress forums menu
+2. BBCode settings panel
+3. Toolbar bbPress forums menu

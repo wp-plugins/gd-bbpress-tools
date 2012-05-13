@@ -3,8 +3,8 @@
 /*
 Plugin Name: GD bbPress Tools
 Plugin URI: http://www.dev4press.com/plugin/gd-bbpress-tools/
-Description: Adds various tools to expand the bbPress plugin implemented forums.
-Version: 1.0.0
+Description: Adds different expansions and tools to the bbPress 2.0 plugin powered forums: BBCode support, toolbar menu, quote, access control...
+Version: 1.1.0
 Author: Milan Petrovic
 Author URI: http://www.dev4press.com/
 
@@ -31,6 +31,7 @@ if (!defined('GDBBPRESSTOOLS_CAP')) {
 }
 
 require_once(dirname(__FILE__).'/code/defaults.php');
+require_once(dirname(__FILE__).'/code/shared.php');
 require_once(dirname(__FILE__).'/code/tools/class.php');
 require_once(dirname(__FILE__).'/code/public.php');
 

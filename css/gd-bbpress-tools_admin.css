@@ -36,6 +36,7 @@
 
 .d4p-settings .form-table th, .d4p-settings-second .form-table th  {
     padding: 5px;
+    width: 160px;
 }
 
 .d4p-settings .form-table td, .d4p-settings-second .form-table td {
