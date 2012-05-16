@@ -1,20 +1,20 @@
 #: code/mods/shortcodes.php:42
-#: forms/tabs/bbcode.php:86
+#: forms/tabs/bbcode.php:92
 msgid "Bold"
 msgstr ""
 
 #: code/mods/shortcodes.php:46
-#: forms/tabs/bbcode.php:90
+#: forms/tabs/bbcode.php:96
 msgid "Italic"
 msgstr ""
 
 #: code/mods/shortcodes.php:50
-#: forms/tabs/bbcode.php:94
+#: forms/tabs/bbcode.php:100
 msgid "Underline"
 msgstr ""
 
 #: code/mods/shortcodes.php:55
-#: forms/tabs/bbcode.php:98
+#: forms/tabs/bbcode.php:104
 msgid "Strikethrough"
 msgstr ""
 
@@ -35,47 +35,48 @@ msgid "Align Justify"
 msgstr ""
 
 #: code/mods/shortcodes.php:79
-#: forms/tabs/bbcode.php:122
+#: forms/tabs/bbcode.php:128
 msgid "Subscript"
 msgstr ""
 
 #: code/mods/shortcodes.php:83
-#: forms/tabs/bbcode.php:126
+#: forms/tabs/bbcode.php:132
 msgid "Superscript"
 msgstr ""
 
 #: code/mods/shortcodes.php:87
-#: forms/tabs/bbcode.php:130
+#: forms/tabs/bbcode.php:148
 msgid "Preformatted"
 msgstr ""
 
 #: code/mods/shortcodes.php:91
+#: forms/tabs/bbcode.php:136
 msgid "Reverse"
 msgstr ""
 
 #: code/mods/shortcodes.php:96
 #: code/mods/shortcodes.php:100
-#: forms/tabs/bbcode.php:146
+#: forms/tabs/bbcode.php:164
 msgid "List: Ordered"
 msgstr ""
 
 #: code/mods/shortcodes.php:104
-#: forms/tabs/bbcode.php:150
+#: forms/tabs/bbcode.php:168
 msgid "List: Unordered"
 msgstr ""
 
 #: code/mods/shortcodes.php:108
-#: forms/tabs/bbcode.php:154
+#: forms/tabs/bbcode.php:172
 msgid "List: Item"
 msgstr ""
 
 #: code/mods/shortcodes.php:112
-#: forms/tabs/bbcode.php:134
+#: forms/tabs/bbcode.php:152
 msgid "Blockquote"
 msgstr ""
 
 #: code/mods/shortcodes.php:116
-#: forms/tabs/bbcode.php:138
+#: forms/tabs/bbcode.php:156
 msgid "Area"
 msgstr ""
 
@@ -84,53 +85,86 @@ msgid "Border"
 msgstr ""
 
 #: code/mods/shortcodes.php:124
-#: forms/tabs/bbcode.php:142
+#: forms/tabs/bbcode.php:160
 msgid "Block"
 msgstr ""
 
 #: code/mods/shortcodes.php:128
-#: forms/tabs/bbcode.php:118
+#: forms/tabs/bbcode.php:124
 msgid "Horizontal Line"
 msgstr ""
 
 #: code/mods/shortcodes.php:132
-#: forms/tabs/bbcode.php:158
-msgid "Quote"
+#: forms/tabs/bbcode.php:140
+msgid "Font Size"
 msgstr ""
 
 #: code/mods/shortcodes.php:136
-#: forms/tabs/bbcode.php:167
-msgid "URL"
+#: forms/tabs/bbcode.php:144
+msgid "Font Color"
 msgstr ""
 
 #: code/mods/shortcodes.php:140
-msgid "Google Search"
+#: forms/tabs/bbcode.php:176
+msgid "Quote"
 msgstr ""
 
 #: code/mods/shortcodes.php:144
-msgid "YouTube Video"
+#: forms/tabs/bbcode.php:185
+msgid "URL"
 msgstr ""
 
 #: code/mods/shortcodes.php:148
-#: forms/tabs/bbcode.php:179
+msgid "Google Search"
+msgstr ""
+
+#: code/mods/shortcodes.php:152
+#: forms/tabs/bbcode.php:189
+msgid "Image"
+msgstr ""
+
+#: code/mods/shortcodes.php:156
+#: forms/tabs/bbcode.php:193
+msgid "YouTube Video"
+msgstr ""
+
+#: code/mods/shortcodes.php:160
+#: forms/tabs/bbcode.php:197
+msgid "Vimeo Video"
+msgstr ""
+
+#: code/mods/shortcodes.php:164
+#: forms/tabs/bbcode.php:205
 msgid "Note"
 msgstr ""
 
-#: code/mods/shortcodes.php:269
+#: code/mods/shortcodes.php:285
 msgid "BBCode you used is not allowed."
 msgstr ""
 
-#: code/mods/shortcodes.php:287
+#: code/mods/shortcodes.php:303
 msgid "You can use BBCodes to format your content."
 msgstr ""
 
-#: code/mods/shortcodes.php:289
+#: code/mods/shortcodes.php:305
 msgid "Your account can't use Advanced BBCodes, they will be stripped before saving."
 msgstr ""
 
-#: code/mods/shortcodes.php:403
-#: code/tools/front.php:29
+#: code/mods/shortcodes.php:455
+#: code/tools/front.php:30
 msgid "wrote"
+msgstr ""
+
+#: code/mods/signature.php:32
+msgid "You can use only plain text. HTML and BBCode will be stripped."
+msgstr ""
+
+#: code/mods/signature.php:34
+msgid "You can use BBCodes. HTML will be stripped."
+msgstr ""
+
+#: code/mods/signature.php:36
+msgid "You can use HTML. BBCodes will be stripped if the BBCodes support is disabled."
 msgstr ""
 
 #: code/mods/toolbar.php:31
@@ -140,6 +174,7 @@ msgid "Forums"
 msgstr ""
 
 #: code/mods/toolbar.php:70
+#: forms/panels.php:7
 msgid "Views"
 msgstr ""
 
@@ -172,6 +207,7 @@ msgid "Replies"
 msgstr ""
 
 #: code/mods/toolbar.php:140
+#: code/admin.php:46
 #: forms/panels.php:5
 msgid "Settings"
 msgstr ""
@@ -189,7 +225,7 @@ msgid "GD bbPress Attchments"
 msgstr ""
 
 #: code/mods/toolbar.php:171
-#: code/admin.php:30
+#: code/admin.php:31
 msgid "Tools"
 msgstr ""
 
@@ -209,91 +245,100 @@ msgstr ""
 msgid "Dev4Press Homepage"
 msgstr ""
 
-#: code/admin.php:48
-msgid "Website"
+#: code/mods/views.php:23
+#: forms/tabs/views.php:9
+msgid "Topics with most replies"
 msgstr ""
 
-#: code/admin.php:49
-msgid "On Twitter"
-msgstr ""
-
-#: code/admin.php:50
-msgid "On Facebook"
-msgstr ""
-
-#: code/admin.php:54
-msgid "Get Help"
-msgstr ""
-
-#: code/admin.php:55
-msgid "General Plugin Information"
-msgstr ""
-
-#: code/admin.php:56
-msgid "Home Page on Dev4Press.com"
-msgstr ""
-
-#: code/admin.php:57
-msgid "Home Page on WordPress.org"
+#: code/mods/views.php:29
+msgid "Latest topics"
 msgstr ""
 
 #: code/admin.php:58
-msgid "Getting Plugin Support"
+msgid "Website"
 msgstr ""
 
 #: code/admin.php:59
-msgid "Support Forum on Dev4Press.com"
+msgid "On Twitter"
 msgstr ""
 
 #: code/admin.php:60
-msgid "Support Forum on WordPress.org"
+msgid "On Facebook"
 msgstr ""
 
-#: code/admin.php:61
-msgid "Plugin Support Sources"
+#: code/admin.php:64
+msgid "Get Help"
+msgstr ""
+
+#: code/admin.php:65
+msgid "General Plugin Information"
 msgstr ""
 
 #: code/admin.php:66
+msgid "Home Page on Dev4Press.com"
+msgstr ""
+
+#: code/admin.php:67
+msgid "Home Page on WordPress.org"
+msgstr ""
+
+#: code/admin.php:68
+msgid "Getting Plugin Support"
+msgstr ""
+
+#: code/admin.php:69
+msgid "Support Forum on Dev4Press.com"
+msgstr ""
+
+#: code/admin.php:70
+msgid "Support Forum on WordPress.org"
+msgstr ""
+
+#: code/admin.php:71
+msgid "Plugin Support Sources"
+msgstr ""
+
+#: code/admin.php:76
 msgid "On Dev4Press website you can find many useful plugins, themes and tutorials, all for WordPress. Please, take a few minutes to browse some of these resources, you might find some of them very useful."
 msgstr ""
 
-#: code/admin.php:67
+#: code/admin.php:77
 msgid "Plugins"
 msgstr ""
 
-#: code/admin.php:67
+#: code/admin.php:77
 msgid "We have more than 10 plugins available, some of them are commercial and some are available for free."
 msgstr ""
 
-#: code/admin.php:68
+#: code/admin.php:78
 msgid "Themes"
 msgstr ""
 
-#: code/admin.php:68
+#: code/admin.php:78
 msgid "All our themes are based on our own xScape Theme Framework, and only available as premium."
 msgstr ""
 
-#: code/admin.php:69
+#: code/admin.php:79
 msgid "Tutorials"
 msgstr ""
 
-#: code/admin.php:69
+#: code/admin.php:79
 msgid "Premium and free tutorials for our plugins themes, and many general and practical WordPress tutorials."
 msgstr ""
 
-#: code/admin.php:70
+#: code/admin.php:80
 msgid "Central Documentation"
 msgstr ""
 
-#: code/admin.php:70
+#: code/admin.php:80
 msgid "Growing collection of functions, classes, hooks, constants with examples for our plugins and themes."
 msgstr ""
 
-#: code/admin.php:71
+#: code/admin.php:81
 msgid "Support Forums"
 msgstr ""
 
-#: code/admin.php:71
+#: code/admin.php:81
 msgid "Premium support forum for all with valid licenses to get help. Also, report bugs and leave suggestions."
 msgstr ""
 
@@ -353,6 +398,7 @@ msgstr ""
 
 #: forms/tabs/bbcode.php:2
 #: forms/tabs/tools.php:2
+#: forms/tabs/views.php:2
 msgid "Settings saved."
 msgstr ""
 
@@ -367,9 +413,12 @@ msgstr ""
 #: forms/tabs/bbcode.php:14
 #: forms/tabs/bbcode.php:26
 #: forms/tabs/bbcode.php:38
-#: forms/tabs/tools.php:14
-#: forms/tabs/tools.php:63
-#: forms/tabs/tools.php:97
+#: forms/tabs/tools.php:44
+#: forms/tabs/tools.php:100
+#: forms/tabs/tools.php:138
+#: forms/tabs/tools.php:223
+#: forms/tabs/views.php:14
+#: forms/tabs/views.php:28
 msgid "Active"
 msgstr ""
 
@@ -395,62 +444,72 @@ msgstr ""
 
 #: forms/tabs/bbcode.php:50
 #: forms/tabs/bbcode.php:53
+#: forms/tabs/tools.php:151
+#: forms/tabs/tools.php:192
 msgid "Allowed to"
 msgstr ""
 
 #: forms/tabs/bbcode.php:56
-#: forms/tabs/tools.php:45
 #: forms/tabs/tools.php:75
-#: forms/tabs/tools.php:109
+#: forms/tabs/tools.php:112
+#: forms/tabs/tools.php:157
+#: forms/tabs/tools.php:198
+#: forms/tabs/tools.php:235
 msgid "Super Admin"
 msgstr ""
 
-#: forms/tabs/bbcode.php:69
+#: forms/tabs/bbcode.php:68
+#: forms/tabs/tools.php:87
+#: forms/tabs/tools.php:124
+#: forms/tabs/tools.php:169
+#: forms/tabs/tools.php:210
+#: forms/tabs/tools.php:247
+msgid "Capability"
+msgstr ""
+
+#: forms/tabs/bbcode.php:75
 msgid "Restrict action"
 msgstr ""
 
-#: forms/tabs/bbcode.php:72
+#: forms/tabs/bbcode.php:78
 msgid "Replace with notice"
 msgstr ""
 
-#: forms/tabs/bbcode.php:73
+#: forms/tabs/bbcode.php:79
 msgid "Remove from content"
 msgstr ""
 
-#: forms/tabs/bbcode.php:82
+#: forms/tabs/bbcode.php:88
 msgid "List of Standard BBCodes"
 msgstr ""
 
-#: forms/tabs/bbcode.php:102
+#: forms/tabs/bbcode.php:108
 msgid "Align: Center"
 msgstr ""
 
-#: forms/tabs/bbcode.php:106
+#: forms/tabs/bbcode.php:112
 msgid "Align: Right"
 msgstr ""
 
-#: forms/tabs/bbcode.php:110
+#: forms/tabs/bbcode.php:116
 msgid "Align: Left"
 msgstr ""
 
-#: forms/tabs/bbcode.php:114
+#: forms/tabs/bbcode.php:120
 msgid "Align: Justify"
 msgstr ""
 
-#: forms/tabs/bbcode.php:163
+#: forms/tabs/bbcode.php:181
 msgid "List of Advanced BBCodes"
 msgstr ""
 
-#: forms/tabs/bbcode.php:171
-msgid "YouTube"
-msgstr ""
-
-#: forms/tabs/bbcode.php:175
+#: forms/tabs/bbcode.php:201
 msgid "Google Search URL"
 msgstr ""
 
-#: forms/tabs/bbcode.php:186
-#: forms/tabs/tools.php:153
+#: forms/tabs/bbcode.php:212
+#: forms/tabs/tools.php:256
+#: forms/tabs/views.php:37
 msgid "Save Changes"
 msgstr ""
 
@@ -482,123 +541,178 @@ msgid "Free Plugins"
 msgstr ""
 
 #: forms/tabs/tools.php:9
-msgid "Quote Topics and Replies"
-msgstr ""
-
-#: forms/tabs/tools.php:10
-msgid "Add button to quote content for a topic and reply with the author and link. Can use BBCode quote type."
-msgstr ""
-
-#: forms/tabs/tools.php:20
-msgid "Button Location"
-msgstr ""
-
-#: forms/tabs/tools.php:23
-msgid "Reply or Topic header"
-msgstr ""
-
-#: forms/tabs/tools.php:24
-msgid "Reply or Topic content"
-msgstr ""
-
-#: forms/tabs/tools.php:25
-msgid "Both header and content"
-msgstr ""
-
-#: forms/tabs/tools.php:30
-msgid "Quote Method"
-msgstr ""
-
-#: forms/tabs/tools.php:33
-msgid "BBCode"
-msgstr ""
-
-#: forms/tabs/tools.php:34
-msgid "HTML"
-msgstr ""
-
-#: forms/tabs/tools.php:39
-#: forms/tabs/tools.php:42
-msgid "Available to"
-msgstr ""
-
-#: forms/tabs/tools.php:58
-msgid "Toolbar Menu"
-msgstr ""
-
-#: forms/tabs/tools.php:59
-msgid "Add menu to the WordPress toolbar with quick access to both admin and front end side forum related pages."
-msgstr ""
-
-#: forms/tabs/tools.php:69
-msgid "Show menu to"
-msgstr ""
-
-#: forms/tabs/tools.php:72
-msgid "Allow upload to"
-msgstr ""
-
-#: forms/tabs/tools.php:90
-msgid "User Signature"
-msgstr ""
-
-#: forms/tabs/tools.php:91
-msgid "Allow users to create signatures that will be included with their replies or topics. Control length and use of HTML or BBCodes."
-msgstr ""
-
-#: forms/tabs/tools.php:92
-msgid "Limit bbPress access on admin side"
-msgstr ""
-
-#: forms/tabs/tools.php:93
-msgid "Select who can see and access admin side bbPress forums, topics and reply controls. Be careful with this feature."
-msgstr ""
-
-#: forms/tabs/tools.php:103
-msgid "Roles with access"
-msgstr ""
-
-#: forms/tabs/tools.php:106
-msgid "User Roles"
-msgstr ""
-
-#: forms/tabs/tools.php:122
 msgid "JavaScript and CSS Settings"
 msgstr ""
 
-#: forms/tabs/tools.php:123
+#: forms/tabs/tools.php:10
 msgid "You can disable including styles and JavaScript by the plugin, if you want to do it some other way."
 msgstr ""
 
-#: forms/tabs/tools.php:127
+#: forms/tabs/tools.php:14
 msgid "Include JavaScript"
 msgstr ""
 
-#: forms/tabs/tools.php:133
+#: forms/tabs/tools.php:20
 msgid "Include CSS"
 msgstr ""
 
-#: forms/tabs/tools.php:140
+#: forms/tabs/tools.php:27
 msgid "If you use shortcodes to embed forums, and you rely on plugin to add JS and CSS, you also need to enable this option to skip checking for bbPress specific pages."
 msgstr ""
 
-#: forms/tabs/tools.php:144
+#: forms/tabs/tools.php:31
 msgid "Always Include"
+msgstr ""
+
+#: forms/tabs/tools.php:39
+msgid "Quote Topics and Replies"
+msgstr ""
+
+#: forms/tabs/tools.php:40
+msgid "Add button to quote content for a topic and reply with the author and link. Can use BBCode quote type."
+msgstr ""
+
+#: forms/tabs/tools.php:50
+msgid "Button Location"
+msgstr ""
+
+#: forms/tabs/tools.php:53
+msgid "Reply or Topic header"
+msgstr ""
+
+#: forms/tabs/tools.php:54
+msgid "Reply or Topic content"
+msgstr ""
+
+#: forms/tabs/tools.php:55
+msgid "Both header and content"
+msgstr ""
+
+#: forms/tabs/tools.php:60
+msgid "Quote Method"
+msgstr ""
+
+#: forms/tabs/tools.php:63
+#: forms/tabs/tools.php:186
+msgid "BBCode"
+msgstr ""
+
+#: forms/tabs/tools.php:64
+#: forms/tabs/tools.php:187
+msgid "HTML"
+msgstr ""
+
+#: forms/tabs/tools.php:69
+#: forms/tabs/tools.php:72
+msgid "Available to"
+msgstr ""
+
+#: forms/tabs/tools.php:95
+msgid "Toolbar Menu"
+msgstr ""
+
+#: forms/tabs/tools.php:96
+msgid "Add menu to the WordPress toolbar with quick access to both admin and front end side forum related pages."
+msgstr ""
+
+#: forms/tabs/tools.php:106
+msgid "Show menu to"
+msgstr ""
+
+#: forms/tabs/tools.php:109
+msgid "Allow upload to"
+msgstr ""
+
+#: forms/tabs/tools.php:133
+#: forms/tools/signature.php:0
+#: forms/tools/signature.php:2
+msgid "User Signature"
+msgstr ""
+
+#: forms/tabs/tools.php:134
+msgid "Allow users to create signatures that will be included with their replies or topics. Control length and use of HTML or BBCodes."
+msgstr ""
+
+#: forms/tabs/tools.php:144
+msgid "Maximum length"
+msgstr ""
+
+#: forms/tabs/tools.php:147
+msgid "characters"
+msgstr ""
+
+#: forms/tabs/tools.php:154
+#: forms/tabs/tools.php:195
+#: forms/tabs/tools.php:232
+msgid "User Roles"
+msgstr ""
+
+#: forms/tabs/tools.php:177
+msgid "User Signature: HTML / BBCodes Enhanced"
+msgstr ""
+
+#: forms/tabs/tools.php:178
+msgid "Allow users to create rich signature with HTML or BBCodes."
+msgstr ""
+
+#: forms/tabs/tools.php:182
+msgid "Enhanced"
+msgstr ""
+
+#: forms/tabs/tools.php:185
+msgid "Disabled"
+msgstr ""
+
+#: forms/tabs/tools.php:218
+msgid "Limit bbPress access on admin side"
+msgstr ""
+
+#: forms/tabs/tools.php:219
+msgid "Select who can see and access admin side bbPress forums, topics and reply controls. Be careful with this feature."
+msgstr ""
+
+#: forms/tabs/tools.php:229
+msgid "Roles with access"
+msgstr ""
+
+#: forms/tabs/views.php:10
+msgid "This view will show list of topics with most replies."
+msgstr ""
+
+#: forms/tabs/views.php:23
+msgid "Latest Topics"
+msgstr ""
+
+#: forms/tabs/views.php:24
+msgid "This view will show list of topics starting with latest ones."
+msgstr ""
+
+#: forms/tools/signature.php:0
+#: forms/tools/signature.php:2
+msgid "Your Signature"
+msgstr ""
+
+#: forms/tools/signature.php:5
+msgid "Signature"
+msgstr ""
+
+#: forms/tools/signature.php:8
+msgid "Signature length is limited to %s characters."
 msgstr ""
 
 #: forms/panels.php:6
 msgid "BBCodes"
 msgstr ""
 
-#: forms/panels.php:7
+#: forms/panels.php:8
 msgid "FAQ"
 msgstr ""
 
-#: forms/panels.php:8
+#: forms/panels.php:9
 msgid "Dev4Press"
 msgstr ""
 
-#: forms/panels.php:9
+#: forms/panels.php:10
 msgid "About"
 msgstr ""
 

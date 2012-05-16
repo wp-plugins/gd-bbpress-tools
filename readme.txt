@@ -1,25 +1,28 @@
 === GD bbPress Tools ===
 Contributors: GDragoN
 Donate link: http://www.dev4press.com/
-Version: 1.1.0
-Tags: bbpress, tools, gdragon, dev4press, forums, forum, topic, reply, signature, quote, toolbar, admin, bbcode, bbcodes, shortcode, shortcodes
+Version: 1.2.0
+Tags: bbpress, tools, gdragon, dev4press, forums, forum, topic, reply, signature, quote, search, toolbar, signature, views, admin, bbcode, bbcodes, shortcode, shortcodes
 Requires at least: 3.2
 Tested up to: 3.4
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Adds different expansions and tools to the bbPress 2.0 plugin powered forums: BBCode support, toolbar menu, quote, access control...
+Adds different expansions and tools to the bbPress 2.0 plugin powered forums: BBCode support, signatures, custom views, toolbar menu, quote, access control...
 
 == Description ==
 Adds various espansions and tools to the bbPress 2.0 plugin implemented forums. Currently included tools:
 
 * BBCode shortcodes support
 * Quote Reply or Topic
+* User signature with BBCode and HTML support
+* Additional custom views
+* Basic topics search results view
 * Toolbar menu integration
 * Limit bbPress admin side access
 
-Plugin supports BBCodes based on the phpBB implementation. Right now, plugin has 26 BBCodes.
+Plugin supports BBCodes based on the phpBB implementation. Right now, plugin has 30 BBCodes.
 
 Supported languages: English.
 
@@ -43,11 +46,11 @@ Supported languages: English.
 * WordPress: 3.2
 
 = bbPress Requirements =
-* bbPress Plugin: 2.0
+* bbPress Plugin: 2.0 or newer
 
 = Basic Installation =
 * Plugin folder in the WordPress plugins folder must be `gd-bbpress-tools`
-* Upload folder `ggd-bbpress-tools` to the `/wp-content/plugins/` directory
+* Upload folder `gd-bbpress-tools` to the `/wp-content/plugins/` directory
 * Activate the plugin through the 'Plugins' menu in WordPress
 
 == Frequently Asked Questions ==
@@ -64,6 +67,17 @@ No. Plugin requires bbPress 2.0 or higher plugin.
 * English
 
 == Changelog ==
+= 1.2.0 =
+* Added user signature with BBCode and HTML support
+* Added use of capabilities for all plugin features
+* Added support for setting up additional custom views
+* Added BBCodes: Vimeo, Image, Font Size, Font Color
+* Added basic support for topics search results view
+* Allows use of the WordPress rich editor for quoting
+* Allows to quote only selected portion of the text
+* When you click quote button, page will scroll to the form
+* Improvements for the bbPress 2.1 compatibility
+
 = 1.1.0 =
 * Added BBCodes shortcodes support
 * Added quote reply or topic support
@@ -74,10 +88,12 @@ No. Plugin requires bbPress 2.0 or higher plugin.
 * First official release
 
 == Upgrade Notice ==
-= 1.1.0 =
-Added BBCodes shortcodes support. Added quote reply or topic support. Added file with shared functions. Plugin features organized into mods.
+= 1.2.0 =
+Added user signature with BBCode and HTML support. Added use of capabilities for all plugin features. Added support for setting up additional custom views. Added BBCodes: Vimeo, Image, Font Size, Font Color. Added basic support for topics search results view. Allows use of the WordPress rich editor for quoting. Allows to quote only selected portion of the text. When you click quote button, page will scroll to the form. Improvements for the bbPress 2.1 compatibility.
 
 == Screenshots ==
 1. Main plugins settings panel
 2. BBCode settings panel
-3. Toolbar bbPress forums menu
+3. Views settings panel
+4. Toolbar bbPress forums menu
+5. Setting up signature

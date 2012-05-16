@@ -2,9 +2,9 @@
 
 class gdbbPressTools_Defaults {
     var $default_options = array(
-        'version' => '1.1.0',
-        'date' => '2012.05.13.',
-        'build' => 828,
+        'version' => '1.2.0',
+        'date' => '2012.05.16.',
+        'build' => 850,
         'status' => 'Stable',
         'product_id' => 'gd-bbpress-tools',
         'edition' => 'free',
@@ -30,10 +30,24 @@ class gdbbPressTools_Defaults {
         'bbcodes_special_roles' => null,
         'bbcodes_special_action' => 'info',
         'signature_active' => 1,
-        'signature_method' => 'bbcode',
         'signature_length' => 512,
-        'signature_rich_super_admin' => 1,
-        'signature_rich_roles' => null
+        'signature_super_admin' => 1,
+        'signature_roles' => null,
+        'signature_method' => 'bbcode',
+        'signature_enhanced_super_admin' => 1,
+        'signature_enhanced_roles' => null,
+        'view_mostreplies_active' => 1,
+        'view_latesttopics_active' => 1,
+        'view_searchresults_active' => 1
+    );
+
+    var $capabilities = array(
+        'd4p_bbpt_toolbar',
+        'd4p_bbpt_admin_disable',
+        'd4p_bbpt_quote',
+        'd4p_bbpt_bbcodes_special',
+        'd4p_bbpt_signature',
+        'd4p_bbpt_signature_enhanced'
     );
 
     function __construct() { }

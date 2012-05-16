@@ -5,6 +5,7 @@ $current = isset($_GET['tab']) ? $_GET['tab'] : 'tools';
 $tabs = array(
     'tools' => __("Settings", "gd-bbpress-tools"), 
     'bbcode' => __("BBCodes", "gd-bbpress-tools"), 
+    'views' => __("Views", "gd-bbpress-tools"), 
     'faq' => __("FAQ", "gd-bbpress-tools"), 
     'd4p' => __("Dev4Press", "gd-bbpress-tools"), 
     'about' => __("About", "gd-bbpress-tools")

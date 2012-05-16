@@ -44,7 +44,7 @@
             </tbody>
         </table>
         <h3><?php _e("Advanced BBCodes", "gd-bbpress-tools"); ?></h3>
-        <p><?php echo sprintf(__("Some bbcodes can be available only to selected user roles. This include: %s.", "gd-bbpress-tools"), 'URL, YOUTUBE, GOOGLE, NOTE'); ?></p>
+        <p><?php echo sprintf(__("Some bbcodes can be available only to selected user roles. This include: %s.", "gd-bbpress-tools"), 'URL, YOUTUBE, VIMEO, GOOGLE, IMG, NOTE'); ?></p>
         <table class="form-table">
             <tbody>
                 <tr valign="top">
@@ -63,6 +63,12 @@
                             </label><br/>
                             <?php } ?>
                         </fieldset>
+                    </td>
+                </tr>
+                <tr valign="top">
+                    <th scope="row"><?php _e("Capability", "gd-bbpress-tools") ?></th>
+                    <td>
+                        <strong>d4p_bbpt_bbcodes_special</strong>
                     </td>
                 </tr>
                 <tbody>
@@ -128,6 +134,18 @@
                     <td>[sup]{content}[/sup]</td>
                 </tr>
                 <tr valign="top">
+                    <th scope="row"><?php _e("Reverse", "gd-bbpress-tools"); ?></th>
+                    <td>[reverse]{content}[/reverse]</td>
+                </tr>
+                <tr valign="top">
+                    <th scope="row"><?php _e("Font Size", "gd-bbpress-tools"); ?></th>
+                    <td>[size={size}]{content}[/size]</td>
+                </tr>
+                <tr valign="top">
+                    <th scope="row"><?php _e("Font Color", "gd-bbpress-tools"); ?></th>
+                    <td>[color={color}]{content}[/color]</td>
+                </tr>
+                <tr valign="top">
                     <th scope="row"><?php _e("Preformatted", "gd-bbpress-tools"); ?></th>
                     <td>[pre]{content}[/pre]</td>
                 </tr>
@@ -169,8 +187,16 @@
                     <td>[url]{link}[/url]<br/>[url=link]{text}[/url]</td>
                 </tr>
                 <tr valign="top">
-                    <th scope="row"><?php _e("YouTube", "gd-bbpress-tools"); ?></th>
+                    <th scope="row"><?php _e("Image", "gd-bbpress-tools"); ?></th>
+                    <td>[img]{image_url}[/img]<br/>[img={width}x{height}]{image_url}[/img]<br/>[img width={x} height={y}]{image_url}[/img]</td>
+                </tr>
+                <tr valign="top">
+                    <th scope="row"><?php _e("YouTube Video", "gd-bbpress-tools"); ?></th>
                     <td>[youtube]{id}[/youtube]<br/>[youtube width={x} height={y}]{id}[/youtube]</td>
+                </tr>
+                <tr valign="top">
+                    <th scope="row"><?php _e("Vimeo Video", "gd-bbpress-tools"); ?></th>
+                    <td>[vimeo]{id}[/vimeo]<br/>[vimeo width={x} height={y}]{id}[/vimeo]</td>
                 </tr>
                 <tr valign="top">
                     <th scope="row"><?php _e("Google Search URL", "gd-bbpress-tools"); ?></th>
@@ -184,5 +210,5 @@
         </table>
     </div>
     <div class="d4p-clear"></div>
-    <p class="submit"><input type="submit" value="<?php _e("Save Changes", "gd-bbpress-tools"); ?>" class="button-primary" id="gdbb-tools-submit" name="gdbb-bbcode-submit" /></p>
+    <p class="submit"><input type="submit" value="<?php _e("Save Changes", "gd-bbpress-tools"); ?>" class="button-primary" id="gdbb-bbcode-submit" name="gdbb-bbcode-submit" /></p>
 </form>

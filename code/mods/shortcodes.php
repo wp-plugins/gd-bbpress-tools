@@ -129,6 +129,14 @@ class gdbbTls_Shortcodes {
                 'name' => __("Horizontal Line", "gd-bbpress-tools"),
                 'atts' => array('style' => '', 'class' => '')
             ),
+            'size' => array(
+                'name' => __("Font Size", "gd-bbpress-tools"),
+                'atts' => array('style' => '', 'class' => '', 'raw' => 0)
+            ),
+            'color' => array(
+                'name' => __("Font Color", "gd-bbpress-tools"),
+                'atts' => array('style' => '', 'class' => '', 'raw' => 0)
+            ),
             'quote' => array(
                 'name' => __("Quote", "gd-bbpress-tools"),
                 'atts' => array('style' => '', 'class' => '', 'raw' => 1)
@@ -141,9 +149,17 @@ class gdbbTls_Shortcodes {
                 'name' => __("Google Search", "gd-bbpress-tools"),
                 'atts' => array('style' => '', 'class' => '', 'target' => '_blank', 'rel' => '', 'raw' => 0)
             ),
+            'img' => array(
+                'name' => __("Image", "gd-bbpress-tools"),
+                'atts' => array('style' => '', 'class' => '', 'alt' => '', 'title' => '', 'width' => '', 'height' => '')
+            ),
             'youtube' => array(
                 'name' => __("YouTube Video", "gd-bbpress-tools"),
-                'atts' => array('style' => '', 'class' => '', 'width' => 0, 'height' => 0)
+                'atts' => array('style' => '', 'class' => '', 'width' => '', 'height' => '')
+            ),
+            'vimeo' => array(
+                'name' => __("Vimeo Video", "gd-bbpress-tools"),
+                'atts' => array('style' => '', 'class' => '', 'width' => '', 'height' => '')
             ),
             'note' => array(
                 'name' => __("Note", "gd-bbpress-tools"),
@@ -369,6 +385,42 @@ class gdbbTls_Shortcodes {
         return $this->_simple('div', 'div', 'div', $atts, $content);
     }
 
+    public function shortcode_size($atts, $content = null) {
+        if (is_null($content)) return '';
+        if (!$this->_scope()) return $content;
+
+        $atts = $this->_atts('size', $atts);
+        $args = isset($this->shortcodes['size']['args']) ? $this->shortcodes['size']['args'] : array();
+
+        if ($atts['size'] != '') {
+            $args['style'] = 'font-size: '.$atts['size'];
+
+            if (is_numeric($atts['size'])) {
+                $args['style'].= 'px';
+            }
+
+            unset($atts['size']);
+        }
+
+        return $this->_tag('span', 'font-size', $content, $atts, $args);
+    }
+
+    public function shortcode_color($atts, $content = null) {
+        if (is_null($content)) return '';
+        if (!$this->_scope()) return $content;
+
+        $atts = $this->_atts('color', $atts);
+        $args = isset($this->shortcodes['color']['args']) ? $this->shortcodes['color']['args'] : array();
+
+        if ($atts['color'] != '') {
+            $args['style'] = 'color: '.$atts['color'];
+
+            unset($atts['color']);
+        }
+
+        return $this->_tag('span', 'font-color', $content, $atts, $args);
+    }
+
     public function shortcode_area($atts, $content = null) {
         if (is_null($content)) return '';
         if (!$this->_scope()) return $content;
@@ -423,6 +475,26 @@ class gdbbTls_Shortcodes {
         return $this->_tag('a', 'url', $content, $atts, $args);
     }
 
+    public function shortcode_img($atts, $content = null) {
+        if (is_null($content)) return '';
+        if (!$this->_scope()) return $content;
+
+        $atts = $this->_atts('img', $atts);
+        $args = isset($this->shortcodes['img']['args']) ? $this->shortcodes['img']['args'] : array();
+        $args['src'] = $content;
+
+        if ($atts['img'] != '') {
+            $parts = explode("x", $atts['img'], 2);
+
+            if (count($parts) == 2) {
+                $args['width'] = intval($parts[0]);
+                $args['height'] = intval($parts[1]);
+            }
+        }
+
+        return $this->_tag('img', 'image', null, $atts, $args);
+    }
+
     public function shortcode_google($atts, $content = null) {
         if (is_null($content)) return '';
         if (!$this->_scope()) return $content;
@@ -450,6 +522,22 @@ class gdbbTls_Shortcodes {
         $atts = $this->_atts('youtube', $atts);
 
         $url = 'http://www.youtube.com/watch?v='.$content;
+
+        $data = array();
+        if ($atts['width'] > 0) $data['width'] = $atts['width'];
+        if ($atts['height'] > 0) $data['height'] = $atts['height'];
+
+        global $wp_embed;
+        return $wp_embed->shortcode($data, $url);
+    }
+
+    public function shortcode_vimeo($atts, $content = null) {
+        if (is_null($content)) return '';
+        if (!$this->_scope()) return $content;
+
+        $atts = $this->_atts('vimeo', $atts);
+
+        $url = 'http://www.vimeo.com/'.$content;
 
         $data = array();
         if ($atts['width'] > 0) $data['width'] = $atts['width'];

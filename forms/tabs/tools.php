@@ -7,6 +7,36 @@
 <form action="" method="post">
     <?php wp_nonce_field("gd-bbpress-tools"); ?>
     <div class="d4p-settings">
+        <h3><?php _e("JavaScript and CSS Settings", "gd-bbpress-tools"); ?></h3>
+        <p><?php _e("You can disable including styles and JavaScript by the plugin, if you want to do it some other way.", "gd-bbpress-tools"); ?></p>
+        <table class="form-table">
+            <tbody>
+                <tr valign="top">
+                    <th scope="row"><label for="include_js"><?php _e("Include JavaScript", "gd-bbpress-tools"); ?></label></th>
+                    <td>
+                        <input type="checkbox" <?php if ($options["include_js"] == 1) echo " checked"; ?> name="include_js" />
+                    </td>
+                </tr>
+                <tr valign="top">
+                    <th scope="row"><label for="include_css"><?php _e("Include CSS", "gd-bbpress-tools"); ?></label></th>
+                    <td>
+                        <input type="checkbox" <?php if ($options["include_css"] == 1) echo " checked"; ?> name="include_css" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p><?php _e("If you use shortcodes to embed forums, and you rely on plugin to add JS and CSS, you also need to enable this option to skip checking for bbPress specific pages.", "gd-bbpress-tools"); ?></p>
+        <table class="form-table">
+            <tbody>
+                <tr valign="top">
+                    <th scope="row"><label for="include_always"><?php _e("Always Include", "gd-bbpress-tools"); ?></label></th>
+                    <td>
+                        <input type="checkbox" <?php if ($options["include_always"] == 1) echo " checked"; ?> name="include_always" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
         <h3><?php _e("Quote Topics and Replies", "gd-bbpress-tools"); ?></h3>
         <p><?php _e("Add button to quote content for a topic and reply with the author and link. Can use BBCode quote type.", "gd-bbpress-tools"); ?></p>
         <table class="form-table">
@@ -54,8 +84,15 @@
                         </fieldset>
                     </td>
                 </tr>
+                <tr valign="top">
+                    <th scope="row"><?php _e("Capability", "gd-bbpress-tools") ?></th>
+                    <td>
+                        <strong>d4p_bbpt_quote</strong>
+                    </td>
+                </tr>
             </tbody>
         </table>
+
         <h3><?php _e("Toolbar Menu", "gd-bbpress-tools"); ?></h3>
         <p><?php _e("Add menu to the WordPress toolbar with quick access to both admin and front end side forum related pages.", "gd-bbpress-tools"); ?></p>
         <table class="form-table">
@@ -84,12 +121,101 @@
                         </fieldset>
                     </td>
                 </tr>
+                <tr valign="top">
+                    <th scope="row"><?php _e("Capability", "gd-bbpress-tools") ?></th>
+                    <td>
+                        <strong>d4p_bbpt_toolbar</strong>
+                    </td>
+                </tr>
             </tbody>
         </table>
     </div>
     <div class="d4p-settings-second">
-        <!-- <h3><?php _e("User Signature", "gd-bbpress-tools"); ?></h3>
-        <p><?php _e("Allow users to create signatures that will be included with their replies or topics. Control length and use of HTML or BBCodes.", "gd-bbpress-tools"); ?></p>-->
+        <h3><?php _e("User Signature", "gd-bbpress-tools"); ?></h3>
+        <p><?php _e("Allow users to create signatures that will be included with their replies or topics. Control length and use of HTML or BBCodes.", "gd-bbpress-tools"); ?></p>
+        <table class="form-table">
+            <tbody>
+                <tr valign="top">
+                    <th scope="row"><label for="signature_active"><?php _e("Active", "gd-bbpress-tools"); ?></label></th>
+                    <td>
+                        <input type="checkbox" <?php if ($options["signature_active"] == 1) echo " checked"; ?> name="signature_active" />
+                    </td>
+                </tr>
+                <tr valign="top">
+                    <th scope="row"><label for="signature_length"><?php _e("Maximum length", "gd-bbpress-tools"); ?></label></th>
+                    <td>
+                        <input type="text" class="small-text" value="<?php echo $options["signature_length"]; ?>" id="signature_length" name="signature_length" />
+                        <span class="description"><?php _e("characters", "gd-bbpress-tools"); ?></span>
+                    </td>
+                </tr>
+                <tr valign="top">
+                    <th scope="row"><?php _e("Allowed to", "gd-bbpress-tools") ?></th>
+                    <td>
+                        <fieldset>
+                            <legend class="screen-reader-text"><span><?php _e("User Roles", "gd-bbpress-tools"); ?></span></legend>
+                            <label for="signature_super_admin">
+                                <input type="checkbox" <?php if ($options["signature_super_admin"] == 1) echo " checked"; ?> name="signature_super_admin" />
+                                <?php _e("Super Admin", "gd-bbpress-tools"); ?>
+                            </label><br/>
+                            <?php foreach ($wp_roles->role_names as $role => $title) { ?>
+                            <label for="signature_roles_<?php echo $role; ?>">
+                                <input type="checkbox" <?php if (!isset($options["signature_roles"]) || is_null($options["signature_roles"]) || in_array($role, $options["signature_roles"])) echo " checked"; ?> value="<?php echo $role; ?>" id="signature_roles_<?php echo $role; ?>" name="signature_roles[]" />
+                                <?php echo $title; ?>
+                            </label><br/>
+                            <?php } ?>
+                        </fieldset>
+                    </td>
+                </tr>
+                <tr valign="top">
+                    <th scope="row"><?php _e("Capability", "gd-bbpress-tools") ?></th>
+                    <td>
+                        <strong>d4p_bbpt_signature</strong>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3><?php _e("User Signature: HTML / BBCodes Enhanced", "gd-bbpress-tools"); ?></h3>
+        <p><?php _e("Allow users to create rich signature with HTML or BBCodes.", "gd-bbpress-tools"); ?></p>
+        <table class="form-table">
+            <tbody>
+                <tr valign="top">
+                    <th scope="row"><label><?php _e("Enhanced", "gd-bbpress-tools"); ?></label></th>
+                    <td>
+                        <select name="signature_method" class="regular-text">
+                            <option value="off"<?php if ($options["signature_method"] == "off") echo ' selected="selected"'; ?>><?php _e("Disabled", "gd-bbpress-tools"); ?></option>
+                            <option value="bbcode"<?php if ($options["signature_method"] == "bbcode") echo ' selected="selected"'; ?>><?php _e("BBCode", "gd-bbpress-tools"); ?></option>
+                            <option value="html"<?php if ($options["signature_method"] == "html") echo ' selected="selected"'; ?>><?php _e("HTML", "gd-bbpress-tools"); ?></option>
+                        </select>
+                    </td>
+                </tr>
+                <tr valign="top">
+                    <th scope="row"><?php _e("Allowed to", "gd-bbpress-tools") ?></th>
+                    <td>
+                        <fieldset>
+                            <legend class="screen-reader-text"><span><?php _e("User Roles", "gd-bbpress-tools"); ?></span></legend>
+                            <label for="signature_enhanced_super_admin">
+                                <input type="checkbox" <?php if ($options["signature_enhanced_super_admin"] == 1) echo " checked"; ?> name="signature_enhanced_super_admin" />
+                                <?php _e("Super Admin", "gd-bbpress-tools"); ?>
+                            </label><br/>
+                            <?php foreach ($wp_roles->role_names as $role => $title) { ?>
+                            <label for="signature_enhanced_roles_<?php echo $role; ?>">
+                                <input type="checkbox" <?php if (!isset($options["signature_enhanced_roles"]) || is_null($options["signature_enhanced_roles"]) || in_array($role, $options["signature_enhanced_roles"])) echo " checked"; ?> value="<?php echo $role; ?>" id="signature_enhanced_roles_<?php echo $role; ?>" name="signature_enhanced_roles[]" />
+                                <?php echo $title; ?>
+                            </label><br/>
+                            <?php } ?>
+                        </fieldset>
+                    </td>
+                </tr>
+                <tr valign="top">
+                    <th scope="row"><?php _e("Capability", "gd-bbpress-tools") ?></th>
+                    <td>
+                        <strong>d4p_bbpt_signature_enhanced</strong>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
         <h3><?php _e("Limit bbPress access on admin side", "gd-bbpress-tools"); ?></h3>
         <p><?php _e("Select who can see and access admin side bbPress forums, topics and reply controls. Be careful with this feature.", "gd-bbpress-tools"); ?></p>
         <table class="form-table">
@@ -118,33 +244,10 @@
                         </fieldset>
                     </td>
                 </tr>
-            </tbody>
-        </table>
-        <h3><?php _e("JavaScript and CSS Settings", "gd-bbpress-tools"); ?></h3>
-        <p><?php _e("You can disable including styles and JavaScript by the plugin, if you want to do it some other way.", "gd-bbpress-tools"); ?></p>
-        <table class="form-table">
-            <tbody>
                 <tr valign="top">
-                    <th scope="row"><label for="include_js"><?php _e("Include JavaScript", "gd-bbpress-tools"); ?></label></th>
+                    <th scope="row"><?php _e("Capability", "gd-bbpress-tools") ?></th>
                     <td>
-                        <input type="checkbox" <?php if ($options["include_js"] == 1) echo " checked"; ?> name="include_js" />
-                    </td>
-                </tr>
-                <tr valign="top">
-                    <th scope="row"><label for="include_css"><?php _e("Include CSS", "gd-bbpress-tools"); ?></label></th>
-                    <td>
-                        <input type="checkbox" <?php if ($options["include_css"] == 1) echo " checked"; ?> name="include_css" />
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <p><?php _e("If you use shortcodes to embed forums, and you rely on plugin to add JS and CSS, you also need to enable this option to skip checking for bbPress specific pages.", "gd-bbpress-tools"); ?></p>
-        <table class="form-table">
-            <tbody>
-                <tr valign="top">
-                    <th scope="row"><label for="include_always"><?php _e("Always Include", "gd-bbpress-tools"); ?></label></th>
-                    <td>
-                        <input type="checkbox" <?php if ($options["include_always"] == 1) echo " checked"; ?> name="include_always" />
+                        <strong>d4p_bbpt_admin_disable</strong>
                     </td>
                 </tr>
             </tbody>

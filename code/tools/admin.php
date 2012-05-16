@@ -14,6 +14,19 @@ class gdbbTls_Admin {
     }
 
     public function admin_init() {
+        if (isset($_POST['gdbb-views-submit'])) {
+            global $gdbbpress_tools;
+            check_admin_referer('gd-bbpress-tools');
+
+            $gdbbpress_tools->o['view_mostreplies_active'] = isset($_POST['view_mostreplies_active']) ? 1 : 0;
+            $gdbbpress_tools->o['view_latesttopics_active'] = isset($_POST['view_latesttopics_active']) ? 1 : 0;
+            $gdbbpress_tools->o['view_searchresults_active'] = isset($_POST['view_searchresults_active']) ? 1 : 0;
+
+            update_option('gd-bbpress-tools', $gdbbpress_tools->o);
+            wp_redirect(add_query_arg('settings-updated', 'true'));
+            exit();
+        }
+
         if (isset($_POST['gdbb-bbcode-submit'])) {
             global $gdbbpress_tools;
             check_admin_referer('gd-bbpress-tools');
@@ -44,10 +57,17 @@ class gdbbTls_Admin {
             $gdbbpress_tools->o['quote_roles'] = (array)$_POST['quote_roles'];
             $gdbbpress_tools->o['toolbar_active'] = isset($_POST['toolbar_active']) ? 1 : 0;
             $gdbbpress_tools->o['toolbar_super_admin'] = isset($_POST['toolbar_super_admin']) ? 1 : 0;
+            $gdbbpress_tools->o['toolbar_roles'] = (array)$_POST['toolbar_roles'];
             $gdbbpress_tools->o['admin_disable_active'] = isset($_POST['admin_disable_active']) ? 1 : 0;
             $gdbbpress_tools->o['admin_disable_super_admin'] = isset($_POST['admin_disable_super_admin']) ? 1 : 0;
-            $gdbbpress_tools->o['toolbar_roles'] = (array)$_POST['toolbar_roles'];
             $gdbbpress_tools->o['admin_disable_roles'] = (array)$_POST['admin_disable_roles'];
+            $gdbbpress_tools->o['signature_active'] = isset($_POST['signature_active']) ? 1 : 0;
+            $gdbbpress_tools->o['signature_length'] = intval($_POST['signature_length']);
+            $gdbbpress_tools->o['signature_super_admin'] = isset($_POST['signature_super_admin']) ? 1 : 0;
+            $gdbbpress_tools->o['signature_roles'] = (array)$_POST['signature_roles'];
+            $gdbbpress_tools->o['signature_method'] = $_POST['signature_method'];
+            $gdbbpress_tools->o['signature_enhanced_super_admin'] = isset($_POST['signature_enhanced_super_admin']) ? 1 : 0;
+            $gdbbpress_tools->o['signature_enhanced_roles'] = (array)$_POST['signature_enhanced_roles'];
 
             update_option('gd-bbpress-tools', $gdbbpress_tools->o);
             wp_redirect(add_query_arg('settings-updated', 'true'));

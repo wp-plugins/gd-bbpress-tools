@@ -2,15 +2,31 @@
 
 var gdbbPressTools = {
     storage: { },
+    get_selection: function() {
+        var t = '';
+
+        if (window.getSelection){
+            t = window.getSelection();
+        } else if (document.getSelection){
+            t = document.getSelection();
+        } else if (document.selection){
+            t = document.selection.createRange().text;
+        }
+
+        return t.toString().trim();
+    },
     init: function() {
         jQuery(".d4p-bbt-quote-link").live("click", function(e){
             e.preventDefault();
 
-            var id = jQuery(this).attr("href").substr(1);
-            var quote_id = '#d4p-bbp-quote-' + id;
-
             if (jQuery("#bbp_reply_content").length > 0) {
-                var qout = jQuery(quote_id).html();
+                var qout = gdbbPressTools.get_selection();
+                var id = jQuery(this).attr("href").substr(1);
+                var quote_id = '#d4p-bbp-quote-' + id;
+
+                if (qout == '') {
+                    qout = jQuery(quote_id).html();
+                }
 
                 qout = qout.replace(/&nbsp;/g, " ");
                 qout = qout.replace(/<p>/g, "");
@@ -24,14 +40,20 @@ var gdbbPressTools = {
                     qout = '<blockquote class="d4pbbc-quote">' + title + qout + '</blockquote>';
                 }
 
-                var txtr = jQuery("#bbp_reply_content");
-                var cntn = txtr.val();
+                if (gdbbPressToolsInit.wp_editor == 1) {
+                    tinyMCE.execInstanceCommand("bbp_reply_content", "mceInsertContent", false, qout);
+                } else {
+                    var txtr = jQuery("#bbp_reply_content");
+                    var cntn = txtr.val();
 
-                if (cntn.trim() != '') {
-                    qout = "\n\n" + qout;
+                    if (cntn.trim() != '') {
+                        qout = "\n\n" + qout;
+                    }
+
+                    txtr.val(cntn + qout);
                 }
 
-                txtr.val(cntn + qout);
+                jQuery("html, body").animate({scrollTop: jQuery("#new-post").offset().top}, 1000);
             }
         });
     }

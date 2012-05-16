@@ -10,7 +10,7 @@ class gdbbPressTools {
     public $l;
     public $o;
 
-    public $mod = array('a' => null, 's' => null, 'q' => null, 't' => null);
+    public $mod = array('a' => null, 'i' => null, 's' => null, 'q' => null, 't' => null, 'v' => null);
 
     function __construct() {
         $this->_init();
@@ -79,6 +79,15 @@ class gdbbPressTools {
             $this->mod['a'] = new gdbbTls_Access();
         }
 
+        if ($this->o['signature_active'] == 1 && d4p_bbt_is_role('signature')) {
+            require_once(GDBBPRESSTOOLS_PATH.'code/mods/signature.php');
+
+            $this->mod['i'] = new gdbbTls_Signature(
+                    $this->o['signature_length'], 
+                    d4p_bbt_is_role('signature_enhanced'),
+                    $this->o['signature_method']);
+        }
+
         if ($this->o['bbcodes_active'] == 1) {
             require_once(GDBBPRESSTOOLS_PATH.'code/mods/shortcodes.php');
 
@@ -100,6 +109,26 @@ class gdbbPressTools {
             require_once(GDBBPRESSTOOLS_PATH.'code/mods/toolbar.php');
 
             $this->mod['t'] = new gdbbTls_Toolbar();
+        }
+
+        $views = array();
+        $active = false;
+        foreach ($this->o as $key => $val) {
+            if (substr($key, 0, 5) == 'view_') {
+                $parts = explode('_', $key, 3);
+                $views[$parts[1]][$parts[2]] = $val;
+
+                if (!$active && $parts[2] == 'active' && $val == 1) {
+                    $active = true;
+                }
+            }
+        }
+
+        if ($active) {
+            require_once(GDBBPRESSTOOLS_PATH.'code/mods/views.php');
+
+            $this->mod['s'] = new gdbbTls_Views(
+                    $views);
         }
     }
 

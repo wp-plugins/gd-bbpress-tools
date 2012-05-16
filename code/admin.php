@@ -9,12 +9,13 @@ class gdbbT_Admin {
     private $admin_plugin = false;
 
     function __construct() {
-        add_action('after_setup_theme', array($this, 'load'), 10);
+        add_action('after_setup_theme', array($this, 'load'));
     }
 
     public function load() {
         add_action('admin_init', array(&$this, 'admin_init'));
         add_action('admin_menu', array(&$this, 'admin_menu'));
+        add_filter('plugin_action_links', array(&$this, 'plugin_actions'), 10, 2);
     }
 
     public function admin_init() {
@@ -39,6 +40,15 @@ class gdbbT_Admin {
         foreach ($this->page_ids as $id) {
             add_action('load-'.$id, array(&$this, 'load_admin_page'));
         }
+    }
+
+    public function plugin_actions($links, $file) {
+        if ($file == 'gd-bbpress-tools/gd-bbpress-tools.php' ){
+            $settings_link = '<a href="edit.php?post_type=forum&page=gdbbpress_tools">'.__("Settings", "gd-bbpress-tools").'</a>';
+            array_unshift($links, $settings_link);
+        }
+
+        return $links;
     }
 
     public function load_admin_page() {
