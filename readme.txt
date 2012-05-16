@@ -1,7 +1,7 @@
 === GD bbPress Tools ===
 Contributors: GDragoN
 Donate link: http://www.dev4press.com/
-Version: 1.2.0
+Version: 1.2.1
 Tags: bbpress, tools, gdragon, dev4press, forums, forum, topic, reply, signature, quote, search, toolbar, signature, views, admin, bbcode, bbcodes, shortcode, shortcodes
 Requires at least: 3.2
 Tested up to: 3.4
@@ -9,10 +9,10 @@ Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Adds different expansions and tools to the bbPress 2.0 plugin powered forums: BBCode support, signatures, custom views, toolbar menu, quote, access control...
+Adds different expansions and tools to the bbPress 2.0 plugin powered forums: BBCode support, signatures, custom views, quote...
 
 == Description ==
-Adds various espansions and tools to the bbPress 2.0 plugin implemented forums. Currently included tools:
+Adds various expansions and tools to the bbPress 2.0 plugin implemented forums. Currently included features:
 
 * BBCode shortcodes support
 * Quote Reply or Topic
@@ -35,6 +35,7 @@ Supported languages: English.
 
 = More from dev4Press.com for bbPress =
 * [GD bbPress Attachments](http://wordpress.org/extend/plugins/gd-bbpress-attachments/) - attachments for topics and replies
+* [GD bbPress Widgets](http://wordpress.org/extend/plugins/gd-bbpress-widgets/) - additional widgets for bbpress
 * [GD CPT Tools Pro](http://www.gdcpttools.com/features/bbpress-integration/) - meta box for the topic and reply form
 
 == Installation ==
@@ -67,6 +68,11 @@ No. Plugin requires bbPress 2.0 or higher plugin.
 * English
 
 == Changelog ==
+= 1.2.1 =
+* Updated readme.txt with more information
+* Fixed broken links in the context help
+* Fixed invalid display of user signatures
+
 = 1.2.0 =
 * Added user signature with BBCode and HTML support
 * Added use of capabilities for all plugin features
@@ -88,8 +94,8 @@ No. Plugin requires bbPress 2.0 or higher plugin.
 * First official release
 
 == Upgrade Notice ==
-= 1.2.0 =
-Added user signature with BBCode and HTML support. Added use of capabilities for all plugin features. Added support for setting up additional custom views. Added BBCodes: Vimeo, Image, Font Size, Font Color. Added basic support for topics search results view. Allows use of the WordPress rich editor for quoting. Allows to quote only selected portion of the text. When you click quote button, page will scroll to the form. Improvements for the bbPress 2.1 compatibility.
+= 1.2.1 =
+Updated readme.txt with FAQ and info. Fixed broken links in the context help. Fixed invalid display of user signatures.
 
 == Screenshots ==
 1. Main plugins settings panel

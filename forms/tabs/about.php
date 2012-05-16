@@ -29,8 +29,8 @@
 </div>
 <div class="d4p-information-second">
     <h3><?php _e("Important Plugin Links", "gd-bbpress-tools"); ?></h3>
-    <a target="_blank" href="http://www.dev4press.com/plugins/gd-bbpress-tools/">GD bbPress Attachments <?php _e("Home Page", "gd-bbpress-tools"); ?></a><br/>
-    <a target="_blank" href="http://wordpress.org/extend/plugins/gd-bbpress-tools/">GD bbPress Attachments <?php _e("on", "gd-bbpress-tools"); ?> WordPress.org</a>
+    <a target="_blank" href="http://www.dev4press.com/plugins/gd-bbpress-tools/">GD bbPress Tools <?php _e("Home Page", "gd-bbpress-tools"); ?></a><br/>
+    <a target="_blank" href="http://wordpress.org/extend/plugins/gd-bbpress-tools/">GD bbPress Tools <?php _e("on", "gd-bbpress-tools"); ?> WordPress.org</a>
     <h3><?php _e("Plugin Support", "gd-bbpress-tools"); ?></h3>
     <a target="_blank" href="http://www.dev4press.com/forums/forum/free-plugins/gd-bbpress-tools/"><?php _e("Plugin Support Forum on Dev4Press", "gd-bbpress-tools"); ?></a><br/>
     <h3><?php _e("Dev4Press Important Links", "gd-bbpress-tools"); ?></h3>

@@ -62,7 +62,9 @@ class gdbbTls_Signature {
     }
 
     public function reply_content($content) {
-        $user_id = get_current_user_id();
+        global $post;
+        $user_id = $post->post_author;
+
         $sig = get_user_meta($user_id, 'signature', true);
         $sig = $this->format_signature($sig);
 

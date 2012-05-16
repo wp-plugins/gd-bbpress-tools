@@ -64,12 +64,12 @@ class gdbbT_Admin {
             "id" => "gdpt-screenhelp-help",
             "title" => __("Get Help", "gd-bbpress-tools"),
             "content" => '<h5>'.__("General Plugin Information", "gd-bbpress-tools").'</h5>
-                <p><a href="http://www.dev4press.com/plugins/gd-bbpress-attachments/" target="_blank">'.__("Home Page on Dev4Press.com", "gd-bbpress-tools").'</a> | 
-                <a href="http://wordpress.org/extend/plugins/gd-bbpress-attachments/" target="_blank">'.__("Home Page on WordPress.org", "gd-bbpress-tools").'</a></p> 
+                <p><a href="http://www.dev4press.com/plugins/gd-bbpress-tools/" target="_blank">'.__("Home Page on Dev4Press.com", "gd-bbpress-tools").'</a> | 
+                <a href="http://wordpress.org/extend/plugins/gd-bbpress-tools/" target="_blank">'.__("Home Page on WordPress.org", "gd-bbpress-tools").'</a></p> 
                 <h5>'.__("Getting Plugin Support", "gd-bbpress-tools").'</h5>
-                <p><a href="http://www.dev4press.com/forums/forum/free-plugins/gd-bbpress-attachments/" target="_blank">'.__("Support Forum on Dev4Press.com", "gd-bbpress-tools").'</a> | 
-                <a href="http://wordpress.org/tags/gd-bbpress-attachments?forum_id=10" target="_blank">'.__("Support Forum on WordPress.org", "gd-bbpress-tools").'</a> | 
-                <a href="http://www.dev4press.com/plugins/gd-bbpress-attachments/support/" target="_blank">'.__("Plugin Support Sources", "gd-bbpress-tools").'</a></p>'));
+                <p><a href="http://www.dev4press.com/forums/forum/free-plugins/gd-bbpress-tools/" target="_blank">'.__("Support Forum on Dev4Press.com", "gd-bbpress-tools").'</a> | 
+                <a href="http://wordpress.org/tags/gd-bbpress-tools?forum_id=10" target="_blank">'.__("Support Forum on WordPress.org", "gd-bbpress-tools").'</a> | 
+                <a href="http://www.dev4press.com/plugins/gd-bbpress-tools/support/" target="_blank">'.__("Plugin Support Sources", "gd-bbpress-tools").'</a></p>'));
 
         $screen->add_help_tab(array(
             "id" => "gdpt-screenhelp-website",

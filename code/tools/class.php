@@ -35,38 +35,38 @@ class gdbbPressTools {
 
     private function _init() {
         global $wp_version;
-        $this->wp_version = substr(str_replace(".", "", $wp_version), 0, 2);
-        define("GDBBPRESSTOOLS_WPV", intval($this->wp_version));
+        $this->wp_version = substr(str_replace('.', '', $wp_version), 0, 2);
+        define('GDBBPRESSTOOLS_WPV', intval($this->wp_version));
 
         $gdd = new gdbbPressTools_Defaults();
 
-        $this->o = get_option("gd-bbpress-tools");
+        $this->o = get_option('gd-bbpress-tools');
         if (!is_array($this->o)) {
             $this->o = $gdd->default_options;
-            update_option("gd-bbpress-tools", $this->o);
+            update_option('gd-bbpress-tools', $this->o);
         }
 
-        if ($this->o["build"] != $gdd->default_options["build"]) {
+        if ($this->o['build'] != $gdd->default_options['build']) {
             $this->o = $this->_upgrade($this->o, $gdd->default_options);
 
-            $this->o["version"] = $gdd->default_options["version"];
-            $this->o["date"] = $gdd->default_options["date"];
-            $this->o["status"] = $gdd->default_options["status"];
-            $this->o["build"] = $gdd->default_options["build"];
-            $this->o["revision"] = $gdd->default_options["revision"];
-            $this->o["edition"] = $gdd->default_options["edition"];
+            $this->o['version'] = $gdd->default_options['version'];
+            $this->o['date'] = $gdd->default_options['date'];
+            $this->o['status'] = $gdd->default_options['status'];
+            $this->o['build'] = $gdd->default_options['build'];
+            $this->o['revision'] = $gdd->default_options['revision'];
+            $this->o['edition'] = $gdd->default_options['edition'];
 
-            update_option("gd-bbpress-tools", $this->o);
+            update_option('gd-bbpress-tools', $this->o);
         }
 
-        define("GDBBPRESSTOOLS_INSTALLED", $gdd->default_options["version"]." Free");
-        define("GDBBPRESSTOOLS_VERSION", $gdd->default_options["version"]."_b".($gdd->default_options["build"]."_free"));
+        define('GDBBPRESSTOOLS_INSTALLED', $gdd->default_options['version'].' Free');
+        define('GDBBPRESSTOOLS_VERSION', $gdd->default_options['version'].'_b'.($gdd->default_options['build'].'_free'));
 
-        $this->plugin_path = dirname(dirname(dirname(__FILE__)))."/";
-        $this->plugin_url = plugins_url("/gd-bbpress-tools/");
+        $this->plugin_path = dirname(dirname(dirname(__FILE__))).'/';
+        $this->plugin_url = plugins_url('/gd-bbpress-tools/');
 
-        define("GDBBPRESSTOOLS_URL", $this->plugin_url);
-        define("GDBBPRESSTOOLS_PATH", $this->plugin_path);
+        define('GDBBPRESSTOOLS_URL', $this->plugin_url);
+        define('GDBBPRESSTOOLS_PATH', $this->plugin_path);
 
         add_action('setup_theme', array($this, 'mods'));
         add_action('setup_theme', array($this, 'load'));
