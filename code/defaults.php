@@ -2,9 +2,9 @@
 
 class gdbbPressTools_Defaults {
     var $default_options = array(
-        'version' => '1.2.1',
-        'date' => '2012.05.17.',
-        'build' => 860,
+        'version' => '1.2.2',
+        'date' => '2012.05.18.',
+        'build' => 872,
         'status' => 'Stable',
         'product_id' => 'gd-bbpress-tools',
         'edition' => 'free',

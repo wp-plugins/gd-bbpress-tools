@@ -1,7 +1,7 @@
 === GD bbPress Tools ===
 Contributors: GDragoN
 Donate link: http://www.dev4press.com/
-Version: 1.2.1
+Version: 1.2.2
 Tags: bbpress, tools, gdragon, dev4press, forums, forum, topic, reply, signature, quote, search, toolbar, signature, views, admin, bbcode, bbcodes, shortcode, shortcodes
 Requires at least: 3.2
 Tested up to: 3.4
@@ -68,6 +68,9 @@ No. Plugin requires bbPress 2.0 or higher plugin.
 * English
 
 == Changelog ==
+= 1.2.2 =
+* Fixed search topics view for bbPress 2.0.2
+
 = 1.2.1 =
 * Updated readme.txt with more information
 * Fixed broken links in the context help
@@ -95,7 +98,7 @@ No. Plugin requires bbPress 2.0 or higher plugin.
 
 == Upgrade Notice ==
 = 1.2.1 =
-Updated readme.txt with FAQ and info. Fixed broken links in the context help. Fixed invalid display of user signatures.
+Fixed search topics view for bbPress 2.0.2. Fixed broken links in the context help. Fixed invalid display of user signatures. Updated readme.txt with FAQ and info.
 
 == Screenshots ==
 1. Main plugins settings panel

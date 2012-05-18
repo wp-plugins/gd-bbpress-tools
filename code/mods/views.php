@@ -9,7 +9,12 @@ class gdbbTls_Views {
         $this->views = $views;
 
         add_action('bbp_register_views', array(&$this, 'register_views'));
-        add_filter('bbp_get_view_query_args', array(&$this, 'modify_search'), 10, 2);
+
+        if (d4p_bbpress_version() > 20) {
+            add_filter('bbp_get_view_query_args', array(&$this, 'modify_search'), 10, 2);
+        } else {
+            add_action('bbp_has_topics_query', array(&$this, 'modify_query'));
+        }
     }
 
     public function modify_search($query, $view) {
@@ -29,6 +34,18 @@ class gdbbTls_Views {
         }
 
         return $query;
+    }
+
+    public function modify_query($bbp_t) {
+        if (bbp_is_single_view()) {
+            global $wp_query;
+
+            if (isset($wp_query->query['bbp_view']) && $wp_query->query['bbp_view'] == 'search') {
+                $bbp_t = $this->modify_search($bbp_t, 'search');
+            }
+        }
+
+        return $bbp_t;
     }
 
     public function register_views() {
