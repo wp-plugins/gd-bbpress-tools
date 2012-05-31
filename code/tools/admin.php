@@ -2,7 +2,7 @@
 
 if (!defined('ABSPATH')) exit;
 
-class gdbbTls_Admin {
+class gdbbMod_Admin {
     public $admin_plugin = false;
 
     function __construct() {
@@ -77,6 +77,6 @@ class gdbbTls_Admin {
 }
 
 global $gdbbpress_tools_admin;
-$gdbbpress_tools_admin = new gdbbTls_Admin();
+$gdbbpress_tools_admin = new gdbbMod_Admin();
 
 ?>

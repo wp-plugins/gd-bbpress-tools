@@ -1,7 +1,7 @@
 === GD bbPress Tools ===
 Contributors: GDragoN
 Donate link: http://www.dev4press.com/
-Version: 1.2.2
+Version: 1.2.3
 Tags: bbpress, tools, gdragon, dev4press, forums, forum, topic, reply, signature, quote, search, toolbar, signature, views, admin, bbcode, bbcodes, shortcode, shortcodes
 Requires at least: 3.2
 Tested up to: 3.4
@@ -33,9 +33,12 @@ Supported languages: English.
 [Twitter](http://twitter.com/milangd) |
 [Facebook Page](http://www.facebook.com/dev4press)
 
-= More from dev4Press.com for bbPress =
+= More free dev4Press.com plugins for bbPress =
 * [GD bbPress Attachments](http://wordpress.org/extend/plugins/gd-bbpress-attachments/) - attachments for topics and replies
 * [GD bbPress Widgets](http://wordpress.org/extend/plugins/gd-bbpress-widgets/) - additional widgets for bbpress
+
+= Premium dev4Press.com plugins for bbPress =
+* [GD bbPress Toolbox Pro](http://www.gdbbpbox.com/) - our free bbPress plugins in one plus more
 * [GD CPT Tools Pro](http://www.gdcpttools.com/features/bbpress-integration/) - meta box for the topic and reply form
 
 == Installation ==
@@ -68,6 +71,10 @@ No. Plugin requires bbPress 2.0 or higher plugin.
 * English
 
 == Changelog ==
+= 1.2.3 =
+* Improvements to shared functions loading
+* Improvements to loading of plugin modules
+
 = 1.2.2 =
 * Fixed search topics view for bbPress 2.0.2
 
@@ -97,8 +104,8 @@ No. Plugin requires bbPress 2.0 or higher plugin.
 * First official release
 
 == Upgrade Notice ==
-= 1.2.1 =
-Fixed search topics view for bbPress 2.0.2. Fixed broken links in the context help. Fixed invalid display of user signatures. Updated readme.txt with FAQ and info.
+= 1.2.3 =
+Improvements to shared functions loading. Improvements to loading of plugin modules.
 
 == Screenshots ==
 1. Main plugins settings panel

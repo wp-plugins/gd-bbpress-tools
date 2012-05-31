@@ -2,7 +2,7 @@
 
 if (!defined('ABSPATH')) exit;
 
-class gdbbTls_Front {
+class gdbbMod_Front {
     function __construct() {
         add_action('after_setup_theme', array($this, 'load'), 10);
     }
@@ -30,7 +30,7 @@ class gdbbTls_Front {
                     quote_method: "<?php echo d4p_bbt_o('quote_method'); ?>",
                     quote_wrote: "<?php echo __("wrote", "gd-bbpress-tools"); ?>",
                     bbpress_version: <?php echo d4p_bbpress_version(); ?>,
-                    wp_editor: <?php echo  d4p_bbpress_version() > 20 ? (bbp_use_wp_editor() ? 1 : 0) : 0; ?>
+                    wp_editor: <?php echo d4p_bbpress_version() > 20 ? (bbp_use_wp_editor() ? 1 : 0) : 0; ?>
                 };
 
                 <?php if (d4p_bbt_o('include_js') == 1) { ?>
@@ -43,6 +43,6 @@ class gdbbTls_Front {
 }
 
 global $gdbbpress_tools_front;
-$gdbbpress_tools_front = new gdbbTls_Front();
+$gdbbpress_tools_front = new gdbbMod_Front();
 
 ?>

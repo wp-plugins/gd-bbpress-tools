@@ -245,13 +245,17 @@ msgstr ""
 msgid "Dev4Press Homepage"
 msgstr ""
 
-#: code/mods/views.php:23
+#: code/mods/views.php:62
 #: forms/tabs/views.php:9
 msgid "Topics with most replies"
 msgstr ""
 
-#: code/mods/views.php:29
+#: code/mods/views.php:70
 msgid "Latest topics"
+msgstr ""
+
+#: code/mods/views.php:78
+msgid "Search Results"
 msgstr ""
 
 #: code/admin.php:58
@@ -418,7 +422,8 @@ msgstr ""
 #: forms/tabs/tools.php:138
 #: forms/tabs/tools.php:223
 #: forms/tabs/views.php:14
-#: forms/tabs/views.php:28
+#: forms/tabs/views.php:27
+#: forms/tabs/views.php:41
 msgid "Active"
 msgstr ""
 
@@ -509,12 +514,12 @@ msgstr ""
 
 #: forms/tabs/bbcode.php:212
 #: forms/tabs/tools.php:256
-#: forms/tabs/views.php:37
+#: forms/tabs/views.php:50
 msgid "Save Changes"
 msgstr ""
 
 #: forms/tabs/bbcode.php:46
-msgid "Some bbcodes can be available only to selected user roles. This include: %s."
+msgid "Some BBCodes can be available only to selected user roles. This include: %s."
 msgstr ""
 
 #: forms/tabs/d4p.php:3
@@ -679,11 +684,19 @@ msgstr ""
 msgid "This view will show list of topics with most replies."
 msgstr ""
 
+#: forms/tabs/views.php:22
+msgid "Topics Search"
+msgstr ""
+
 #: forms/tabs/views.php:23
+msgid "This view is used to perform search through topics."
+msgstr ""
+
+#: forms/tabs/views.php:36
 msgid "Latest Topics"
 msgstr ""
 
-#: forms/tabs/views.php:24
+#: forms/tabs/views.php:37
 msgid "This view will show list of topics starting with latest ones."
 msgstr ""
 

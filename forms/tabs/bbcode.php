@@ -44,7 +44,7 @@
             </tbody>
         </table>
         <h3><?php _e("Advanced BBCodes", "gd-bbpress-tools"); ?></h3>
-        <p><?php echo sprintf(__("Some bbcodes can be available only to selected user roles. This include: %s.", "gd-bbpress-tools"), 'URL, YOUTUBE, VIMEO, GOOGLE, IMG, NOTE'); ?></p>
+        <p><?php echo sprintf(__("Some BBCodes can be available only to selected user roles. This include: %s.", "gd-bbpress-tools"), 'URL, YOUTUBE, VIMEO, GOOGLE, IMG, NOTE'); ?></p>
         <table class="form-table">
             <tbody>
                 <tr valign="top">

@@ -20,8 +20,8 @@
             </tbody>
         </table>
 
-        <h3><?php _e("Search", "gd-bbpress-tools"); ?></h3>
-        <p><?php _e("This view is used to perform search.", "gd-bbpress-tools"); ?></p>
+        <h3><?php _e("Topics Search", "gd-bbpress-tools"); ?></h3>
+        <p><?php _e("This view is used to perform search through topics.", "gd-bbpress-tools"); ?></p>
         <table class="form-table">
             <tbody>
                 <tr valign="top">

@@ -73,42 +73,44 @@ class gdbbPressTools {
     }
 
     public function mods() {
-        if (is_admin() && $this->o['admin_disable_active'] == 1 && !d4p_bbt_is_role('admin_disable')) {
-            require_once(GDBBPRESSTOOLS_PATH.'code/mods/access.php');
+        if (is_admin()) {
+            if ($this->o['admin_disable_active'] == 1 && !d4p_bbp_is_role('admin_disable')) {
+                require_once(GDBBPRESSTOOLS_PATH.'code/mods/access.php');
 
-            $this->mod['a'] = new gdbbTls_Access();
+                $this->mod['a'] = new gdbbMod_Access();
+            }
+        } else {
+            if ($this->o['quote_active'] == 1) {
+                require_once(GDBBPRESSTOOLS_PATH.'code/mods/quote.php');
+
+                $this->mod['q'] = new gdbbMod_Quote(
+                        $this->o['quote_location'], 
+                        $this->o['quote_method'], 
+                        d4p_bbp_is_role('quote'));
+            }
         }
 
-        if ($this->o['signature_active'] == 1 && d4p_bbt_is_role('signature')) {
+        if ($this->o['signature_active'] == 1 && d4p_bbp_is_role('signature')) {
             require_once(GDBBPRESSTOOLS_PATH.'code/mods/signature.php');
 
-            $this->mod['i'] = new gdbbTls_Signature(
+            $this->mod['i'] = new gdbbMod_Signature(
                     $this->o['signature_length'], 
-                    d4p_bbt_is_role('signature_enhanced'),
+                    d4p_bbp_is_role('signature_enhanced'),
                     $this->o['signature_method']);
         }
 
         if ($this->o['bbcodes_active'] == 1) {
             require_once(GDBBPRESSTOOLS_PATH.'code/mods/shortcodes.php');
 
-            $this->mod['s'] = new gdbbTls_Shortcodes(
+            $this->mod['s'] = new gdbbMod_Shortcodes(
                     $this->o['bbcodes_bbpress_only'] == 1, 
-                    !d4p_bbt_is_role('bbcodes_special'));
+                    !d4p_bbp_is_role('bbcodes_special'));
         }
 
-        if ($this->o['quote_active'] == 1) {
-            require_once(GDBBPRESSTOOLS_PATH.'code/mods/quote.php');
-
-            $this->mod['q'] = new gdbbTls_Quote(
-                    $this->o['quote_location'], 
-                    $this->o['quote_method'], 
-                    d4p_bbt_is_role('quote'));
-        }
-
-        if (GDBBPRESSTOOLS_WPV > 32 && $this->o['toolbar_active'] == 1 && d4p_bbt_is_role('toolbar')) {
+        if (GDBBPRESSTOOLS_WPV > 32 && $this->o['toolbar_active'] == 1 && d4p_bbp_is_role('toolbar')) {
             require_once(GDBBPRESSTOOLS_PATH.'code/mods/toolbar.php');
 
-            $this->mod['t'] = new gdbbTls_Toolbar();
+            $this->mod['t'] = new gdbbMod_Toolbar();
         }
 
         $views = array();
@@ -127,7 +129,7 @@ class gdbbPressTools {
         if ($active) {
             require_once(GDBBPRESSTOOLS_PATH.'code/mods/views.php');
 
-            $this->mod['s'] = new gdbbTls_Views(
+            $this->mod['s'] = new gdbbMod_Views(
                     $views);
         }
     }
