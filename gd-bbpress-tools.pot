@@ -168,80 +168,80 @@ msgid "You can use HTML. BBCodes will be stripped if the BBCodes support is disa
 msgstr ""
 
 #: code/mods/toolbar.php:31
-#: code/mods/toolbar.php:43
-#: code/mods/toolbar.php:121
+#: code/mods/toolbar.php:53
+#: code/mods/toolbar.php:124
 msgid "Forums"
 msgstr ""
 
-#: code/mods/toolbar.php:70
+#: code/mods/toolbar.php:72
 #: forms/panels.php:7
 msgid "Views"
 msgstr ""
 
-#: code/mods/toolbar.php:91
+#: code/mods/toolbar.php:94
 msgid "New"
 msgstr ""
 
-#: code/mods/toolbar.php:97
+#: code/mods/toolbar.php:100
 msgid "Forum"
 msgstr ""
 
-#: code/mods/toolbar.php:103
+#: code/mods/toolbar.php:106
 msgid "Topic"
 msgstr ""
 
-#: code/mods/toolbar.php:109
+#: code/mods/toolbar.php:112
 msgid "Reply"
 msgstr ""
 
-#: code/mods/toolbar.php:115
+#: code/mods/toolbar.php:118
 msgid "Edit"
 msgstr ""
 
-#: code/mods/toolbar.php:127
+#: code/mods/toolbar.php:130
 msgid "Topics"
 msgstr ""
 
-#: code/mods/toolbar.php:133
+#: code/mods/toolbar.php:136
 msgid "Replies"
 msgstr ""
 
-#: code/mods/toolbar.php:140
+#: code/mods/toolbar.php:143
 #: code/admin.php:46
 #: forms/panels.php:5
 msgid "Settings"
 msgstr ""
 
-#: code/mods/toolbar.php:146
+#: code/mods/toolbar.php:149
 msgid "bbPress Settings"
 msgstr ""
 
-#: code/mods/toolbar.php:156
+#: code/mods/toolbar.php:159
 msgid "GD bbPress Tools"
 msgstr ""
 
-#: code/mods/toolbar.php:163
+#: code/mods/toolbar.php:166
 msgid "GD bbPress Attchments"
 msgstr ""
 
-#: code/mods/toolbar.php:171
+#: code/mods/toolbar.php:174
 #: code/admin.php:31
 msgid "Tools"
 msgstr ""
 
-#: code/mods/toolbar.php:177
+#: code/mods/toolbar.php:180
 msgid "Recount"
 msgstr ""
 
-#: code/mods/toolbar.php:190
+#: code/mods/toolbar.php:193
 msgid "Information"
 msgstr ""
 
-#: code/mods/toolbar.php:205
+#: code/mods/toolbar.php:208
 msgid "bbPress Homepage"
 msgstr ""
 
-#: code/mods/toolbar.php:213
+#: code/mods/toolbar.php:216
 msgid "Dev4Press Homepage"
 msgstr ""
 

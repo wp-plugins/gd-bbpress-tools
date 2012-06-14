@@ -38,40 +38,42 @@ class gdbbMod_Toolbar {
             'parent' => 'gdbb-toolbar',
             'id'     => 'gdbb-toolbar-public'
         ));
-        $wp_admin_bar->add_menu(array(
-            'parent' => 'gdbb-toolbar-public',
-            'id'     => 'gdbb-toolbar-forums',
-            'title'  => __("Forums", "gd-bbpress-tools"),
-            'href'   => get_post_type_archive_link('forum')
-        ));
 
         $query = $forums_query = array(
 			'post_parent'    => 0,
-			'posts_per_page' => 24,
+                        'post_status'    => 'publish',
+			'posts_per_page' => 20,
 			'orderby'        => 'menu_order',
-			'order'          => 'ASC'
-                    );
-        if (bbp_has_forums($query)) {
-            while (bbp_forums()) {
-                bbp_the_forum();
+			'order'          => 'ASC');
+        $forums = bbp_get_forums_for_current_user($query);
+        if (count($forums)) {
+            $wp_admin_bar->add_menu(array(
+                'parent' => 'gdbb-toolbar-public',
+                'id'     => 'gdbb-toolbar-forums',
+                'title'  => __("Forums", "gd-bbpress-tools"),
+                'href'   => get_post_type_archive_link('forum')
+            ));
 
+            foreach ($forums as $forum) {
                 $wp_admin_bar->add_menu(array(
                     'parent' => 'gdbb-toolbar-forums',
-                    'id'     => 'gdbb-toolbar-forums-'.bbp_get_forum_id(),
-                    'title'  => bbp_get_forum_title(),
-                    'href'   => bbp_get_forum_permalink()
+                    'id'     => 'gdbb-toolbar-forums-'.$forum->ID,
+                    'title'  => apply_filters('the_title', $forum->post_title, $forum->ID),
+                    'href'   => get_permalink($forum->ID)
                 ));
             }
         }
-        
-        if (bbp_get_views()) {
+
+        $views = bbp_get_views();
+        if (count($views) > 0) {
             $wp_admin_bar->add_menu(array(
                 'parent' => 'gdbb-toolbar-public',
                 'id'     => 'gdbb-toolbar-views',
                 'title'  => __("Views", "gd-bbpress-tools"),
                 'href'   => get_post_type_archive_link('forum')
             ));
-            foreach (bbp_get_views() as $view => $args) {
+
+            foreach ($views as $view => $args) {
                 $wp_admin_bar->add_menu(array(
                     'parent' => 'gdbb-toolbar-views',
                     'id'     => 'gdbb-toolbar-views-'.$view,
