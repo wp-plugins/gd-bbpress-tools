@@ -73,6 +73,8 @@ class gdbbPressTools {
     }
 
     public function mods() {
+        if (!function_exists('bbp_version')) return;
+
         if (is_admin()) {
             if ($this->o['admin_disable_active'] == 1 && !d4p_bbp_is_role('admin_disable')) {
                 require_once(GDBBPRESSTOOLS_PATH.'code/mods/access.php');
@@ -135,6 +137,8 @@ class gdbbPressTools {
     }
 
     public function load() {
+        if (!function_exists('bbp_version')) return;
+
         add_action('init', array(&$this, 'load_translation'));
 
         if (is_admin()) {

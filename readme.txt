@@ -1,10 +1,10 @@
 === GD bbPress Tools ===
 Contributors: GDragoN
 Donate link: http://www.dev4press.com/
-Version: 1.2.4
+Version: 1.2.5
 Tags: bbpress, tools, gdragon, dev4press, forums, forum, topic, reply, signature, quote, search, toolbar, signature, views, admin, bbcode, bbcodes, shortcode, shortcodes
 Requires at least: 3.2
-Tested up to: 3.4
+Tested up to: 3.5
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -24,7 +24,7 @@ Adds various expansions and tools to the bbPress 2.0 plugin implemented forums. 
 
 Plugin supports BBCodes based on the phpBB implementation. Right now, plugin has 30 BBCodes.
 
-Supported languages: English.
+Supported languages: English, Serbian.
 
 = Important URL's =
 [Plugin Home](http://www.dev4press.com/plugins/gd-bbpress-tools/) |
@@ -69,8 +69,13 @@ No. Plugin requires bbPress 2.0 or higher plugin.
 
 == Translations ==
 * English
+* Serbian
 
 == Changelog ==
+= 1.2.5 =
+* Added Serbian translation
+* Check if bbPress is activated before loading code
+
 = 1.2.4 =
 * Fixed toolbar integration bug causing posts edit problems
 
