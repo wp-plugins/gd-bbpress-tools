@@ -1,7 +1,7 @@
 === GD bbPress Tools ===
 Contributors: GDragoN
 Donate link: http://www.dev4press.com/
-Version: 1.2.5
+Version: 1.2.6
 Tags: bbpress, tools, gdragon, dev4press, forums, forum, topic, reply, signature, quote, search, toolbar, signature, views, admin, bbcode, bbcodes, shortcode, shortcodes
 Requires at least: 3.2
 Tested up to: 3.5
@@ -72,6 +72,9 @@ No. Plugin requires bbPress 2.0 or higher plugin.
 * Serbian
 
 == Changelog ==
+= 1.2.6 =
+* Fixed toolbar menu when there are no forums to show
+
 = 1.2.5 =
 * Added Serbian translation
 * Check if bbPress is activated before loading code
@@ -112,8 +115,8 @@ No. Plugin requires bbPress 2.0 or higher plugin.
 * First official release
 
 == Upgrade Notice ==
-= 1.2.4 =
-Fixed toolbar integration bug causing posts edit problems.
+= 1.2.6 =
+Fixed toolbar menu when there are no forums to show.
 
 == Screenshots ==
 1. Main plugins settings panel

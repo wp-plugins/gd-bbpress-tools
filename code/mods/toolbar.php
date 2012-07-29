@@ -46,7 +46,7 @@ class gdbbMod_Toolbar {
 			'orderby'        => 'menu_order',
 			'order'          => 'ASC');
         $forums = bbp_get_forums_for_current_user($query);
-        if (count($forums)) {
+        if (is_array($forums) && count($forums) > 0) {
             $wp_admin_bar->add_menu(array(
                 'parent' => 'gdbb-toolbar-public',
                 'id'     => 'gdbb-toolbar-forums',
@@ -65,7 +65,7 @@ class gdbbMod_Toolbar {
         }
 
         $views = bbp_get_views();
-        if (count($views) > 0) {
+        if (is_array($views) && count($views) > 0) {
             $wp_admin_bar->add_menu(array(
                 'parent' => 'gdbb-toolbar-public',
                 'id'     => 'gdbb-toolbar-views',
