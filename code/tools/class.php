@@ -82,13 +82,12 @@ class gdbbPressTools {
                 $this->mod['a'] = new gdbbMod_Access();
             }
         } else {
-            if ($this->o['quote_active'] == 1) {
+            if ($this->o['quote_active'] == 1 && d4p_bbp_is_role('quote')) {
                 require_once(GDBBPRESSTOOLS_PATH.'code/mods/quote.php');
 
                 $this->mod['q'] = new gdbbMod_Quote(
                         $this->o['quote_location'], 
-                        $this->o['quote_method'], 
-                        d4p_bbp_is_role('quote'));
+                        $this->o['quote_method']);
             }
         }
 

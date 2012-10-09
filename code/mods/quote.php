@@ -9,10 +9,9 @@ class gdbbMod_Quote {
     private $method = 'quote';
     private $allowed = true;
 
-    function __construct($location, $method, $allowed) {
+    function __construct($location, $method) {
         $this->location = $location;
         $this->method = $method;
-        $this->allowed = $allowed;
 
         add_action('init', array($this, 'init'));
     }
@@ -23,14 +22,14 @@ class gdbbMod_Quote {
         if (d4p_bbt_o('quote_method') == 'html') {
             $url = bbp_get_reply_url($id);
             $ath = bbp_get_reply_author_display_name($id);
-            return '<a href="#'.$id.'" bbp-url="'.$url.'" bbp-author="'.$ath.'" class="d4p-bbt-quote-link">Quote</a>';
+            return '<a href="#'.$id.'" bbp-url="'.$url.'" bbp-author="'.$ath.'" class="d4p-bbt-quote-link">'.__("Quote", "gd-bbpress-tools").'</a>';
         } else {
-            return '<a href="#'.$id.'" class="d4p-bbt-quote-link">Quote</a>';
+            return '<a href="#'.$id.'" class="d4p-bbt-quote-link">'.__("Quote", "gd-bbpress-tools").'</a>';
         }
     }
 
     public function init() {
-        add_filter('bbp_get_reply_content', array(&$this, 'quote_content'));
+        add_filter('bbp_get_reply_content', array(&$this, 'quote_content'), 1);
 
         if ($this->location == 'header' || $this->location == 'both') {
             add_filter('bbp_get_topic_admin_links', array(&$this, 'reply_links'), 10, 2);

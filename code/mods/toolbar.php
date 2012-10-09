@@ -51,7 +51,7 @@ class gdbbMod_Toolbar {
                 'parent' => 'gdbb-toolbar-public',
                 'id'     => 'gdbb-toolbar-forums',
                 'title'  => __("Forums", "gd-bbpress-tools"),
-                'href'   => get_post_type_archive_link('forum')
+                'href'   => bbp_get_forums_url()
             ));
 
             foreach ($forums as $forum) {
@@ -70,7 +70,7 @@ class gdbbMod_Toolbar {
                 'parent' => 'gdbb-toolbar-public',
                 'id'     => 'gdbb-toolbar-views',
                 'title'  => __("Views", "gd-bbpress-tools"),
-                'href'   => get_post_type_archive_link('forum')
+                'href'   => bbp_get_forums_url()
             ));
 
             foreach ($views as $view => $args) {

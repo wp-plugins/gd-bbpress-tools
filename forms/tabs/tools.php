@@ -36,6 +36,7 @@
                 </tr>
             </tbody>
         </table>
+        <p><?php _e("Enable this option if you use BuddyPress with bbPress plugin for site wide forums.", "gd-bbpress-tools"); ?></p>
 
         <h3><?php _e("Quote Topics and Replies", "gd-bbpress-tools"); ?></h3>
         <p><?php _e("Add button to quote content for a topic and reply with the author and link. Can use BBCode quote type.", "gd-bbpress-tools"); ?></p>

@@ -2,13 +2,14 @@
 
 class gdbbPressTools_Defaults {
     var $default_options = array(
-        'version' => '1.2.6',
-        'date' => '2012.07.29.',
-        'build' => 950,
-        'status' => 'Stable',
+        'version' => '1.2.7',
+        'date' => '2012.10.09.',
+        'build' => 1100,
+        'status' => 'stable',
         'product_id' => 'gd-bbpress-tools',
         'edition' => 'free',
         'revision' => 0,
+        'upgrade_to_pro_127' => 1,
         'include_always' => 0,
         'include_js' => 1,
         'include_css' => 1,

@@ -1,7 +1,7 @@
 === GD bbPress Tools ===
 Contributors: GDragoN
-Donate link: http://www.dev4press.com/
-Version: 1.2.6
+Donate link: http://www.gdbbpbox.com/
+Version: 1.2.7
 Tags: bbpress, tools, gdragon, dev4press, forums, forum, topic, reply, signature, quote, search, toolbar, signature, views, admin, bbcode, bbcodes, shortcode, shortcodes
 Requires at least: 3.2
 Tested up to: 3.5
@@ -64,14 +64,29 @@ Open the Forums menu, and you will see Tools item there. This will open a panel 
 * Will this plugin work with standalone bbPress instalation?
 No. This plugin requires the plugin versions of bbPress 2.0 or higher.
 
-* Will this plugin work with bbPress that is part of BuddyPress plugin?
+* Does this plugin work with bbPress that is part of BuddyPress plugin?
 No. Plugin requires bbPress 2.0 or higher plugin.
+
+* Does this plugin work with bbPress 2.1 used as site wide forums for BuddyPress plugin?
+Yes. But, make sure to enable 'Always Include' option for JavaScript and CSS.
 
 == Translations ==
 * English
 * Serbian
+* German: David Decker - http://deckerweb.de/
 
 == Changelog ==
+= 1.2.7 =
+* BuddyPress with site wide bbPress supported
+* Support for signature editing with admin side profile editor
+* Expanded list of FAQ entries
+* Panel for upgrade to GD bbPress Toolbox
+* Added few missing translation strings
+* Added German Translation
+* Change to generating some links in toolbar menu
+* Fixed quote element that can include attachments also
+* Fixed quote option displayed when not allowed
+
 = 1.2.6 =
 * Fixed toolbar menu when there are no forums to show
 
@@ -116,7 +131,7 @@ No. Plugin requires bbPress 2.0 or higher plugin.
 
 == Upgrade Notice ==
 = 1.2.6 =
-Fixed toolbar menu when there are no forums to show.
+BuddyPress with site wide bbPress supported. Support for signature editing with admin side profile editor. Expanded list of FAQ entries. Panel for upgrade to GD bbPress Toolbox. Added few missing translation strings. Added German Translation. Change to generating some links in toolbar menu. Fixed quote element that can include attachments also. Fixed quote option displayed when not allowed.
 
 == Screenshots ==
 1. Main plugins settings panel

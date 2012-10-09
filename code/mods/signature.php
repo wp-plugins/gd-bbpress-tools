@@ -16,15 +16,24 @@ class gdbbMod_Signature {
     }
 
     public function init() {
-        add_action('bbp_user_edit_after', array(&$this, 'editor_form'));
-        add_action('bbp_user_edit_signature_info', array(&$this, 'signature_info'));
-        add_action('personal_options_update', array($this, 'editor_save'));
+        add_action('show_user_profile', array(&$this, 'editor_form_profile'));
+        add_action('edit_user_profile', array(&$this, 'editor_form_profile'));
+
         add_action('edit_user_profile_update', array($this, 'editor_save'));
+        add_action('personal_options_update', array($this, 'editor_save'));
+
+        add_action('bbp_user_edit_after', array(&$this, 'editor_form_bbpress'));
+        add_action('bbp_user_edit_signature_info', array(&$this, 'signature_info'));
         add_filter('bbp_get_reply_content', array(&$this, 'reply_content'), 10000);
     }
 
-    public function editor_form() {
-        $form = apply_filters('d4p_bbpresstools_signature_editor_file', GDBBPRESSTOOLS_PATH.'forms/tools/signature.php');
+    public function editor_form_profile() {
+        $form = apply_filters('d4p_bbpresstools_signature_editor_file', GDBBPRESSTOOLS_PATH.'forms/tools/signature_profile.php');
+        include_once($form);
+    }
+
+    public function editor_form_bbpress() {
+        $form = apply_filters('d4p_bbpresstools_signature_editor_file', GDBBPRESSTOOLS_PATH.'forms/tools/signature_bbpress.php');
         include_once($form);
     }
 
