@@ -7,7 +7,6 @@ class gdbbMod_Quote {
 
     private $location = 'header';
     private $method = 'quote';
-    private $allowed = true;
 
     function __construct($location, $method) {
         $this->location = $location;
@@ -29,7 +28,7 @@ class gdbbMod_Quote {
     }
 
     public function init() {
-        add_filter('bbp_get_reply_content', array(&$this, 'quote_content'), 1);
+        add_filter('bbp_get_reply_content', array(&$this, 'quote_content'), 9);
 
         if ($this->location == 'header' || $this->location == 'both') {
             add_filter('bbp_get_topic_admin_links', array(&$this, 'reply_links'), 10, 2);

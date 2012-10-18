@@ -1,7 +1,7 @@
 === GD bbPress Tools ===
 Contributors: GDragoN
 Donate link: http://www.gdbbpbox.com/
-Version: 1.2.7
+Version: 1.2.8
 Tags: bbpress, tools, gdragon, dev4press, forums, forum, topic, reply, signature, quote, search, toolbar, signature, views, admin, bbcode, bbcodes, shortcode, shortcodes
 Requires at least: 3.2
 Tested up to: 3.5
@@ -76,6 +76,12 @@ Yes. But, make sure to enable 'Always Include' option for JavaScript and CSS.
 * German: David Decker - http://deckerweb.de/
 
 == Changelog ==
+= 1.2.8 =
+* Fixed quote not working with HTML editor with fancy editor
+* Fixed scroll in JavaScript for quote with IE7 and IE8
+* Fixed JavaScript use of trim function with IE7 and IE8
+* Fixed problem with quote that breaks the oEmbed
+
 = 1.2.7 =
 * BuddyPress with site wide bbPress supported
 * Support for signature editing with admin side profile editor
@@ -130,8 +136,8 @@ Yes. But, make sure to enable 'Always Include' option for JavaScript and CSS.
 * First official release
 
 == Upgrade Notice ==
-= 1.2.6 =
-BuddyPress with site wide bbPress supported. Support for signature editing with admin side profile editor. Expanded list of FAQ entries. Panel for upgrade to GD bbPress Toolbox. Added few missing translation strings. Added German Translation. Change to generating some links in toolbar menu. Fixed quote element that can include attachments also. Fixed quote option displayed when not allowed.
+= 1.2.8 =
+Fixed scroll and use of trim in JavaScript with IE7 and IE8. Fixed problem with quote that breaks the oEmbed.
 
 == Screenshots ==
 1. Main plugins settings panel

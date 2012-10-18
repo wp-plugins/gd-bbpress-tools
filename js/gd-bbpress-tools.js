@@ -13,7 +13,7 @@ var gdbbPressTools = {
             t = document.selection.createRange().text;
         }
 
-        return t.toString().trim();
+        return jQuery.trim(t.toString());
     },
     init: function() {
         jQuery(".d4p-bbt-quote-link").live("click", function(e){
@@ -40,20 +40,26 @@ var gdbbPressTools = {
                     qout = '<blockquote class="d4pbbc-quote">' + title + qout + '</blockquote>';
                 }
 
-                if (gdbbPressToolsInit.wp_editor == 1) {
+                if (gdbxRender_Data.wp_editor == 1 && !jQuery("#bbp_reply_content").is(":visible")) {
                     tinyMCE.execInstanceCommand("bbp_reply_content", "mceInsertContent", false, qout);
                 } else {
                     var txtr = jQuery("#bbp_reply_content");
                     var cntn = txtr.val();
 
-                    if (cntn.trim() != '') {
+                    if (jQuery.trim(cntn) != '') {
                         qout = "\n\n" + qout;
                     }
 
                     txtr.val(cntn + qout);
                 }
 
-                jQuery("html, body").animate({scrollTop: jQuery("#new-post").offset().top}, 1000);
+                var old_ie = jQuery.browser.msie && parseInt(jQuery.browser.version) < 9;
+
+                if (!old_ie) {
+                    jQuery("html, body").animate({scrollTop: jQuery("#new-post").offset().top}, 1000);
+                } else {
+                    document.location.href = "#new-post";
+                }
             }
         });
     }
