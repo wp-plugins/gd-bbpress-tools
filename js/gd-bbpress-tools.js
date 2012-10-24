@@ -40,7 +40,7 @@ var gdbbPressTools = {
                     qout = '<blockquote class="d4pbbc-quote">' + title + qout + '</blockquote>';
                 }
 
-                if (gdbxRender_Data.wp_editor == 1 && !jQuery("#bbp_reply_content").is(":visible")) {
+                if (gdbbPressToolsInit.wp_editor == 1 && !jQuery("#bbp_reply_content").is(":visible")) {
                     tinyMCE.execInstanceCommand("bbp_reply_content", "mceInsertContent", false, qout);
                 } else {
                     var txtr = jQuery("#bbp_reply_content");
