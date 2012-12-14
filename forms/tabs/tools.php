@@ -76,7 +76,7 @@
                                 <input type="checkbox" <?php if ($options["quote_super_admin"] == 1) echo " checked"; ?> name="quote_super_admin" />
                                 <?php _e("Super Admin", "gd-bbpress-tools"); ?>
                             </label><br/>
-                            <?php foreach ($wp_roles->role_names as $role => $title) { ?>
+                            <?php foreach ($_user_roles as $role => $title) { ?>
                             <label for="quote_roles_<?php echo $role; ?>">
                                 <input type="checkbox" <?php if (!isset($options["quote_roles"]) || is_null($options["quote_roles"]) || in_array($role, $options["quote_roles"])) echo " checked"; ?> value="<?php echo $role; ?>" id="quote_roles_<?php echo $role; ?>" name="quote_roles[]" />
                                 <?php echo $title; ?>
@@ -113,7 +113,7 @@
                                 <input type="checkbox" <?php if ($options["toolbar_super_admin"] == 1) echo " checked"; ?> name="toolbar_super_admin" />
                                 <?php _e("Super Admin", "gd-bbpress-tools"); ?>
                             </label><br/>
-                            <?php foreach ($wp_roles->role_names as $role => $title) { ?>
+                            <?php foreach ($_user_roles as $role => $title) { ?>
                             <label for="toolbar_roles_<?php echo $role; ?>">
                                 <input type="checkbox" <?php if (!isset($options["toolbar_roles"]) || is_null($options["toolbar_roles"]) || in_array($role, $options["toolbar_roles"])) echo " checked"; ?> value="<?php echo $role; ?>" id="toolbar_roles_<?php echo $role; ?>" name="toolbar_roles[]" />
                                 <?php echo $title; ?>
@@ -158,7 +158,7 @@
                                 <input type="checkbox" <?php if ($options["signature_super_admin"] == 1) echo " checked"; ?> name="signature_super_admin" />
                                 <?php _e("Super Admin", "gd-bbpress-tools"); ?>
                             </label><br/>
-                            <?php foreach ($wp_roles->role_names as $role => $title) { ?>
+                            <?php foreach ($_user_roles as $role => $title) { ?>
                             <label for="signature_roles_<?php echo $role; ?>">
                                 <input type="checkbox" <?php if (!isset($options["signature_roles"]) || is_null($options["signature_roles"]) || in_array($role, $options["signature_roles"])) echo " checked"; ?> value="<?php echo $role; ?>" id="signature_roles_<?php echo $role; ?>" name="signature_roles[]" />
                                 <?php echo $title; ?>
@@ -199,7 +199,7 @@
                                 <input type="checkbox" <?php if ($options["signature_enhanced_super_admin"] == 1) echo " checked"; ?> name="signature_enhanced_super_admin" />
                                 <?php _e("Super Admin", "gd-bbpress-tools"); ?>
                             </label><br/>
-                            <?php foreach ($wp_roles->role_names as $role => $title) { ?>
+                            <?php foreach ($_user_roles as $role => $title) { ?>
                             <label for="signature_enhanced_roles_<?php echo $role; ?>">
                                 <input type="checkbox" <?php if (!isset($options["signature_enhanced_roles"]) || is_null($options["signature_enhanced_roles"]) || in_array($role, $options["signature_enhanced_roles"])) echo " checked"; ?> value="<?php echo $role; ?>" id="signature_enhanced_roles_<?php echo $role; ?>" name="signature_enhanced_roles[]" />
                                 <?php echo $title; ?>
@@ -236,7 +236,7 @@
                                 <input type="checkbox" <?php if ($options["admin_disable_super_admin"] == 1) echo " checked"; ?> name="admin_disable_super_admin" />
                                 <?php _e("Super Admin", "gd-bbpress-tools"); ?>
                             </label><br/>
-                            <?php foreach ($wp_roles->role_names as $role => $title) { ?>
+                            <?php foreach ($_user_roles as $role => $title) { ?>
                             <label for="admin_disable_roles_<?php echo $role; ?>">
                                 <input type="checkbox" <?php if (!isset($options["admin_disable_roles"]) || is_null($options["admin_disable_roles"]) || in_array($role, $options["admin_disable_roles"])) echo " checked"; ?> value="<?php echo $role; ?>" id="admin_disable_roles_<?php echo $role; ?>" name="admin_disable_roles[]" />
                                 <?php echo $title; ?>

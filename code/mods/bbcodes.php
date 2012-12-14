@@ -35,6 +35,7 @@ class gdbbMod_Shortcodes {
         }
 
         add_filter('bbp_get_reply_content', 'do_shortcode');
+        add_filter('bbp_get_topic_content', 'do_shortcode');
     }
 
     private function _init() {

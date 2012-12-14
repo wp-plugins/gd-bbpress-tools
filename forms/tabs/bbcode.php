@@ -56,7 +56,7 @@
                                 <input type="checkbox" <?php if ($options["bbcodes_special_super_admin"] == 1) echo " checked"; ?> name="bbcodes_special_super_admin" />
                                 <?php _e("Super Admin", "gd-bbpress-tools"); ?>
                             </label><br/>
-                            <?php foreach ($wp_roles->role_names as $role => $title) { ?>
+                            <?php foreach ($_user_roles as $role => $title) { ?>
                             <label for="bbcodes_special_roles_<?php echo $role; ?>">
                                 <input type="checkbox" <?php if (!isset($options["bbcodes_special_roles"]) || is_null($options["bbcodes_special_roles"]) || in_array($role, $options["bbcodes_special_roles"])) echo " checked"; ?> value="<?php echo $role; ?>" id="bbcodes_special_roles_<?php echo $role; ?>" name="bbcodes_special_roles[]" />
                                 <?php echo $title; ?>

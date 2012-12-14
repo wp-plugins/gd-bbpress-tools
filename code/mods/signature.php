@@ -18,16 +18,33 @@ class gdbbMod_Signature {
     public function init() {
         add_action('show_user_profile', array(&$this, 'editor_form_profile'));
         add_action('edit_user_profile', array(&$this, 'editor_form_profile'));
-
         add_action('edit_user_profile_update', array($this, 'editor_save'));
         add_action('personal_options_update', array($this, 'editor_save'));
+        add_action('xprofile_updated_profile', array($this, 'editor_save'));
 
         add_action('bbp_user_edit_after', array(&$this, 'editor_form_bbpress'));
         add_action('bbp_user_edit_signature_info', array(&$this, 'signature_info'));
-        add_filter('bbp_get_reply_content', array(&$this, 'reply_content'), 10000);
+
+        add_action('bp_custom_profile_edit_fields', array(&$this, 'editor_form_buddypress'));
+
+        add_action('bbp_head', array(&$this, 'add_content_filters'));
+        add_action('d4p_bbpresssignature_add_content_filters', array(&$this, 'add_content_filters'));
+        add_action('d4p_bbpresssignature_remove_content_filters', array(&$this, 'remove_content_filters'));
+    }
+
+    public function add_content_filters() {
+        add_filter('bbp_get_topic_content', array(&$this, 'reply_content'), 10000, 2);
+        add_filter('bbp_get_reply_content', array(&$this, 'reply_content'), 10000, 2);
+    }
+
+    public function remove_content_filters() {
+        remove_filter('bbp_get_topic_content', array(&$this, 'reply_content'), 10000, 2);
+        remove_filter('bbp_get_reply_content', array(&$this, 'reply_content'), 10000, 2);
     }
 
     public function editor_form_profile() {
+        if (!is_admin()) return;
+
         $form = apply_filters('d4p_bbpresstools_signature_editor_file', GDBBPRESSTOOLS_PATH.'forms/tools/signature_profile.php');
         include_once($form);
     }
@@ -35,6 +52,16 @@ class gdbbMod_Signature {
     public function editor_form_bbpress() {
         $form = apply_filters('d4p_bbpresstools_signature_editor_file', GDBBPRESSTOOLS_PATH.'forms/tools/signature_bbpress.php');
         include_once($form);
+    }
+
+    public function editor_form_buddypress() {
+        global $user_ID;
+
+        $bbx_user_signature = get_user_meta($user_ID, 'signature', true);
+        $form = apply_filters('d4p_bbpresssignature_bbpress_editor_file', GDBBPRESSTOOLS_PATH.'forms/tools/signature_buddypress.php');
+        include_once($form);
+
+        remove_action('bp_custom_profile_edit_fields', array(&$this, 'editor_form_buddypress'));
     }
 
     public function signature_info() {
@@ -64,15 +91,19 @@ class gdbbMod_Signature {
     }
 
     public function editor_save($user_id) {
-        $sig = $_POST['signature'];
-        $sig = $this->format_signature($sig);
+        $sig = $this->format_signature($_POST['signature']);
 
         update_user_meta($user_id, 'signature', $sig);
     }
 
-    public function reply_content($content) {
-        global $post;
-        $user_id = $post->post_author;
+    public function reply_content($content, $reply_id = 0) {
+        if ($reply_id == 0) {
+            global $post;
+
+            $user_id = $post->post_author;
+        } else {
+            $user_id = bbp_get_reply_author_id($reply_id);
+        }
 
         $sig = get_user_meta($user_id, 'signature', true);
         $sig = $this->format_signature($sig);

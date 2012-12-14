@@ -101,7 +101,7 @@ class gdbbPressTools {
         }
 
         if ($this->o['bbcodes_active'] == 1) {
-            require_once(GDBBPRESSTOOLS_PATH.'code/mods/shortcodes.php');
+            require_once(GDBBPRESSTOOLS_PATH.'code/mods/bbcodes.php');
 
             $this->mod['s'] = new gdbbMod_Shortcodes(
                     $this->o['bbcodes_bbpress_only'] == 1, 

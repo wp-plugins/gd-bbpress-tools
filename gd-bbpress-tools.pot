@@ -1,171 +1,171 @@
-#: code/mods/quote.php:24
-#: code/mods/quote.php:26
-#: code/mods/shortcodes.php:140
-#: forms/tabs/bbcode.php:176
-msgid "Quote"
-msgstr ""
-
-#: code/mods/shortcodes.php:42
+#: code/mods/bbcodes.php:43
 #: forms/tabs/bbcode.php:92
 msgid "Bold"
 msgstr ""
 
-#: code/mods/shortcodes.php:46
+#: code/mods/bbcodes.php:47
 #: forms/tabs/bbcode.php:96
 msgid "Italic"
 msgstr ""
 
-#: code/mods/shortcodes.php:50
+#: code/mods/bbcodes.php:51
 #: forms/tabs/bbcode.php:100
 msgid "Underline"
 msgstr ""
 
-#: code/mods/shortcodes.php:55
+#: code/mods/bbcodes.php:56
 #: forms/tabs/bbcode.php:104
 msgid "Strikethrough"
 msgstr ""
 
-#: code/mods/shortcodes.php:59
+#: code/mods/bbcodes.php:60
 msgid "Align Center"
 msgstr ""
 
-#: code/mods/shortcodes.php:64
+#: code/mods/bbcodes.php:65
 msgid "Align Right"
 msgstr ""
 
-#: code/mods/shortcodes.php:69
+#: code/mods/bbcodes.php:70
 msgid "Align Left"
 msgstr ""
 
-#: code/mods/shortcodes.php:74
+#: code/mods/bbcodes.php:75
 msgid "Align Justify"
 msgstr ""
 
-#: code/mods/shortcodes.php:79
+#: code/mods/bbcodes.php:80
 #: forms/tabs/bbcode.php:128
 msgid "Subscript"
 msgstr ""
 
-#: code/mods/shortcodes.php:83
+#: code/mods/bbcodes.php:84
 #: forms/tabs/bbcode.php:132
 msgid "Superscript"
 msgstr ""
 
-#: code/mods/shortcodes.php:87
+#: code/mods/bbcodes.php:88
 #: forms/tabs/bbcode.php:148
 msgid "Preformatted"
 msgstr ""
 
-#: code/mods/shortcodes.php:91
+#: code/mods/bbcodes.php:92
 #: forms/tabs/bbcode.php:136
 msgid "Reverse"
 msgstr ""
 
-#: code/mods/shortcodes.php:96
-#: code/mods/shortcodes.php:100
+#: code/mods/bbcodes.php:97
+#: code/mods/bbcodes.php:101
 #: forms/tabs/bbcode.php:164
 msgid "List: Ordered"
 msgstr ""
 
-#: code/mods/shortcodes.php:104
+#: code/mods/bbcodes.php:105
 #: forms/tabs/bbcode.php:168
 msgid "List: Unordered"
 msgstr ""
 
-#: code/mods/shortcodes.php:108
+#: code/mods/bbcodes.php:109
 #: forms/tabs/bbcode.php:172
 msgid "List: Item"
 msgstr ""
 
-#: code/mods/shortcodes.php:112
+#: code/mods/bbcodes.php:113
 #: forms/tabs/bbcode.php:152
 msgid "Blockquote"
 msgstr ""
 
-#: code/mods/shortcodes.php:116
+#: code/mods/bbcodes.php:117
 #: forms/tabs/bbcode.php:156
 msgid "Area"
 msgstr ""
 
-#: code/mods/shortcodes.php:120
+#: code/mods/bbcodes.php:121
 msgid "Border"
 msgstr ""
 
-#: code/mods/shortcodes.php:124
+#: code/mods/bbcodes.php:125
 #: forms/tabs/bbcode.php:160
 msgid "Block"
 msgstr ""
 
-#: code/mods/shortcodes.php:128
+#: code/mods/bbcodes.php:129
 #: forms/tabs/bbcode.php:124
 msgid "Horizontal Line"
 msgstr ""
 
-#: code/mods/shortcodes.php:132
+#: code/mods/bbcodes.php:133
 #: forms/tabs/bbcode.php:140
 msgid "Font Size"
 msgstr ""
 
-#: code/mods/shortcodes.php:136
+#: code/mods/bbcodes.php:137
 #: forms/tabs/bbcode.php:144
 msgid "Font Color"
 msgstr ""
 
-#: code/mods/shortcodes.php:144
+#: code/mods/bbcodes.php:141
+#: code/mods/quote.php:26
+#: code/mods/quote.php:28
+#: forms/tabs/bbcode.php:176
+msgid "Quote"
+msgstr ""
+
+#: code/mods/bbcodes.php:145
 #: forms/tabs/bbcode.php:185
 msgid "URL"
 msgstr ""
 
-#: code/mods/shortcodes.php:148
+#: code/mods/bbcodes.php:149
 msgid "Google Search"
 msgstr ""
 
-#: code/mods/shortcodes.php:152
+#: code/mods/bbcodes.php:153
 #: forms/tabs/bbcode.php:189
 msgid "Image"
 msgstr ""
 
-#: code/mods/shortcodes.php:156
+#: code/mods/bbcodes.php:157
 #: forms/tabs/bbcode.php:193
 msgid "YouTube Video"
 msgstr ""
 
-#: code/mods/shortcodes.php:160
+#: code/mods/bbcodes.php:161
 #: forms/tabs/bbcode.php:197
 msgid "Vimeo Video"
 msgstr ""
 
-#: code/mods/shortcodes.php:164
+#: code/mods/bbcodes.php:165
 #: forms/tabs/bbcode.php:205
 msgid "Note"
 msgstr ""
 
-#: code/mods/shortcodes.php:285
+#: code/mods/bbcodes.php:286
 msgid "BBCode you used is not allowed."
 msgstr ""
 
-#: code/mods/shortcodes.php:303
+#: code/mods/bbcodes.php:304
 msgid "You can use BBCodes to format your content."
 msgstr ""
 
-#: code/mods/shortcodes.php:305
+#: code/mods/bbcodes.php:306
 msgid "Your account can't use Advanced BBCodes, they will be stripped before saving."
 msgstr ""
 
-#: code/mods/shortcodes.php:455
-#: code/tools/front.php:30
+#: code/mods/bbcodes.php:456
+#: code/tools/front.php:34
 msgid "wrote"
 msgstr ""
 
-#: code/mods/signature.php:32
+#: code/mods/signature.php:68
 msgid "You can use only plain text. HTML and BBCode will be stripped."
 msgstr ""
 
-#: code/mods/signature.php:34
+#: code/mods/signature.php:70
 msgid "You can use BBCodes. HTML will be stripped."
 msgstr ""
 
-#: code/mods/signature.php:36
+#: code/mods/signature.php:72
 msgid "You can use HTML. BBCodes will be stripped if the BBCodes support is disabled."
 msgstr ""
 
@@ -775,20 +775,28 @@ msgstr ""
 
 #: forms/tools/signature_bbpress.php:0
 #: forms/tools/signature_bbpress.php:2
+#: forms/tools/signature_profile.php:1
 msgid "Your Forum Signature"
 msgstr ""
 
 #: forms/tools/signature_bbpress.php:0
 #: forms/tools/signature_bbpress.php:2
+#: forms/tools/signature_profile.php:1
 msgid "User Forum Signature"
 msgstr ""
 
 #: forms/tools/signature_bbpress.php:5
+#: forms/tools/signature_profile.php:4
 msgid "Signature"
 msgstr ""
 
-#: forms/tools/signature_bbpress.php:8
+#: forms/tools/signature_bbpress.php:9
+#: forms/tools/signature_buddypress.php:4
 msgid "Signature length is limited to %s characters."
+msgstr ""
+
+#: forms/tools/signature_buddypress.php:1
+msgid "Forum Signature"
 msgstr ""
 
 #: forms/panels.php:10
