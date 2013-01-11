@@ -1,7 +1,7 @@
 === GD bbPress Tools ===
 Contributors: GDragoN
 Donate link: http://www.gdbbpbox.com/
-Version: 1.3
+Version: 1.3.1
 Tags: bbpress, tools, gdragon, dev4press, forums, forum, topic, reply, signature, quote, search, toolbar, signature, views, admin, bbcode, bbcodes, shortcode, shortcodes
 Requires at least: 3.2
 Tested up to: 3.5
@@ -76,6 +76,10 @@ Yes. But, make sure to enable 'Always Include' option for JavaScript and CSS.
 * German: David Decker - http://deckerweb.de/
 
 == Changelog ==
+= 1.3.1 =
+* Fixed signature visible to logged in users only
+* Fixed detection of bbPress 2.2
+
 = 1.3 =
 * Added support for dynamic roles from bbPress 2.2
 * Added signature edit to BuddyPress profile editor
@@ -153,8 +157,8 @@ Yes. But, make sure to enable 'Always Include' option for JavaScript and CSS.
 * First official release
 
 == Upgrade Notice ==
-= 1.3 =
-Added support for dynamic roles from bbPress 2.2. Added signature edit to BuddyPress profile editor. Using enqueue scripts and styles to load files on frontend. Various styling improvements to embedded forms and elements. Admin menu now uses 'activate_plugins' capability by default. Screenshots removed from plugin and added into assets directory. Fixed duplicated signature form on profile edit page. Fixed signature fails to find topic/reply author. Fixed signature not displayed when using lead topic. Fixed quote not working when using lead topic. Fixed quote in some cases quote link is missing. Fixed bbcodes not applied when displaying lead topic.
+= 1.3.1 =
+Fixed signature visible to logged in users only. Fixed detection of bbPress 2.2.
 
 == Screenshots ==
 1. Main plugins settings panel

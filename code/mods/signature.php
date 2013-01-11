@@ -3,6 +3,7 @@
 if (!defined('ABSPATH')) exit;
 
 class gdbbMod_Signature {
+    public $active = false;
     public $max_length;
     public $enhanced;
     public $method;
@@ -16,16 +17,18 @@ class gdbbMod_Signature {
     }
 
     public function init() {
-        add_action('show_user_profile', array(&$this, 'editor_form_profile'));
-        add_action('edit_user_profile', array(&$this, 'editor_form_profile'));
-        add_action('edit_user_profile_update', array($this, 'editor_save'));
-        add_action('personal_options_update', array($this, 'editor_save'));
-        add_action('xprofile_updated_profile', array($this, 'editor_save'));
+        if ($this->active) {
+            add_action('show_user_profile', array(&$this, 'editor_form_profile'));
+            add_action('edit_user_profile', array(&$this, 'editor_form_profile'));
+            add_action('edit_user_profile_update', array($this, 'editor_save'));
+            add_action('personal_options_update', array($this, 'editor_save'));
+            add_action('xprofile_updated_profile', array($this, 'editor_save'));
 
-        add_action('bbp_user_edit_after', array(&$this, 'editor_form_bbpress'));
-        add_action('bbp_user_edit_signature_info', array(&$this, 'signature_info'));
+            add_action('bbp_user_edit_after', array(&$this, 'editor_form_bbpress'));
+            add_action('bbp_user_edit_signature_info', array(&$this, 'signature_info'));
 
-        add_action('bp_custom_profile_edit_fields', array(&$this, 'editor_form_buddypress'));
+            add_action('bp_custom_profile_edit_fields', array(&$this, 'editor_form_buddypress'));
+        }
 
         add_action('bbp_head', array(&$this, 'add_content_filters'));
         add_action('d4p_bbpresssignature_add_content_filters', array(&$this, 'add_content_filters'));

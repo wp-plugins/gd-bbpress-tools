@@ -91,13 +91,14 @@ class gdbbPressTools {
             }
         }
 
-        if ($this->o['signature_active'] == 1 && d4p_bbp_is_role('signature')) {
+        if ($this->o['signature_active'] == 1) {
             require_once(GDBBPRESSTOOLS_PATH.'code/mods/signature.php');
 
             $this->mod['i'] = new gdbbMod_Signature(
                     $this->o['signature_length'], 
                     d4p_bbp_is_role('signature_enhanced'),
                     $this->o['signature_method']);
+            $this->mod['i']->active = d4p_bbp_is_role('signature');
         }
 
         if ($this->o['bbcodes_active'] == 1) {
