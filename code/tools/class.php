@@ -10,27 +10,18 @@ class gdbbPressTools {
     public $l;
     public $o;
 
+    public $is_search = false;
+
     public $mod = array('a' => null, 'i' => null, 's' => null, 'q' => null, 't' => null, 'v' => null);
 
     function __construct() {
         $this->_init();
-    }
 
-    private function _upgrade($old, $new) {
-        foreach ($new as $key => $value) {
-            if (!isset($old[$key])) $old[$key] = $value;
-        }
+        add_action('bbp_init', array($this, 'load_modules'), 1);
+        add_action('bbp_init', array($this, 'init_modules'), 2);
+        add_action('bbp_init', array($this, 'load_plugin'), 3);
 
-        $unset = array();
-        foreach ($old as $key => $value) {
-            if (!isset($new[$key])) $unset[] = $key;
-        }
-
-        foreach ($unset as $key) {
-            unset($old[$key]);
-        }
-
-        return $old;
+        add_action('bbp_init', array($this, 'hook_modules'));
     }
 
     private function _init() {
@@ -46,7 +37,7 @@ class gdbbPressTools {
             update_option('gd-bbpress-tools', $this->o);
         }
 
-        if ($this->o['build'] != $gdd->default_options['build']) {
+        if (!isset($this->o['build']) || $this->o['build'] != $gdd->default_options['build']) {
             $this->o = $this->_upgrade($this->o, $gdd->default_options);
 
             $this->o['version'] = $gdd->default_options['version'];
@@ -67,13 +58,33 @@ class gdbbPressTools {
 
         define('GDBBPRESSTOOLS_URL', $this->plugin_url);
         define('GDBBPRESSTOOLS_PATH', $this->plugin_path);
-
-        add_action('setup_theme', array($this, 'mods'));
-        add_action('setup_theme', array($this, 'load'));
     }
 
-    public function mods() {
-        if (!function_exists('bbp_version')) return;
+    private function _upgrade($old, $new) {
+        foreach ($new as $key => $value) {
+            if (!isset($old[$key])) $old[$key] = $value;
+        }
+
+        $unset = array();
+        foreach ($old as $key => $value) {
+            if (!isset($new[$key])) $unset[] = $key;
+        }
+
+        foreach ($unset as $key) {
+            unset($old[$key]);
+        }
+
+        return $old;
+    }
+
+    public function load_modules() {
+        if (!function_exists('bbp_version')) {
+            return;
+        }
+
+        if (function_exists('bbp_is_search')) {
+            $this->is_search = bbp_is_search();
+        }
 
         if (is_admin()) {
             if ($this->o['admin_disable_active'] == 1 && !d4p_bbp_is_role('admin_disable')) {
@@ -82,7 +93,7 @@ class gdbbPressTools {
                 $this->mod['a'] = new gdbbMod_Access();
             }
         } else {
-            if ($this->o['quote_active'] == 1 && d4p_bbp_is_role('quote')) {
+            if ($this->o['quote_active'] == 1 && d4p_bbp_is_role('quote') && !$this->is_search) {
                 require_once(GDBBPRESSTOOLS_PATH.'code/mods/quote.php');
 
                 $this->mod['q'] = new gdbbMod_Quote(
@@ -97,7 +108,8 @@ class gdbbPressTools {
             $this->mod['i'] = new gdbbMod_Signature(
                     $this->o['signature_length'], 
                     d4p_bbp_is_role('signature_enhanced'),
-                    $this->o['signature_method']);
+                    $this->o['signature_method'],
+                    $this->o['signature_buddypress_profile_group']);
             $this->mod['i']->active = d4p_bbp_is_role('signature');
         }
 
@@ -136,23 +148,29 @@ class gdbbPressTools {
         }
     }
 
-    public function load() {
-        if (!function_exists('bbp_version')) return;
+    public function init_modules() {
+        do_action('bbtoolbox_init');
+    }
 
-        add_action('init', array(&$this, 'load_translation'));
+    public function hook_modules() {
+        do_action('bbtoolbox_core');
+    }
+
+    public function load_plugin() {
+        if (!function_exists('bbp_version')) {
+            return;
+        }
+
+        $this->l = get_locale();
+
+        if(!empty($this->l)) {
+            load_plugin_textdomain('gd-bbpress-tools', false, 'gd-bbpress-tools/languages');
+        }
 
         if (is_admin()) {
             require_once(GDBBPRESSTOOLS_PATH.'code/admin.php');
         } else {
             require_once(GDBBPRESSTOOLS_PATH.'code/tools/front.php');
-        }
-    }
-
-    public function load_translation() {
-        $this->l = get_locale();
-
-        if(!empty($this->l)) {
-            load_plugin_textdomain('gd-bbpress-tools', false, 'gd-bbpress-tools/languages');
         }
     }
 }

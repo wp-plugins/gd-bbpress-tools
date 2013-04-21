@@ -105,8 +105,8 @@ msgid "Font Color"
 msgstr ""
 
 #: code/mods/bbcodes.php:141
-#: code/mods/quote.php:26
-#: code/mods/quote.php:28
+#: code/mods/quote.php:39
+#: code/mods/quote.php:41
 #: forms/tabs/bbcode.php:176
 msgid "Quote"
 msgstr ""
@@ -157,15 +157,15 @@ msgstr ""
 msgid "wrote"
 msgstr ""
 
-#: code/mods/signature.php:68
+#: code/mods/signature.php:75
 msgid "You can use only plain text. HTML and BBCode will be stripped."
 msgstr ""
 
-#: code/mods/signature.php:70
+#: code/mods/signature.php:77
 msgid "You can use BBCodes. HTML will be stripped."
 msgstr ""
 
-#: code/mods/signature.php:72
+#: code/mods/signature.php:79
 msgid "You can use HTML. BBCodes will be stripped if the BBCodes support is disabled."
 msgstr ""
 
@@ -260,27 +260,27 @@ msgstr ""
 msgid "Search Results"
 msgstr ""
 
-#: code/admin.php:29
+#: code/admin.php:27
 #: forms/tabs/toolbox.php:2
 msgid "Thank you for using this plugin. Please, take a few minutes and check out the GD bbPress Toolbox Pro plugin with many new and improved features."
 msgstr ""
 
-#: code/admin.php:30
+#: code/admin.php:28
 #: forms/tabs/toolbox.php:4
 msgid "Buy GD bbPress Toolbox Pro version or Dev4Press Plugins Pack and get 15% discount using this coupon"
 msgstr ""
 
-#: code/admin.php:32
+#: code/admin.php:30
 #: forms/tabs/toolbox.php:6
 msgid "Official Website"
 msgstr ""
 
-#: code/admin.php:33
+#: code/admin.php:31
 #: forms/tabs/toolbox.php:7
 msgid "Dev4Press Plugins Pack"
 msgstr ""
 
-#: code/admin.php:34
+#: code/admin.php:32
 msgid "Don't display this message anymore"
 msgstr ""
 
@@ -455,7 +455,7 @@ msgstr ""
 #: forms/tabs/tools.php:45
 #: forms/tabs/tools.php:101
 #: forms/tabs/tools.php:139
-#: forms/tabs/tools.php:224
+#: forms/tabs/tools.php:260
 #: forms/tabs/views.php:14
 #: forms/tabs/views.php:27
 #: forms/tabs/views.php:41
@@ -494,7 +494,7 @@ msgstr ""
 #: forms/tabs/tools.php:113
 #: forms/tabs/tools.php:158
 #: forms/tabs/tools.php:199
-#: forms/tabs/tools.php:236
+#: forms/tabs/tools.php:272
 msgid "Super Admin"
 msgstr ""
 
@@ -503,7 +503,7 @@ msgstr ""
 #: forms/tabs/tools.php:125
 #: forms/tabs/tools.php:170
 #: forms/tabs/tools.php:211
-#: forms/tabs/tools.php:248
+#: forms/tabs/tools.php:284
 msgid "Capability"
 msgstr ""
 
@@ -548,7 +548,7 @@ msgid "Google Search URL"
 msgstr ""
 
 #: forms/tabs/bbcode.php:212
-#: forms/tabs/tools.php:257
+#: forms/tabs/tools.php:293
 #: forms/tabs/views.php:50
 msgid "Save Changes"
 msgstr ""
@@ -721,7 +721,7 @@ msgstr ""
 
 #: forms/tabs/tools.php:155
 #: forms/tabs/tools.php:196
-#: forms/tabs/tools.php:233
+#: forms/tabs/tools.php:269
 msgid "User Roles"
 msgstr ""
 
@@ -742,15 +742,31 @@ msgid "Disabled"
 msgstr ""
 
 #: forms/tabs/tools.php:219
-msgid "Limit bbPress access on admin side"
+msgid "User Signature: BuddyPress Profile Field Group"
 msgstr ""
 
 #: forms/tabs/tools.php:220
+msgid "Select group where the signature editor will be displayed."
+msgstr ""
+
+#: forms/tabs/tools.php:224
+msgid "Field Group"
+msgstr ""
+
+#: forms/tabs/tools.php:255
+msgid "Limit bbPress access on admin side"
+msgstr ""
+
+#: forms/tabs/tools.php:256
 msgid "Select who can see and access admin side bbPress forums, topics and reply controls. Be careful with this feature."
 msgstr ""
 
-#: forms/tabs/tools.php:230
+#: forms/tabs/tools.php:266
 msgid "Roles with access"
+msgstr ""
+
+#: forms/tabs/tools.php:236
+msgid "Base"
 msgstr ""
 
 #: forms/tabs/views.php:10

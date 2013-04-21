@@ -6,10 +6,6 @@ class gdbbMod_Admin {
     public $admin_plugin = false;
 
     function __construct() {
-        add_action('after_setup_theme', array($this, 'load'));
-    }
-
-    public function load() {
         add_action('admin_init', array(&$this, 'admin_init'));
     }
 
@@ -68,6 +64,7 @@ class gdbbMod_Admin {
             $gdbbpress_tools->o['signature_method'] = $_POST['signature_method'];
             $gdbbpress_tools->o['signature_enhanced_super_admin'] = isset($_POST['signature_enhanced_super_admin']) ? 1 : 0;
             $gdbbpress_tools->o['signature_enhanced_roles'] = (array)$_POST['signature_enhanced_roles'];
+            $gdbbpress_tools->o['signature_buddypress_profile_group'] = $_POST['signature_buddypress_profile_group'];
 
             update_option('gd-bbpress-tools', $gdbbpress_tools->o);
             wp_redirect(add_query_arg('settings-updated', 'true'));

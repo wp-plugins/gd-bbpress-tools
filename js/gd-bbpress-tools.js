@@ -1,5 +1,4 @@
 /*jslint regexp: true, undef: true, sloppy: true, eqeq: true, vars: true, white: true, plusplus: true, maxerr: 50, indent: 4 */
-
 var gdbbPressTools = {
     storage: { },
     get_selection: function() {
@@ -16,7 +15,7 @@ var gdbbPressTools = {
         return jQuery.trim(t.toString());
     },
     init: function() {
-        jQuery(".d4p-bbt-quote-link").live("click", function(e){
+        jQuery(document).on("click", ".d4p-bbt-quote-link", function(e){
             e.preventDefault();
 
             if (jQuery("#bbp_reply_content").length > 0) {

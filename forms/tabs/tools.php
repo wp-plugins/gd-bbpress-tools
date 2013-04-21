@@ -217,6 +217,42 @@
             </tbody>
         </table>
 
+        <h3><?php _e("User Signature: BuddyPress Profile Field Group", "gd-bbpress-tools"); ?></h3>
+        <p><?php _e("Select group where the signature editor will be displayed.", "gd-bbpress-tools"); ?></p>
+        <table class="form-table">
+            <tbody>
+                <tr valign="top">
+                    <th scope="row"><label><?php _e("Field Group", "gd-bbpress-tools"); ?></label></th>
+                    <td>
+                        <?php
+
+                        $groups = array();
+                        if (class_exists('BP_XProfile_Group')) {
+                            $raw = BP_XProfile_Group::get(array('fetch_fields' => false));
+
+                            foreach ($raw as $group) {
+                                $groups[$group->id] = $group->name;
+                            }
+                        } else {
+                            $groups = array('1' => __("Base", "gd-bbpress-tools"));
+                        }
+
+                        ?>
+                        <select name="signature_buddypress_profile_group" class="regular-text">
+                            <?php
+
+                            foreach ($groups as $key => $name) {
+                                $selected = $options['signature_buddypress_profile_group'] == $key ? ' selected="selected"' : '';
+                                echo '<option value="'.$key.'"'.$selected.'>'.$name.'</option>';
+                            }
+
+                            ?>
+                        </select>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
         <h3><?php _e("Limit bbPress access on admin side", "gd-bbpress-tools"); ?></h3>
         <p><?php _e("Select who can see and access admin side bbPress forums, topics and reply controls. Be careful with this feature.", "gd-bbpress-tools"); ?></p>
         <table class="form-table">

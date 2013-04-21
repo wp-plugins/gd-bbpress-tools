@@ -136,7 +136,7 @@ if (!function_exists('d4p_bbp_is_role')) {
         } else if (is_super_admin()) {
             $allowed = $gdbbpress_tools->o[$setting_name.'_super_admin'] == 1;
         } else if (is_user_logged_in()) {
-            $roles = $gdbbpress_tools->o[$setting_name.'_roles'];
+            $roles = isset($gdbbpress_tools->o[$setting_name.'_roles']) ? $gdbbpress_tools->o[$setting_name.'_roles'] : null;
 
             if (is_null($roles)) {
                 $allowed = true;

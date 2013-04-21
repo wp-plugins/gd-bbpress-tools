@@ -9,21 +9,19 @@ class gdbbT_Admin {
     private $admin_plugin = false;
 
     function __construct() {
-        add_action('after_setup_theme', array($this, 'load'));
-    }
-
-    public function load() {
         add_action('admin_init', array(&$this, 'admin_init'));
         add_action('admin_menu', array(&$this, 'admin_menu'));
 
         add_filter('plugin_action_links', array(&$this, 'plugin_actions'), 10, 2);
         add_filter('plugin_row_meta', array(&$this, 'plugin_links'), 10, 2);
+
+        add_action('admin_enqueue_scripts', array(&$this, 'enqueue_files'));
     }
 
     function upgrade_notice() {
         global $gdbbpress_tools;
 
-        if ($gdbbpress_tools->o['upgrade_to_pro_130'] == 1) {
+        if ($gdbbpress_tools->o['upgrade_to_pro_140'] == 1) {
             $no_thanks = add_query_arg('proupgradebbt', 'hide');
 
             echo '<div class="updated d4p-updated">';
@@ -42,14 +40,10 @@ class gdbbT_Admin {
             $this->admin_plugin = $_GET['page'] == 'gdbbpress_tools';
         }
 
-        if ($this->admin_plugin) {
-            wp_enqueue_style('gd-bbpress-tools', GDBBPRESSTOOLS_URL."css/gd-bbpress-tools_admin.css", array(), GDBBPRESSTOOLS_VERSION);
-        }
-
         if (isset($_GET['proupgradebbt']) && $_GET['proupgradebbt'] == 'hide') {
             global $gdbbpress_tools;
 
-            $gdbbpress_tools->o['upgrade_to_pro_130'] = 0;
+            $gdbbpress_tools->o['upgrade_to_pro_140'] = 0;
 
             update_option('gd-bbpress-tools', $gdbbpress_tools->o);
 
@@ -58,6 +52,12 @@ class gdbbT_Admin {
         }
     }
 
+    public function enqueue_files() {
+        if ($this->admin_plugin) {
+            wp_enqueue_style('gd-bbpress-tools', GDBBPRESSTOOLS_URL."css/gd-bbpress-tools_admin.css", array(), GDBBPRESSTOOLS_VERSION);
+        }
+    }
+    
     public function admin_menu() {
         $this->page_ids[] = add_submenu_page('edit.php?post_type=forum', 'GD bbPress Tools', __("Tools", "gd-bbpress-tools"), GDBBPRESSTOOLS_CAP, 'gdbbpress_tools', array(&$this, 'menu_tools'));
 

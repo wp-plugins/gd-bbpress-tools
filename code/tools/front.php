@@ -4,7 +4,7 @@ if (!defined('ABSPATH')) exit;
 
 class gdbbMod_Front {
     function __construct() {
-        add_action('after_setup_theme', array($this, 'load'), 10);
+        add_action('bbtoolbox_core', array($this, 'load'));
     }
 
     public function load() {

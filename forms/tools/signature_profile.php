@@ -3,6 +3,6 @@
 <table class="form-table">
     <tr>
 	<th><label for="signature"><?php _e("Signature", "gd-bbpress-tools"); ?></label></th>
-	<td><textarea name="signature" id="signature" rows="5" cols="30"><?php echo $profileuser->signature; ?></textarea><br />
+	<td><textarea name="signature" id="signature" rows="5" cols="30"><?php echo $profileuser->signature; ?></textarea></td>
     </tr>
 </table>

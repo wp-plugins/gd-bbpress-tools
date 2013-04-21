@@ -4,7 +4,7 @@ if (!defined('ABSPATH')) exit;
 
 class gdbbMod_Toolbar {
     function __construct() {
-        add_action('init', array($this, 'init'));
+        add_action('bbtoolbox_init', array($this, 'init'));
     }
 
     public function init() {

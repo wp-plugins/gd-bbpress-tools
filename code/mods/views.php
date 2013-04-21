@@ -8,7 +8,7 @@ class gdbbMod_Views {
     function __construct($views) {
         $this->views = $views;
 
-        add_action('bbp_register_views', array(&$this, 'register_views'));
+        add_action('bbtoolbox_core', array(&$this, 'register_views'));
 
         if (d4p_bbpress_version() > 20) {
             add_filter('bbp_get_view_query_args', array(&$this, 'modify_search'), 10, 2);

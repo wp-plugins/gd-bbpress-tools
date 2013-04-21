@@ -1,10 +1,10 @@
 === GD bbPress Tools ===
 Contributors: GDragoN
 Donate link: http://www.gdbbpbox.com/
-Version: 1.3.1
+Version: 1.4
 Tags: bbpress, tools, gdragon, dev4press, forums, forum, topic, reply, signature, quote, search, toolbar, signature, views, admin, bbcode, bbcodes, shortcode, shortcodes
-Requires at least: 3.2
-Tested up to: 3.5
+Requires at least: 3.3
+Tested up to: 3.6
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -44,13 +44,12 @@ Supported languages: English, Serbian.
 == Installation ==
 = General Requirements =
 * PHP: 5.2.x
-* bbPress: 2.x.x
 
 = WordPress Requirements =
-* WordPress: 3.2
+* WordPress: 3.3
 
 = bbPress Requirements =
-* bbPress Plugin: 2.0 or newer
+* bbPress Plugin: 2.1 or newer
 
 = Basic Installation =
 * Plugin folder in the WordPress plugins folder must be `gd-bbpress-tools`
@@ -76,6 +75,17 @@ Yes. But, make sure to enable 'Always Include' option for JavaScript and CSS.
 * German: David Decker - http://deckerweb.de/
 
 == Changelog ==
+= 1.4 =
+* Select profile group in BuddyPress for signature editor
+* Changed loading order for bbPress 2.3 compatibility
+* Admin side uses proper enqueue method to load style
+* Dropped support for bbPress 2.0
+* Dropped support for WordPress 3.2
+* Fixed quote not setting proper ID for lead topic display
+* Fixed testing for roles allowed for all available tools
+* Fixed missing enhanced info when editing signatures
+* Fixed missing table cell ending for admin side signature editor
+
 = 1.3.1 =
 * Fixed signature visible to logged in users only
 * Fixed detection of bbPress 2.2
@@ -157,8 +167,8 @@ Yes. But, make sure to enable 'Always Include' option for JavaScript and CSS.
 * First official release
 
 == Upgrade Notice ==
-= 1.3.1 =
-Fixed signature visible to logged in users only. Fixed detection of bbPress 2.2.
+= 1.4 =
+Select profile group in BuddyPress for signature editor. Changed loading order for bbPress 2.3 compatibility. Admin side uses proper enqueue method to load style. Dropped support for bbPress 2.0. Dropped support for WordPress 3.2. Fixed quote not setting proper ID for lead topic display. Fixed testing for roles allowed for all available tools. Fixed missing enhanced info when editing signatures. Fixed missing table cell ending for admin side signature editor.
 
 == Screenshots ==
 1. Main plugins settings panel

@@ -7,13 +7,15 @@ class gdbbMod_Signature {
     public $max_length;
     public $enhanced;
     public $method;
+    public $profile_group;
 
-    function __construct($max_length = 512, $enhanced = true, $method = 'bbcode') {
+    function __construct($max_length = 512, $enhanced = true, $method = 'bbcode', $profile_group = 1) {
         $this->max_length = $max_length;
         $this->enhanced = $enhanced;
         $this->method = $method;
+        $this->profile_group = $profile_group;
 
-        add_action('init', array($this, 'init'));
+        add_action('bbtoolbox_init', array($this, 'init'));
     }
 
     public function init() {
@@ -58,13 +60,15 @@ class gdbbMod_Signature {
     }
 
     public function editor_form_buddypress() {
-        global $user_ID;
+        if (bp_get_current_profile_group_id() == $this->profile_group) {
+            global $user_ID;
 
-        $bbx_user_signature = get_user_meta($user_ID, 'signature', true);
-        $form = apply_filters('d4p_bbpresssignature_bbpress_editor_file', GDBBPRESSTOOLS_PATH.'forms/tools/signature_buddypress.php');
-        include_once($form);
+            $bbx_user_signature = get_user_meta($user_ID, 'signature', true);
+            $form = apply_filters('d4p_bbpresssignature_bbpress_editor_file', GDBBPRESSTOOLS_PATH.'forms/tools/signature_buddypress.php');
+            include_once($form);
 
-        remove_action('bp_custom_profile_edit_fields', array(&$this, 'editor_form_buddypress'));
+            remove_action('bp_custom_profile_edit_fields', array(&$this, 'editor_form_buddypress'));
+        }
     }
 
     public function signature_info() {
