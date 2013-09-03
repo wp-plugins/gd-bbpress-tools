@@ -11,17 +11,25 @@ class gdbbMod_Shortcodes {
     private $restricted = false;
     private $bbpress_only = false;
 
-    function __construct($bbpress_only = false, $restricted = false, $removal = 'info') {
+    private $list_deactivated = array();
+
+    function __construct($bbpress_only = false, $restricted = false, $removal = 'info', $deactivated = array(), $notice = true) {
         $this->bbpress_only = $bbpress_only;
         $this->restricted = $restricted;
         $this->removal = $removal;
+        $this->list_deactivated = (array)$deactivated;
+        $this->notice = $notice;
 
         $this->_init();
 
         $list = array_keys($this->shortcodes);
         foreach ($list as $shortcode) {
-            add_shortcode($shortcode, array(&$this, 'shortcode_'.$shortcode));
-            add_shortcode(strtoupper($shortcode), array(&$this, 'shortcode_'.$shortcode));
+            $deactivate = in_array($shortcode, $this->list_deactivated);
+
+            if (!$deactivate) {
+                add_shortcode($shortcode, array(&$this, 'shortcode_'.$shortcode));
+                add_shortcode(strtoupper($shortcode), array(&$this, 'shortcode_'.$shortcode));
+            }
         }
 
         if ($this->notice) {
@@ -468,7 +476,7 @@ class gdbbMod_Shortcodes {
         $args = isset($this->shortcodes['url']['args']) ? $this->shortcodes['url']['args'] : array();
 
         if ($atts['url'] != '') {
-            $args['href'] = $atts['url'];
+            $args['href'] = str_replace(array('"', "'"), '', $atts['url']);
         } else {
             $args['href'] = $content;
         }
@@ -503,12 +511,15 @@ class gdbbMod_Shortcodes {
         $atts = $this->_atts('google', $atts);
         $args = isset($this->shortcodes['google']['args']) ? $this->shortcodes['google']['args'] : array();
 
-        $link = 'http://www.google.';
+        $protocol = is_ssl() ? 'https' : 'http';
+        $link = $protocol.'://www.google.';
+
         if ($atts['google'] != '') {
             $link.= $atts['google'];
         } else {
             $link.= 'com';
         }
+
         $link.= '/search?q='.urlencode($content);
 
         $args['href'] = $link;
@@ -522,7 +533,25 @@ class gdbbMod_Shortcodes {
 
         $atts = $this->_atts('youtube', $atts);
 
-        $url = 'http://www.youtube.com/watch?v='.$content;
+        if (strpos($content, 'youtube.com') === false && strpos($content, 'youtu.be') === false) {
+            $protocol = is_ssl() ? 'https' : 'http';
+            $url = $protocol.'://www.youtube.com/watch?v='.$content;
+        } else {
+            $url = $content;
+
+            if (is_ssl() && substr($url, 0, 5) != 'https') {
+                $url = 'https'.substr($url, 4);
+            }
+        }
+
+        if ($atts['youtube'] != '') {
+            $parts = explode('x', $atts['youtube'], 2);
+
+            if (count($parts) == 2) {
+                $args['width'] = intval($parts[0]);
+                $args['height'] = intval($parts[1]);
+            }
+        }
 
         $data = array();
         if ($atts['width'] > 0) $data['width'] = $atts['width'];
@@ -538,7 +567,25 @@ class gdbbMod_Shortcodes {
 
         $atts = $this->_atts('vimeo', $atts);
 
-        $url = 'http://www.vimeo.com/'.$content;
+        if (strpos($content, 'vimeo.com') === false) {
+            $protocol = is_ssl() ? 'https' : 'http';
+            $url = $protocol.'://www.vimeo.com/'.$content;
+        } else {
+            $url = $content;
+
+            if (is_ssl() && substr($url, 0, 5) != 'https') {
+                $url = 'https'.substr($url, 4);
+            }
+        }
+
+        if ($atts['vimeo'] != '') {
+            $parts = explode('x', $atts['vimeo'], 2);
+
+            if (count($parts) == 2) {
+                $args['width'] = intval($parts[0]);
+                $args['height'] = intval($parts[1]);
+            }
+        }
 
         $data = array();
         if ($atts['width'] > 0) $data['width'] = $atts['width'];

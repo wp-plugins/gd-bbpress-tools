@@ -2,14 +2,14 @@
 
 class gdbbPressTools_Defaults {
     var $default_options = array(
-        'version' => '1.4',
-        'date' => '2013.04.21.',
-        'build' => 1288,
+        'version' => '1.5',
+        'date' => '2013.09.03.',
+        'build' => 1335,
         'status' => 'stable',
         'product_id' => 'gd-bbpress-tools',
         'edition' => 'free',
         'revision' => 0,
-        'upgrade_to_pro_140' => 1,
+        'upgrade_to_pro_150' => 1,
         'include_always' => 0,
         'include_js' => 1,
         'include_css' => 1,
@@ -30,6 +30,7 @@ class gdbbPressTools_Defaults {
         'bbcodes_special_super_admin' => 1,
         'bbcodes_special_roles' => null,
         'bbcodes_special_action' => 'info',
+        'bbcodes_deactivated' => array(),
         'signature_active' => 1,
         'signature_length' => 512,
         'signature_super_admin' => 1,

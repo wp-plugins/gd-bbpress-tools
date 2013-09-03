@@ -27,12 +27,28 @@ class gdbbMod_Admin {
             global $gdbbpress_tools;
             check_admin_referer('gd-bbpress-tools');
 
+            $all_bbcodes = array(
+                'b', 'u', 'i', 's', 'center', 'right', 'left', 'justify', 'sub', 'sup', 'pre',
+                'reverse', 'list', 'ol', 'ul', 'li', 'blockquote', 'div', 'area', 'border',
+                'hr', 'size', 'color', 'quote', 'url', 'google', 'youtube', 'vimeo', 'img',
+                'note');
+
+            $deactivate = array();
+            $active = isset($_POST['bbcode_activated']) ? (array)$_POST['bbcode_activated'] : array();
+
+            foreach ($all_bbcodes as $bbc) {
+                if (!in_array($bbc, $active)) {
+                    $deactivate[] = $bbc;
+                }
+            }
+
             $gdbbpress_tools->o['bbcodes_active'] = isset($_POST['bbcodes_active']) ? 1 : 0;
             $gdbbpress_tools->o['bbcodes_notice'] = isset($_POST['bbcodes_notice']) ? 1 : 0;
             $gdbbpress_tools->o['bbcodes_bbpress_only'] = isset($_POST['bbcodes_bbpress_only']) ? 1 : 0;
             $gdbbpress_tools->o['bbcodes_special_super_admin'] = isset($_POST['bbcodes_special_super_admin']) ? 1 : 0;
             $gdbbpress_tools->o['bbcodes_special_roles'] = (array)$_POST['bbcodes_special_roles'];
             $gdbbpress_tools->o['bbcodes_special_action'] = isset($_POST['bbcodes_special_action']) ? 1 : 0;
+            $gdbbpress_tools->o['bbcodes_deactivated'] = $deactivate;
 
             update_option('gd-bbpress-tools', $gdbbpress_tools->o);
             wp_redirect(add_query_arg('settings-updated', 'true'));

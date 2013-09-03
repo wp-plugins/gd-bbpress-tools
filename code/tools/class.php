@@ -118,7 +118,10 @@ class gdbbPressTools {
 
             $this->mod['s'] = new gdbbMod_Shortcodes(
                     $this->o['bbcodes_bbpress_only'] == 1, 
-                    !d4p_bbp_is_role('bbcodes_special'));
+                    !d4p_bbp_is_role('bbcodes_special'),
+                    'info',
+                    $this->o['bbcodes_deactivated'],
+                    $this->o['bbcodes_notice'] == 1);
         }
 
         if (GDBBPRESSTOOLS_WPV > 32 && $this->o['toolbar_active'] == 1 && d4p_bbp_is_role('toolbar')) {

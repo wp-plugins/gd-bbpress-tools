@@ -1,7 +1,7 @@
 === GD bbPress Tools ===
 Contributors: GDragoN
 Donate link: http://www.gdbbpbox.com/
-Version: 1.4
+Version: 1.5
 Tags: bbpress, tools, gdragon, dev4press, forums, forum, topic, reply, signature, quote, search, toolbar, signature, views, admin, bbcode, bbcodes, shortcode, shortcodes
 Requires at least: 3.3
 Tested up to: 3.6
@@ -24,12 +24,17 @@ Adds various expansions and tools to the bbPress 2.0 plugin implemented forums. 
 
 Plugin supports BBCodes based on the phpBB implementation. Right now, plugin has 30 BBCodes.
 
-Supported languages: English, Serbian.
+Supported languages: English, Serbian, German.
+
+= bbPress Plugin Versions =
+GD bbPress Attachments 2.0 supports bbPress 2.2.x, 2.3.x and 2.4.x versions. bbPress 2.0.x and 2.1.x are no longer supported!
+
+= BuddyPress Support =
+GD bbPress Attachments 2.0 is tested with BuddyPress 1.8.x and it works fine if you enable BuddyPress support in bbPress plugin for Group Forums. Make sure you enable JavaScript and CSS Settings Always Include option in the Tools plugin settings.
 
 = Important URL's =
 [Plugin Home](http://www.dev4press.com/plugins/gd-bbpress-tools/) |
 [Support Forum](http://www.dev4press.com/forums/forum/free-plugins/gd-bbpress-tools/) |
-[Feedburner](http://feeds2.feedburner.com/dev4press) |
 [Twitter](http://twitter.com/milangd) |
 [Facebook Page](http://www.facebook.com/dev4press)
 
@@ -43,13 +48,13 @@ Supported languages: English, Serbian.
 
 == Installation ==
 = General Requirements =
-* PHP: 5.2.x
+* PHP: 5.2.4 or newer
 
 = WordPress Requirements =
-* WordPress: 3.3
+* WordPress: 3.3 or newer
 
 = bbPress Requirements =
-* bbPress Plugin: 2.1 or newer
+* bbPress Plugin: 2.2 or newer
 
 = Basic Installation =
 * Plugin folder in the WordPress plugins folder must be `gd-bbpress-tools`
@@ -61,12 +66,12 @@ Supported languages: English, Serbian.
 Open the Forums menu, and you will see Tools item there. This will open a panel with global plugin settings.
 
 * Will this plugin work with standalone bbPress instalation?
-No. This plugin requires the plugin versions of bbPress 2.0 or higher.
+No. This plugin requires the plugin versions of bbPress 2.2 or higher.
 
 * Does this plugin work with bbPress that is part of BuddyPress plugin?
-No. Plugin requires bbPress 2.0 or higher plugin.
+No. Plugin requires bbPress 2.2 or higher plugin.
 
-* Does this plugin work with bbPress 2.1 used as site wide forums for BuddyPress plugin?
+* Does this plugin work with bbPress plugin used as site wide forums for BuddyPress plugin?
 Yes. But, make sure to enable 'Always Include' option for JavaScript and CSS.
 
 == Translations ==
@@ -75,6 +80,14 @@ Yes. But, make sure to enable 'Always Include' option for JavaScript and CSS.
 * German: David Decker - http://deckerweb.de/
 
 == Changelog ==
+= 1.5 =
+* Added options to disable any of the plugins bbcodes
+* Improved bbcodes: youtube code supports full url
+* Improved bbcodes: vimeo code supports full url
+* Removed support for bbPress 2.1.x
+* Fixed option for showing and hiding bbCode notice
+* Fixed bbCode youtube and vimeo don't work with SSL active
+
 = 1.4 =
 * Select profile group in BuddyPress for signature editor
 * Changed loading order for bbPress 2.3 compatibility

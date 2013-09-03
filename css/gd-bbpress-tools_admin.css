@@ -68,3 +68,12 @@ div.d4p-updated {
     color: #cc0000 !important;
     font-weight: bold !important;
 }
+
+.d4p-bbcodes-table th,
+.d4p-bbcodes-table td {
+    vertical-align: top !important;
+}
+
+.d4p-bbcodes-table th {
+    width: 20px !important;
+}

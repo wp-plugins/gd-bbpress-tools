@@ -1,158 +1,160 @@
-#: code/mods/bbcodes.php:43
-#: forms/tabs/bbcode.php:92
+#: code/mods/bbcodes.php:51
+#: forms/tabs/bbcode.php:105
 msgid "Bold"
 msgstr ""
 
-#: code/mods/bbcodes.php:47
-#: forms/tabs/bbcode.php:96
+#: code/mods/bbcodes.php:55
+#: forms/tabs/bbcode.php:109
 msgid "Italic"
 msgstr ""
 
-#: code/mods/bbcodes.php:51
-#: forms/tabs/bbcode.php:100
+#: code/mods/bbcodes.php:59
+#: forms/tabs/bbcode.php:113
 msgid "Underline"
 msgstr ""
 
-#: code/mods/bbcodes.php:56
-#: forms/tabs/bbcode.php:104
+#: code/mods/bbcodes.php:64
+#: forms/tabs/bbcode.php:117
 msgid "Strikethrough"
 msgstr ""
 
-#: code/mods/bbcodes.php:60
+#: code/mods/bbcodes.php:68
 msgid "Align Center"
 msgstr ""
 
-#: code/mods/bbcodes.php:65
+#: code/mods/bbcodes.php:73
 msgid "Align Right"
 msgstr ""
 
-#: code/mods/bbcodes.php:70
+#: code/mods/bbcodes.php:78
 msgid "Align Left"
 msgstr ""
 
-#: code/mods/bbcodes.php:75
+#: code/mods/bbcodes.php:83
 msgid "Align Justify"
 msgstr ""
 
-#: code/mods/bbcodes.php:80
-#: forms/tabs/bbcode.php:128
+#: code/mods/bbcodes.php:88
+#: forms/tabs/bbcode.php:141
 msgid "Subscript"
 msgstr ""
 
-#: code/mods/bbcodes.php:84
-#: forms/tabs/bbcode.php:132
+#: code/mods/bbcodes.php:92
+#: forms/tabs/bbcode.php:145
 msgid "Superscript"
 msgstr ""
 
-#: code/mods/bbcodes.php:88
-#: forms/tabs/bbcode.php:148
+#: code/mods/bbcodes.php:96
+#: forms/tabs/bbcode.php:161
 msgid "Preformatted"
 msgstr ""
 
-#: code/mods/bbcodes.php:92
-#: forms/tabs/bbcode.php:136
+#: code/mods/bbcodes.php:100
+#: forms/tabs/bbcode.php:149
 msgid "Reverse"
 msgstr ""
 
-#: code/mods/bbcodes.php:97
-#: code/mods/bbcodes.php:101
-#: forms/tabs/bbcode.php:164
+#: code/mods/bbcodes.php:105
+#: code/mods/bbcodes.php:109
+#: forms/tabs/bbcode.php:181
+#: forms/tabs/bbcode.php:185
 msgid "List: Ordered"
 msgstr ""
 
-#: code/mods/bbcodes.php:105
-#: forms/tabs/bbcode.php:168
+#: code/mods/bbcodes.php:113
+#: forms/tabs/bbcode.php:189
 msgid "List: Unordered"
 msgstr ""
 
-#: code/mods/bbcodes.php:109
-#: forms/tabs/bbcode.php:172
+#: code/mods/bbcodes.php:117
+#: forms/tabs/bbcode.php:193
 msgid "List: Item"
 msgstr ""
 
-#: code/mods/bbcodes.php:113
-#: forms/tabs/bbcode.php:152
+#: code/mods/bbcodes.php:121
+#: forms/tabs/bbcode.php:165
 msgid "Blockquote"
 msgstr ""
 
-#: code/mods/bbcodes.php:117
-#: forms/tabs/bbcode.php:156
+#: code/mods/bbcodes.php:125
+#: forms/tabs/bbcode.php:173
 msgid "Area"
 msgstr ""
 
-#: code/mods/bbcodes.php:121
+#: code/mods/bbcodes.php:129
+#: forms/tabs/bbcode.php:169
 msgid "Border"
 msgstr ""
 
-#: code/mods/bbcodes.php:125
-#: forms/tabs/bbcode.php:160
+#: code/mods/bbcodes.php:133
+#: forms/tabs/bbcode.php:177
 msgid "Block"
 msgstr ""
 
-#: code/mods/bbcodes.php:129
-#: forms/tabs/bbcode.php:124
+#: code/mods/bbcodes.php:137
+#: forms/tabs/bbcode.php:137
 msgid "Horizontal Line"
 msgstr ""
 
-#: code/mods/bbcodes.php:133
-#: forms/tabs/bbcode.php:140
+#: code/mods/bbcodes.php:141
+#: forms/tabs/bbcode.php:153
 msgid "Font Size"
 msgstr ""
 
-#: code/mods/bbcodes.php:137
-#: forms/tabs/bbcode.php:144
+#: code/mods/bbcodes.php:145
+#: forms/tabs/bbcode.php:157
 msgid "Font Color"
 msgstr ""
 
-#: code/mods/bbcodes.php:141
+#: code/mods/bbcodes.php:149
 #: code/mods/quote.php:39
 #: code/mods/quote.php:41
-#: forms/tabs/bbcode.php:176
+#: forms/tabs/bbcode.php:197
 msgid "Quote"
 msgstr ""
 
-#: code/mods/bbcodes.php:145
-#: forms/tabs/bbcode.php:185
+#: code/mods/bbcodes.php:153
+#: forms/tabs/bbcode.php:206
 msgid "URL"
 msgstr ""
 
-#: code/mods/bbcodes.php:149
+#: code/mods/bbcodes.php:157
 msgid "Google Search"
 msgstr ""
 
-#: code/mods/bbcodes.php:153
-#: forms/tabs/bbcode.php:189
+#: code/mods/bbcodes.php:161
+#: forms/tabs/bbcode.php:210
 msgid "Image"
 msgstr ""
 
-#: code/mods/bbcodes.php:157
-#: forms/tabs/bbcode.php:193
+#: code/mods/bbcodes.php:165
+#: forms/tabs/bbcode.php:214
 msgid "YouTube Video"
 msgstr ""
 
-#: code/mods/bbcodes.php:161
-#: forms/tabs/bbcode.php:197
+#: code/mods/bbcodes.php:169
+#: forms/tabs/bbcode.php:219
 msgid "Vimeo Video"
 msgstr ""
 
-#: code/mods/bbcodes.php:165
-#: forms/tabs/bbcode.php:205
+#: code/mods/bbcodes.php:173
+#: forms/tabs/bbcode.php:228
 msgid "Note"
 msgstr ""
 
-#: code/mods/bbcodes.php:286
+#: code/mods/bbcodes.php:294
 msgid "BBCode you used is not allowed."
 msgstr ""
 
-#: code/mods/bbcodes.php:304
+#: code/mods/bbcodes.php:312
 msgid "You can use BBCodes to format your content."
 msgstr ""
 
-#: code/mods/bbcodes.php:306
+#: code/mods/bbcodes.php:314
 msgid "Your account can't use Advanced BBCodes, they will be stripped before saving."
 msgstr ""
 
-#: code/mods/bbcodes.php:456
+#: code/mods/bbcodes.php:464
 #: code/tools/front.php:34
 msgid "wrote"
 msgstr ""
@@ -435,23 +437,23 @@ msgstr ""
 msgid "Page"
 msgstr ""
 
-#: forms/tabs/bbcode.php:2
+#: forms/tabs/bbcode.php:14
 #: forms/tabs/tools.php:2
 #: forms/tabs/views.php:2
 msgid "Settings saved."
 msgstr ""
 
-#: forms/tabs/bbcode.php:9
+#: forms/tabs/bbcode.php:21
 msgid "BBCodes Support"
 msgstr ""
 
-#: forms/tabs/bbcode.php:10
+#: forms/tabs/bbcode.php:22
 msgid "Implements shortcodes for standard BBCodes based on the phpBB 3.0 forums implementation with many additional codes."
 msgstr ""
 
-#: forms/tabs/bbcode.php:14
 #: forms/tabs/bbcode.php:26
 #: forms/tabs/bbcode.php:38
+#: forms/tabs/bbcode.php:50
 #: forms/tabs/tools.php:45
 #: forms/tabs/tools.php:101
 #: forms/tabs/tools.php:139
@@ -462,34 +464,34 @@ msgstr ""
 msgid "Active"
 msgstr ""
 
-#: forms/tabs/bbcode.php:21
+#: forms/tabs/bbcode.php:33
 msgid "BBCodes New Topic/Reply Notice"
 msgstr ""
 
-#: forms/tabs/bbcode.php:22
+#: forms/tabs/bbcode.php:34
 msgid "If the BBCodes support is active, you can display notice in the new topic/reply form."
 msgstr ""
 
-#: forms/tabs/bbcode.php:33
+#: forms/tabs/bbcode.php:45
 msgid "Limit to bbPress only"
 msgstr ""
 
-#: forms/tabs/bbcode.php:34
+#: forms/tabs/bbcode.php:46
 msgid "Processing of the bbcodes can be limited only to bbPress implemented forums, topics and replies."
 msgstr ""
 
-#: forms/tabs/bbcode.php:45
+#: forms/tabs/bbcode.php:57
 msgid "Advanced BBCodes"
 msgstr ""
 
-#: forms/tabs/bbcode.php:50
-#: forms/tabs/bbcode.php:53
+#: forms/tabs/bbcode.php:62
+#: forms/tabs/bbcode.php:65
 #: forms/tabs/tools.php:152
 #: forms/tabs/tools.php:193
 msgid "Allowed to"
 msgstr ""
 
-#: forms/tabs/bbcode.php:56
+#: forms/tabs/bbcode.php:68
 #: forms/tabs/tools.php:76
 #: forms/tabs/tools.php:113
 #: forms/tabs/tools.php:158
@@ -498,7 +500,7 @@ msgstr ""
 msgid "Super Admin"
 msgstr ""
 
-#: forms/tabs/bbcode.php:68
+#: forms/tabs/bbcode.php:80
 #: forms/tabs/tools.php:88
 #: forms/tabs/tools.php:125
 #: forms/tabs/tools.php:170
@@ -507,53 +509,61 @@ msgstr ""
 msgid "Capability"
 msgstr ""
 
-#: forms/tabs/bbcode.php:75
+#: forms/tabs/bbcode.php:86
 msgid "Restrict action"
 msgstr ""
 
-#: forms/tabs/bbcode.php:78
+#: forms/tabs/bbcode.php:89
 msgid "Replace with notice"
 msgstr ""
 
-#: forms/tabs/bbcode.php:79
+#: forms/tabs/bbcode.php:90
 msgid "Remove from content"
 msgstr ""
 
-#: forms/tabs/bbcode.php:88
-msgid "List of Standard BBCodes"
+#: forms/tabs/bbcode.php:96
+msgid "Active BBCodes"
 msgstr ""
 
-#: forms/tabs/bbcode.php:108
-msgid "Align: Center"
+#: forms/tabs/bbcode.php:97
+msgid "By default all BBCodes are active. If you want, you can disable registration of any of the BBCodes. To do that, just uncheck the BBCodes you want to deactivate from the list on the right side."
 msgstr ""
 
-#: forms/tabs/bbcode.php:112
-msgid "Align: Right"
-msgstr ""
-
-#: forms/tabs/bbcode.php:116
-msgid "Align: Left"
-msgstr ""
-
-#: forms/tabs/bbcode.php:120
-msgid "Align: Justify"
-msgstr ""
-
-#: forms/tabs/bbcode.php:181
-msgid "List of Advanced BBCodes"
-msgstr ""
-
-#: forms/tabs/bbcode.php:201
-msgid "Google Search URL"
-msgstr ""
-
-#: forms/tabs/bbcode.php:212
+#: forms/tabs/bbcode.php:98
 #: forms/tabs/tools.php:293
 #: forms/tabs/views.php:50
 msgid "Save Changes"
 msgstr ""
 
-#: forms/tabs/bbcode.php:46
+#: forms/tabs/bbcode.php:101
+msgid "List of Standard BBCodes"
+msgstr ""
+
+#: forms/tabs/bbcode.php:121
+msgid "Align: Center"
+msgstr ""
+
+#: forms/tabs/bbcode.php:125
+msgid "Align: Right"
+msgstr ""
+
+#: forms/tabs/bbcode.php:129
+msgid "Align: Left"
+msgstr ""
+
+#: forms/tabs/bbcode.php:133
+msgid "Align: Justify"
+msgstr ""
+
+#: forms/tabs/bbcode.php:202
+msgid "List of Advanced BBCodes"
+msgstr ""
+
+#: forms/tabs/bbcode.php:224
+msgid "Google Search URL"
+msgstr ""
+
+#: forms/tabs/bbcode.php:58
 msgid "Some BBCodes can be available only to selected user roles. This include: %s."
 msgstr ""
 
