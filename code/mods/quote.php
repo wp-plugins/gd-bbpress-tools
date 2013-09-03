@@ -12,9 +12,7 @@ class gdbbMod_Quote {
         $this->location = $location;
         $this->method = $method;
 
-        add_action('bbp_head', array(&$this, 'add_content_filters'));
-        add_action('d4p_bbpressquote_add_content_filters', array(&$this, 'add_content_filters'));
-        add_action('d4p_bbpressquote_remove_content_filters', array(&$this, 'remove_content_filters'));
+        $this->add_content_filters();
     }
 
     private function _quote() {

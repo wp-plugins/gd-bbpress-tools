@@ -1,7 +1,7 @@
 === GD bbPress Tools ===
 Contributors: GDragoN
 Donate link: http://www.gdbbpbox.com/
-Version: 1.5
+Version: 1.5.1
 Tags: bbpress, tools, gdragon, dev4press, forums, forum, topic, reply, signature, quote, search, toolbar, signature, views, admin, bbcode, bbcodes, shortcode, shortcodes
 Requires at least: 3.3
 Tested up to: 3.6
@@ -80,6 +80,10 @@ Yes. But, make sure to enable 'Always Include' option for JavaScript and CSS.
 * German: David Decker - http://deckerweb.de/
 
 == Changelog ==
+= 1.5.1 =
+* Fixed signatures not working with bbPress 2.4
+* Fixed quote not working with bbPress 2.4
+
 = 1.5 =
 * Added options to disable any of the plugins bbcodes
 * Improved bbcodes: youtube code supports full url

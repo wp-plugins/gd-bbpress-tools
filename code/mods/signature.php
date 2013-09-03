@@ -32,9 +32,7 @@ class gdbbMod_Signature {
             add_action('bp_custom_profile_edit_fields', array(&$this, 'editor_form_buddypress'));
         }
 
-        add_action('bbp_head', array(&$this, 'add_content_filters'));
-        add_action('d4p_bbpresssignature_add_content_filters', array(&$this, 'add_content_filters'));
-        add_action('d4p_bbpresssignature_remove_content_filters', array(&$this, 'remove_content_filters'));
+        $this->add_content_filters();
     }
 
     public function add_content_filters() {
