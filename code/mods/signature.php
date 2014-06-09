@@ -114,7 +114,10 @@ class gdbbMod_Signature {
         $sig = $this->format_signature($sig);
 
         if ($sig != '') {
-            $content.= '<div class="bbp-signature">'.do_shortcode($sig).'</div>';
+            $sig = convert_smilies($sig);
+            $sig = do_shortcode($sig);
+
+            $content.= '<div class="bbp-signature">'.$sig.'</div>';
         }
 
         return $content;

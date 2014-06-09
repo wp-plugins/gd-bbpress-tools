@@ -1,10 +1,10 @@
 === GD bbPress Tools ===
 Contributors: GDragoN
 Donate link: http://www.gdbbpbox.com/
-Version: 1.5.1
+Version: 1.6
 Tags: bbpress, tools, gdragon, dev4press, forums, forum, topic, reply, signature, quote, search, toolbar, signature, views, admin, bbcode, bbcodes, shortcode, shortcodes
 Requires at least: 3.3
-Tested up to: 3.6
+Tested up to: 3.9
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -27,24 +27,22 @@ Plugin supports BBCodes based on the phpBB implementation. Right now, plugin has
 Supported languages: English, Serbian, German.
 
 = bbPress Plugin Versions =
-GD bbPress Attachments 2.0 supports bbPress 2.2.x, 2.3.x and 2.4.x versions. bbPress 2.0.x and 2.1.x are no longer supported!
+GD bbPress Tools 1.6 supports bbPress 2.3.x, 2.4.x and 2.5.x versions. bbPress 2.0.x, 2.1.x and 2.2.x are no longer supported!
 
 = BuddyPress Support =
-GD bbPress Attachments 2.0 is tested with BuddyPress 1.8.x and it works fine if you enable BuddyPress support in bbPress plugin for Group Forums. Make sure you enable JavaScript and CSS Settings Always Include option in the Tools plugin settings.
+GD bbPress Tools 1.6 is tested with BuddyPress 1.8.x and it works fine if you enable BuddyPress support in bbPress plugin for Group Forums. Make sure you enable JavaScript and CSS Settings Always Include option in the Tools plugin settings.
 
-= Important URL's =
-[Plugin Home](http://www.dev4press.com/plugins/gd-bbpress-tools/) |
-[Support Forum](http://www.dev4press.com/forums/forum/free-plugins/gd-bbpress-tools/) |
-[Twitter](http://twitter.com/milangd) |
-[Facebook Page](http://www.facebook.com/dev4press)
-
-= More free dev4Press.com plugins for bbPress =
-* [GD bbPress Attachments](http://wordpress.org/extend/plugins/gd-bbpress-attachments/) - attachments for topics and replies
-* [GD bbPress Widgets](http://wordpress.org/extend/plugins/gd-bbpress-widgets/) - additional widgets for bbpress
+= Upgrade to GD bbPress Toolbox Pro =
+Pro version contains many more useful features 10 more BBCodes (including Hide and Spoiler), BBCodes editor toolbar, many more views, notification email control, great new responsive admin UI and much more. Plus, Pro version contains powerful attachments features and 4 widgets.
+[GD bbPress Toolbox Pro](http://www.gdbbpbox.com/)
 
 = Premium dev4Press.com plugins for bbPress =
 * [GD bbPress Toolbox Pro](http://www.gdbbpbox.com/) - our free bbPress plugins in one plus more
 * [GD CPT Tools Pro](http://www.gdcpttools.com/features/bbpress-integration/) - meta box for the topic and reply form
+
+= More free dev4Press.com plugins for bbPress =
+* [GD bbPress Attachments](http://wordpress.org/extend/plugins/gd-bbpress-attachments/) - attachments for topics and replies
+* [GD bbPress Widgets](http://wordpress.org/extend/plugins/gd-bbpress-widgets/) - additional widgets for bbpress
 
 == Installation ==
 = General Requirements =
@@ -54,7 +52,7 @@ GD bbPress Attachments 2.0 is tested with BuddyPress 1.8.x and it works fine if 
 * WordPress: 3.3 or newer
 
 = bbPress Requirements =
-* bbPress Plugin: 2.2 or newer
+* bbPress Plugin: 2.3 or newer
 
 = Basic Installation =
 * Plugin folder in the WordPress plugins folder must be `gd-bbpress-tools`
@@ -66,10 +64,10 @@ GD bbPress Attachments 2.0 is tested with BuddyPress 1.8.x and it works fine if 
 Open the Forums menu, and you will see Tools item there. This will open a panel with global plugin settings.
 
 * Will this plugin work with standalone bbPress instalation?
-No. This plugin requires the plugin versions of bbPress 2.2 or higher.
+No. This plugin requires the plugin versions of bbPress 2.3 or higher.
 
 * Does this plugin work with bbPress that is part of BuddyPress plugin?
-No. Plugin requires bbPress 2.2 or higher plugin.
+No. Plugin requires bbPress 2.3 or higher plugin.
 
 * Does this plugin work with bbPress plugin used as site wide forums for BuddyPress plugin?
 Yes. But, make sure to enable 'Always Include' option for JavaScript and CSS.
@@ -79,7 +77,17 @@ Yes. But, make sure to enable 'Always Include' option for JavaScript and CSS.
 * Serbian
 * German: David Decker - http://deckerweb.de/
 
+== Upgrade Notice ==
+= 1.6 =
+Added smilies parsing for user signature. Removed support for bbPress 2.2.x. Fixed some quote issues with BR tags. Fixed quote not working with WordPress 3.9.
+
 == Changelog ==
+= 1.6 =
+* Added smilies parsing for user signature
+* Removed support for bbPress 2.2.x
+* Fixed some quote issues with BR tags
+* Fixed quote not working with WordPress 3.9
+
 = 1.5.1 =
 * Fixed signatures not working with bbPress 2.4
 * Fixed quote not working with bbPress 2.4
@@ -182,10 +190,6 @@ Yes. But, make sure to enable 'Always Include' option for JavaScript and CSS.
 
 = 1.0.0 =
 * First official release
-
-== Upgrade Notice ==
-= 1.4 =
-Select profile group in BuddyPress for signature editor. Changed loading order for bbPress 2.3 compatibility. Admin side uses proper enqueue method to load style. Dropped support for bbPress 2.0. Dropped support for WordPress 3.2. Fixed quote not setting proper ID for lead topic display. Fixed testing for roles allowed for all available tools. Fixed missing enhanced info when editing signatures. Fixed missing table cell ending for admin side signature editor.
 
 == Screenshots ==
 1. Main plugins settings panel

@@ -107,8 +107,8 @@ msgid "Font Color"
 msgstr ""
 
 #: code/mods/bbcodes.php:149
+#: code/mods/quote.php:37
 #: code/mods/quote.php:39
-#: code/mods/quote.php:41
 #: forms/tabs/bbcode.php:197
 msgid "Quote"
 msgstr ""
@@ -159,15 +159,15 @@ msgstr ""
 msgid "wrote"
 msgstr ""
 
-#: code/mods/signature.php:75
+#: code/mods/signature.php:73
 msgid "You can use only plain text. HTML and BBCode will be stripped."
 msgstr ""
 
-#: code/mods/signature.php:77
+#: code/mods/signature.php:75
 msgid "You can use BBCodes. HTML will be stripped."
 msgstr ""
 
-#: code/mods/signature.php:79
+#: code/mods/signature.php:77
 msgid "You can use HTML. BBCodes will be stripped if the BBCodes support is disabled."
 msgstr ""
 
@@ -582,11 +582,11 @@ msgstr ""
 msgid "Other Premium Plugins"
 msgstr ""
 
-#: forms/tabs/d4p.php:20
+#: forms/tabs/d4p.php:19
 msgid "Premium Themes"
 msgstr ""
 
-#: forms/tabs/d4p.php:23
+#: forms/tabs/d4p.php:22
 msgid "Free Plugins"
 msgstr ""
 
@@ -619,10 +619,18 @@ msgid "Panel with logged errors"
 msgstr ""
 
 #: forms/tabs/toolbox.php:21
-msgid "More widgets"
+msgid "More BBCodes"
 msgstr ""
 
 #: forms/tabs/toolbox.php:22
+msgid "BBCodes Toolbar"
+msgstr ""
+
+#: forms/tabs/toolbox.php:23
+msgid "More widgets"
+msgstr ""
+
+#: forms/tabs/toolbox.php:24
 msgid "More registered views"
 msgstr ""
 

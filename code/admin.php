@@ -21,7 +21,7 @@ class gdbbT_Admin {
     function upgrade_notice() {
         global $gdbbpress_tools;
 
-        if ($gdbbpress_tools->o['upgrade_to_pro_150'] == 1) {
+        if ($gdbbpress_tools->o['upgrade_to_pro_160'] == 1) {
             $no_thanks = add_query_arg('proupgradebbt', 'hide');
 
             echo '<div class="updated d4p-updated">';
@@ -43,7 +43,7 @@ class gdbbT_Admin {
         if (isset($_GET['proupgradebbt']) && $_GET['proupgradebbt'] == 'hide') {
             global $gdbbpress_tools;
 
-            $gdbbpress_tools->o['upgrade_to_pro_150'] = 0;
+            $gdbbpress_tools->o['upgrade_to_pro_160'] = 0;
 
             update_option('gd-bbpress-tools', $gdbbpress_tools->o);
 
