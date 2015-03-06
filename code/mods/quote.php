@@ -42,8 +42,8 @@ class gdbbMod_Quote {
     }
 
     public function add_content_filters() {
-        add_filter('bbp_get_reply_content', array(&$this, 'quote_reply_content'), 9);
-        add_filter('bbp_get_topic_content', array(&$this, 'quote_topic_content'), 9);
+        add_filter('bbp_get_reply_content', array(&$this, 'quote_reply_content'), 90);
+        add_filter('bbp_get_topic_content', array(&$this, 'quote_topic_content'), 90);
 
         if ($this->location == 'content' || $this->location == 'both') {
             add_filter('bbp_get_reply_content', array(&$this, 'reply_content'));

@@ -68,21 +68,26 @@
                     </td>
                 </tr>
                 <tr valign="top">
+                    <th scope="row"><?php _e("Tags filtering", "gd-bbpress-tools") ?></th>
+                    <td>
+                        <input type="checkbox" <?php if ($options["allowed_tags_div"] == 1) echo " checked"; ?> name="allowed_tags_div" />
+                        <?php _e("Enable DIV tag"); ?><br/>
+                        <em><?php _e("Needed for quotes to work properly."); ?></em>
+                    </td>
+                </tr>
+                <tr valign="top">
                     <th scope="row"><?php _e("Available to", "gd-bbpress-tools") ?></th>
                     <td>
-                        <fieldset>
-                            <legend class="screen-reader-text"><span><?php _e("Available to", "gd-bbpress-tools"); ?></span></legend>
-                            <label for="quote_super_admin">
-                                <input type="checkbox" <?php if ($options["quote_super_admin"] == 1) echo " checked"; ?> name="quote_super_admin" />
-                                <?php _e("Super Admin", "gd-bbpress-tools"); ?>
-                            </label><br/>
-                            <?php foreach ($_user_roles as $role => $title) { ?>
-                            <label for="quote_roles_<?php echo $role; ?>">
-                                <input type="checkbox" <?php if (!isset($options["quote_roles"]) || is_null($options["quote_roles"]) || in_array($role, $options["quote_roles"])) echo " checked"; ?> value="<?php echo $role; ?>" id="quote_roles_<?php echo $role; ?>" name="quote_roles[]" />
-                                <?php echo $title; ?>
-                            </label><br/>
-                            <?php } ?>
-                        </fieldset>
+                        <label for="quote_super_admin">
+                            <input type="checkbox" <?php if ($options["quote_super_admin"] == 1) echo " checked"; ?> name="quote_super_admin" />
+                            <?php _e("Super Admin", "gd-bbpress-tools"); ?>
+                        </label><br/>
+                        <?php foreach ($_user_roles as $role => $title) { ?>
+                        <label for="quote_roles_<?php echo $role; ?>">
+                            <input type="checkbox" <?php if (!isset($options["quote_roles"]) || is_null($options["quote_roles"]) || in_array($role, $options["quote_roles"])) echo " checked"; ?> value="<?php echo $role; ?>" id="quote_roles_<?php echo $role; ?>" name="quote_roles[]" />
+                            <?php echo $title; ?>
+                        </label><br/>
+                        <?php } ?>
                     </td>
                 </tr>
                 <tr valign="top">
@@ -187,6 +192,7 @@
                             <option value="off"<?php if ($options["signature_method"] == "off") echo ' selected="selected"'; ?>><?php _e("Disabled", "gd-bbpress-tools"); ?></option>
                             <option value="bbcode"<?php if ($options["signature_method"] == "bbcode") echo ' selected="selected"'; ?>><?php _e("BBCode", "gd-bbpress-tools"); ?></option>
                             <option value="html"<?php if ($options["signature_method"] == "html") echo ' selected="selected"'; ?>><?php _e("HTML", "gd-bbpress-tools"); ?></option>
+                            <option value="full"<?php if ($options["signature_method"] == "full") echo ' selected="selected"'; ?>><?php _e("BBCode And HTML", "gd-bbpress-tools"); ?></option>
                         </select>
                     </td>
                 </tr>

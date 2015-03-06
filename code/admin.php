@@ -21,7 +21,7 @@ class gdbbT_Admin {
     function upgrade_notice() {
         global $gdbbpress_tools;
 
-        if ($gdbbpress_tools->o['upgrade_to_pro_160'] == 1) {
+        if ($gdbbpress_tools->o['upgrade_to_pro_170'] == 1) {
             $no_thanks = add_query_arg('proupgradebbt', 'hide');
 
             echo '<div class="updated d4p-updated">';
@@ -43,7 +43,7 @@ class gdbbT_Admin {
         if (isset($_GET['proupgradebbt']) && $_GET['proupgradebbt'] == 'hide') {
             global $gdbbpress_tools;
 
-            $gdbbpress_tools->o['upgrade_to_pro_160'] = 0;
+            $gdbbpress_tools->o['upgrade_to_pro_170'] = 0;
 
             update_option('gd-bbpress-tools', $gdbbpress_tools->o);
 
@@ -95,7 +95,7 @@ class gdbbT_Admin {
 
         $screen->set_help_sidebar('
             <p><strong>Dev4Press:</strong></p>
-            <p><a target="_blank" href="http://www.dev4press.com/">'.__("Website", "gd-bbpress-tools").'</a></p>
+            <p><a target="_blank" href="https://www.dev4press.com/">'.__("Website", "gd-bbpress-tools").'</a></p>
             <p><a target="_blank" href="http://twitter.com/milangd">'.__("On Twitter", "gd-bbpress-tools").'</a></p>
             <p><a target="_blank" href="http://facebook.com/dev4press">'.__("On Facebook", "gd-bbpress-tools").'</a></p>');
 
@@ -103,22 +103,22 @@ class gdbbT_Admin {
             "id" => "gdpt-screenhelp-help",
             "title" => __("Get Help", "gd-bbpress-tools"),
             "content" => '<h5>'.__("General Plugin Information", "gd-bbpress-tools").'</h5>
-                <p><a href="http://www.dev4press.com/plugins/gd-bbpress-tools/" target="_blank">'.__("Home Page on Dev4Press.com", "gd-bbpress-tools").'</a> | 
+                <p><a href="https://www.dev4press.com/plugins/gd-bbpress-tools/" target="_blank">'.__("Home Page on Dev4Press.com", "gd-bbpress-tools").'</a> | 
                 <a href="http://wordpress.org/extend/plugins/gd-bbpress-tools/" target="_blank">'.__("Home Page on WordPress.org", "gd-bbpress-tools").'</a></p> 
                 <h5>'.__("Getting Plugin Support", "gd-bbpress-tools").'</h5>
-                <p><a href="http://www.dev4press.com/forums/forum/free-plugins/gd-bbpress-tools/" target="_blank">'.__("Support Forum on Dev4Press.com", "gd-bbpress-tools").'</a> | 
-                <a href="http://wordpress.org/tags/gd-bbpress-tools?forum_id=10" target="_blank">'.__("Support Forum on WordPress.org", "gd-bbpress-tools").'</a> | 
-                <a href="http://www.dev4press.com/plugins/gd-bbpress-tools/support/" target="_blank">'.__("Plugin Support Sources", "gd-bbpress-tools").'</a></p>'));
+                <p><a href="https://support.dev4press.com/forums/forum/plugins-free/gd-bbpress-tools/" target="_blank">'.__("Support Forum on Dev4Press.com", "gd-bbpress-tools").'</a> | 
+                <a href="https://wordpress.org/support/plugin/gd-bbpress-tools" target="_blank">'.__("Support Forum on WordPress.org", "gd-bbpress-tools").'</a> | 
+                <a href="https://www.dev4press.com/plugins/gd-bbpress-tools/support/" target="_blank">'.__("Plugin Support Sources", "gd-bbpress-tools").'</a></p>'));
 
         $screen->add_help_tab(array(
             "id" => "gdpt-screenhelp-website",
             "title" => "Dev4Press", "sfc",
             "content" => '<p>'.__("On Dev4Press website you can find many useful plugins, themes and tutorials, all for WordPress. Please, take a few minutes to browse some of these resources, you might find some of them very useful.", "gd-bbpress-tools").'</p>
-                <p><a href="http://www.dev4press.com/plugins/" target="_blank"><strong>'.__("Plugins", "gd-bbpress-tools").'</strong></a> - '.__("We have more than 10 plugins available, some of them are commercial and some are available for free.", "gd-bbpress-tools").'</p>
-                <p><a href="http://www.dev4press.com/themes/" target="_blank"><strong>'.__("Themes", "gd-bbpress-tools").'</strong></a> - '.__("All our themes are based on our own xScape Theme Framework, and only available as premium.", "gd-bbpress-tools").'</p>
-                <p><a href="http://www.dev4press.com/category/tutorials/" target="_blank"><strong>'.__("Tutorials", "gd-bbpress-tools").'</strong></a> - '.__("Premium and free tutorials for our plugins themes, and many general and practical WordPress tutorials.", "gd-bbpress-tools").'</p>
-                <p><a href="http://www.dev4press.com/documentation/" target="_blank"><strong>'.__("Central Documentation", "gd-bbpress-tools").'</strong></a> - '.__("Growing collection of functions, classes, hooks, constants with examples for our plugins and themes.", "gd-bbpress-tools").'</p>
-                <p><a href="http://www.dev4press.com/forums/" target="_blank"><strong>'.__("Support Forums", "gd-bbpress-tools").'</strong></a> - '.__("Premium support forum for all with valid licenses to get help. Also, report bugs and leave suggestions.", "gd-bbpress-tools").'</p>'));
+                <p><a href="https://www.dev4press.com/plugins/" target="_blank"><strong>'.__("Plugins", "gd-bbpress-tools").'</strong></a> - '.__("We have more than 10 plugins available, some of them are commercial and some are available for free.", "gd-bbpress-tools").'</p>
+                <p><a href="https://www.dev4press.com/themes/" target="_blank"><strong>'.__("Themes", "gd-bbpress-tools").'</strong></a> - '.__("All our themes are based on our own xScape Theme Framework, and only available as premium.", "gd-bbpress-tools").'</p>
+                <p><a href="https://www.dev4press.com/category/tutorials/" target="_blank"><strong>'.__("Tutorials", "gd-bbpress-tools").'</strong></a> - '.__("Premium and free tutorials for our plugins themes, and many general and practical WordPress tutorials.", "gd-bbpress-tools").'</p>
+                <p><a href="https://www.dev4press.com/documentation/" target="_blank"><strong>'.__("Central Documentation", "gd-bbpress-tools").'</strong></a> - '.__("Growing collection of functions, classes, hooks, constants with examples for our plugins and themes.", "gd-bbpress-tools").'</p>
+                <p><a href="https://www.dev4press.com/forums/" target="_blank"><strong>'.__("Support Forums", "gd-bbpress-tools").'</strong></a> - '.__("Premium support forum for all with valid licenses to get help. Also, report bugs and leave suggestions.", "gd-bbpress-tools").'</p>'));
     }
 
     public function menu_tools() {

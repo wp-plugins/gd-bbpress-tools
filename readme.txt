@@ -1,18 +1,18 @@
 === GD bbPress Tools ===
 Contributors: GDragoN
 Donate link: http://www.gdbbpbox.com/
-Version: 1.6
+Version: 1.7
 Tags: bbpress, tools, gdragon, dev4press, forums, forum, topic, reply, signature, quote, search, toolbar, signature, views, admin, bbcode, bbcodes, shortcode, shortcodes
 Requires at least: 3.3
-Tested up to: 3.9
+Tested up to: 4.1
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Adds different expansions and tools to the bbPress 2.0 plugin powered forums: BBCode support, signatures, custom views, quote...
+Adds different expansions and tools to the bbPress 2.x plugin powered forums: BBCode support, signatures, custom views, quote...
 
 == Description ==
-Adds various expansions and tools to the bbPress 2.0 plugin implemented forums. Currently included features:
+Adds various expansions and tools to the bbPress 2.x plugin implemented forums. Currently included features:
 
 * BBCode shortcodes support
 * Quote Reply or Topic
@@ -27,13 +27,13 @@ Plugin supports BBCodes based on the phpBB implementation. Right now, plugin has
 Supported languages: English, Serbian, German.
 
 = bbPress Plugin Versions =
-GD bbPress Tools 1.6 supports bbPress 2.3.x, 2.4.x and 2.5.x versions. bbPress 2.0.x, 2.1.x and 2.2.x are no longer supported!
+GD bbPress Tools 1.7 supports bbPress 2.3.x, 2.4.x and 2.5.x versions. bbPress 2.0.x, 2.1.x and 2.2.x are no longer supported!
 
 = BuddyPress Support =
-GD bbPress Tools 1.6 is tested with BuddyPress 1.8.x and it works fine if you enable BuddyPress support in bbPress plugin for Group Forums. Make sure you enable JavaScript and CSS Settings Always Include option in the Tools plugin settings.
+GD bbPress Tools 1.7 is tested with BuddyPress 2.2.x. Make sure you enable JavaScript and CSS Settings Always Include option in the Tools plugin settings.
 
 = Upgrade to GD bbPress Toolbox Pro =
-Pro version contains many more useful features 10 more BBCodes (including Hide and Spoiler), BBCodes editor toolbar, many more views, notification email control, great new responsive admin UI and much more. Plus, Pro version contains powerful attachments features and 4 widgets.
+Pro version contains many more useful features 10 more BBCodes (including Hide and Spoiler), BBCodes editor toolbar, many more views, notification email control, BBCodes toolbar, great new responsive admin UI and much more. Plus, Pro version contains powerful attachments features and 5 widgets.
 [GD bbPress Toolbox Pro](http://www.gdbbpbox.com/)
 
 = Premium dev4Press.com plugins for bbPress =
@@ -78,10 +78,22 @@ Yes. But, make sure to enable 'Always Include' option for JavaScript and CSS.
 * German: David Decker - http://deckerweb.de/
 
 == Upgrade Notice ==
-= 1.6 =
-Added smilies parsing for user signature. Removed support for bbPress 2.2.x. Fixed some quote issues with BR tags. Fixed quote not working with WordPress 3.9.
+= 1.7 =
+Added option to enable DIV tag in the content. Added check if user can set unfiltered HTML for signatures. Added option to allow mixing HTML and BBCode in signatures. Improved signature editing process loading and display. Fixed several reported bugs.
 
 == Changelog ==
+= 1.7 =
+* Added option to enable DIV tag in the content
+* Added check if user can set unfiltered HTML for signatures
+* Added option to allow mixing HTML and BBCode in signatures
+* Improved signature editing process loading and display
+* Fixed display of HTML signatures to non logged users
+* Fixed editing signatures on admin profile page breaks HTML
+* Fixed warning when saving signature in some cases
+* Fixed BuddyPress profile edit shows wrong signature
+* Fixed quote problem caused by filtered DIV tags
+* Fixed order of the quote content wrapper filters
+
 = 1.6 =
 * Added smilies parsing for user signature
 * Removed support for bbPress 2.2.x

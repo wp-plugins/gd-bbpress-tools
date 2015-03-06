@@ -62,6 +62,7 @@ class gdbbMod_Admin {
             $gdbbpress_tools->o['include_always'] = isset($_POST['include_always']) ? 1 : 0;
             $gdbbpress_tools->o['include_js'] = isset($_POST['include_js']) ? 1 : 0;
             $gdbbpress_tools->o['include_css'] = isset($_POST['include_css']) ? 1 : 0;
+            $gdbbpress_tools->o['allowed_tags_div'] = isset($_POST['allowed_tags_div']) ? 1 : 0;
             $gdbbpress_tools->o['quote_active'] = isset($_POST['quote_active']) ? 1 : 0;
             $gdbbpress_tools->o['quote_location'] = $_POST['quote_location'];
             $gdbbpress_tools->o['quote_method'] = $_POST['quote_method'];

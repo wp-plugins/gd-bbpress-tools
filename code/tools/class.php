@@ -130,6 +130,11 @@ class gdbbPressTools {
             $this->mod['t'] = new gdbbMod_Toolbar();
         }
 
+        if ($this->o['allowed_tags_div'] == 1) {
+            add_filter('bbp_kses_allowed_tags', array(&$this, 'allowed_tags'));
+            add_filter('bbp_get_allowed_tags', array(&$this, 'display_allowed_tags'));
+        }
+
         $views = array();
         $active = false;
         foreach ($this->o as $key => $val) {
@@ -157,6 +162,18 @@ class gdbbPressTools {
 
     public function hook_modules() {
         do_action('bbtoolbox_core');
+    }
+
+    public function allowed_tags($list) {
+        $list['div'] = array('class' => true);
+
+        return $list;
+    }
+
+    public function display_allowed_tags($tags) {
+        $remove = str_replace(htmlentities('<div class="">'), '', $tags);
+
+        return trim($remove);
     }
 
     public function load_plugin() {

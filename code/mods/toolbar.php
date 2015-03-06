@@ -214,7 +214,7 @@ class gdbbMod_Toolbar {
             'parent' => 'gdbb-toolbar-info-links-d4p',
             'id'     => 'gdbb-toolbar-d4p-home',
             'title'  => __("Dev4Press Homepage", "gd-bbpress-tools"),
-            'href'   => 'http://www.dev4press.com/',
+            'href'   => 'https://www.dev4press.com/',
             'meta'   => array('target' => '_blank')
         ));
     }
