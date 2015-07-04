@@ -1,10 +1,10 @@
 === GD bbPress Tools ===
 Contributors: GDragoN
 Donate link: http://www.gdbbpbox.com/
-Version: 1.7
+Version: 1.7.1
 Tags: bbpress, tools, gdragon, dev4press, forums, forum, topic, reply, signature, quote, search, toolbar, signature, views, admin, bbcode, bbcodes, shortcode, shortcodes
 Requires at least: 3.3
-Tested up to: 4.1
+Tested up to: 4.3
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -78,10 +78,14 @@ Yes. But, make sure to enable 'Always Include' option for JavaScript and CSS.
 * German: David Decker - http://deckerweb.de/
 
 == Upgrade Notice ==
-= 1.7 =
-Added option to enable DIV tag in the content. Added check if user can set unfiltered HTML for signatures. Added option to allow mixing HTML and BBCode in signatures. Improved signature editing process loading and display. Fixed several reported bugs.
+= 1.7.1 =
+Updated several Dev4Press links. Fixed potential XSS security issue with unsanitized input.
 
 == Changelog ==
+= 1.7.1 =
+* Updated several Dev4Press links
+* Fixed potential XSS security issue with unsanitized input
+
 = 1.7 =
 * Added option to enable DIV tag in the content
 * Added check if user can set unfiltered HTML for signatures

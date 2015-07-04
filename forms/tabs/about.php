@@ -29,7 +29,7 @@
 </div>
 <div class="d4p-information-second">
     <h3><?php _e("Important Plugin Links", "gd-bbpress-tools"); ?></h3>
-    <a target="_blank" href="https://www.dev4press.com/plugins/gd-bbpress-tools/">GD bbPress Tools <?php _e("Home Page", "gd-bbpress-tools"); ?></a><br/>
+    <a target="_blank" href="https://plugins.dev4press.com/gd-bbpress-tools/">GD bbPress Tools <?php _e("Home Page", "gd-bbpress-tools"); ?></a><br/>
     <a target="_blank" href="http://wordpress.org/extend/plugins/gd-bbpress-tools/">GD bbPress Tools <?php _e("on", "gd-bbpress-tools"); ?> WordPress.org</a>
     <h3><?php _e("Plugin Support", "gd-bbpress-tools"); ?></h3>
     <a target="_blank" href="https://support.dev4press.com/forums/forum/plugins-free/gd-bbpress-tools/"><?php _e("Plugin Support Forum on Dev4Press", "gd-bbpress-tools"); ?></a><br/>

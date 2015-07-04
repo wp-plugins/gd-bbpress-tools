@@ -1,10 +1,6 @@
 <?php
 
-$current = isset($_GET['tab']) ? $_GET['tab'] : 'tools';
-
-if ($current != 'toolbox') {
-    $this->upgrade_notice();
-}
+$current = isset($_GET['tab']) ? sanitize_key($_GET['tab']) : 'tools';
 
 $tabs = array(
     'tools' => __("Settings", "gd-bbpress-tools"), 
@@ -15,6 +11,14 @@ $tabs = array(
     'd4p' => __("Dev4Press", "gd-bbpress-tools"), 
     'about' => __("About", "gd-bbpress-tools")
 );
+
+if (!isset($tabs[$current])) {
+    $current = 'tools';
+}
+
+if ($current != 'toolbox') {
+    $this->upgrade_notice();
+}
 
 ?>
 <div class="wrap">
